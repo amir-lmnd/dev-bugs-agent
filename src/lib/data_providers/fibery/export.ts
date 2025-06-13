@@ -3,7 +3,7 @@ import { FiberyBugReport } from "./parsers/bug_report.parser";
 import { FiberyProvider } from "./fibery.provider";
 import { writeFile } from "../../fs";
 
-const FILE_NAME = "home_bionics_tickets";
+const FILE_NAME = "home_bionics_tickets_raw";
 const FILE_DIR = "data/fibery";
 
 /**

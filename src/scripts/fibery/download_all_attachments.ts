@@ -4,7 +4,7 @@ import axios from "axios";
 
 const filePath = path.resolve(
   __dirname,
-  "../../../data/fibery/home_bionics_tickets.json"
+  "../../../data/fibery/home_bionics_tickets_raw.json"
 );
 
 type Attachment = {
