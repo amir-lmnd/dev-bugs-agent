@@ -1,0 +1,277 @@
+---
+description: TypeBox Schema Conventions
+globs: *.schema.ts,*.types.ts
+alwaysApply: false
+---
+# TypeBox Schema Conventions
+
+This rule outlines the best practices and conventions for defining TypeBox schemas in our codebase.
+Previoulsy we used class-validators for input validation, but decided to migrate to TypeBox due to its many advantages, including the ability to define the schema once and have it apply to a Typescript type, input validation, and as a type for auto-generated clients.
+
+## Basic Schema Structure
+
+### Required Imports
+
+```typescript
+import { Type, TSchema } from '@sinclair/typebox'
+import type { StaticDecode } from '@sinclair/typebox'
+```
+
+### Naming Conventions
+
+- Schema names MUST end with `Schema` suffix (e.g., `UserSchema`, `BaseResponseSchema`)
+- Type inference exports should match schema name without 'Schema' suffix
+- File naming: Use the suffix `.schema.ts` for schema files
+
+### Documentation Requirements
+
+Every schema property MUST include:
+
+- `description`: Clear description of the property, only applicable if it adds information not specified in the property name
+- `example`: Whenever possible
+- `default`: When applicable
+
+Examples:
+
+```typescript
+// Good example:
+const AddressSchema = Type.Object({
+  state: Type.String({
+    description: 'The US state, specified as a 2 letter abbreviation',
+    example: 'IL',
+  }),
+})
+
+// Bad example:
+const AddressSchema = Type.Object({
+  state: Type.String({
+    description: 'The state',
+  }),
+})
+```
+
+## Schema Security
+
+### Additional Properties
+
+ALWAYS add `additionalProperties: false` to all `Type.Object()` declarations to prevent data pollution:
+
+```typescript
+const UserSchema = Type.Object(
+  {
+    name: Type.String(),
+    email: Type.String(),
+  },
+  {
+    additionalProperties: false,
+  },
+)
+```
+
+This rule applies to ALL object declarations, including nested objects:
+
+```typescript
+const OrderSchema = Type.Object(
+  {
+    items: Type.Array(
+      Type.Object(
+        {
+          id: Type.String(),
+          quantity: Type.Number(),
+        },
+        { additionalProperties: false },  // Required for nested objects
+      )
+    )
+  },
+  { additionalProperties: false },  // Required for parent object
+)
+```
+
+The only exception is when there is a specific documented reason to allow additional properties.
+
+## Type Definitions
+
+### Primitive Types Best Practices
+
+```typescript
+// String - specify length constraints
+Type.String({ minLength: 1, maxLength: 100 })
+
+// Number - specify range constraints
+Type.Number({ minimum: 0, maximum: 100 })
+
+// Boolean
+Type.Boolean()
+
+// Array - ALWAYS specify item type
+Type.Array(Type.String())
+
+// Optional properties
+Type.Optional(Type.String())
+```
+
+### Readonly Usage
+
+Prefer `Type.Readonly` or `Type.ReadonlyOptional` for safer type inference:
+
+```typescript
+const UserSchema = Type.Object({
+  name: Type.Readonly(Type.String())
+})
+```
+
+## Enums
+
+1. Define a TypeScript enum
+2. Construct a Typebox schema based on that enum. 
+3. DON'T infer the type for that schema since you can just use the original enum.
+
+Example:
+
+```typescript
+export enum JobStatus {
+  Success = 'success',
+  Error = 'error',
+}
+
+export const JobStatusSchema = Type.Enum(JobStatus, {
+  example: SchemaJobStatus.Success,
+})
+```
+
+For enums used in just one schema, define the enum schema inline:
+
+```typescript
+export const Job = Type.Object({
+  jobStatus: Type.Enum(JobStatus, {
+    example: SchemaJobStatus.Success,
+  }),
+})
+```
+
+## Schema Identifiers
+
+### $id Usage
+
+- Add `$id` to standalone schemas
+- Skip `$id` for schemas only used in compositions
+- `$id` value should be the schema name without the `Schema` suffix
+
+Example:
+
+```typescript
+// Standalone schema - needs $id
+export const UserSchema = Type.Object({
+  name: Type.String(),
+}, {
+  $id: 'User',
+})
+
+// Composition schema - no $id needed
+const BaseSchema = Type.Object({
+  type: Type.String(),
+})
+```
+
+## Type Inference
+
+### StaticDecode Usage
+
+Always use `StaticDecode` for type inference and import it explicitly:
+
+```typescript
+import type { StaticDecode } from '@sinclair/typebox'
+```
+
+### Type Inference Exports
+
+Place all type-inference exports at the bottom of the schema file and use `StaticDecode` for each:
+
+```typescript
+export type MyType = StaticDecode<typeof MySchema>
+```
+
+### Naming Conventions
+
+Inferred type names should:
+
+- Omit the `Type` suffix  
+- Match the schema name without the `Schema` suffix  
+
+```typescript
+export type UserResponse = StaticDecode<typeof UserResponseSchema>
+```
+
+### Type Inference Location
+
+Group all inference exports together at the end of the file:
+
+```typescript
+export type Type1 = StaticDecode<typeof Schema1>
+export type Type2 = StaticDecode<typeof Schema2>
+```
+
+### No Direct Static Usage
+Never use `Static` for type inference or mix it with `StaticDecode`.
+
+## Advanced Patterns
+
+### Schema Composition
+
+Use `Type.Composite` for extending schemas:
+
+```typescript
+export const ComposedSchema = Type.Composite([
+  BaseSchema,
+  Type.Object({
+    additionalProp: Type.String(),
+  }),
+])
+```
+
+### Generic Schemas
+
+Example of a generic schema:
+
+```typescript
+export const GenericSchema = <T extends TSchema>(dataSchema: T) =>
+  Type.Composite([
+    BaseSchema,
+    Type.Object({
+      data: dataSchema,
+    }),
+  ])
+```
+
+### Discriminated Unions
+
+Use for data that can take multiple distinct shapes:
+
+```typescript
+export enum DwellingType {
+  Apartment = 'apartment',
+  House = 'house',
+}
+
+export const ApartmentSchema = Type.Object({
+  dwellingType: Type.Literal(DwellingType.Apartment),
+  unit: Type.String(),
+})
+
+export const HouseSchema = Type.Object({
+  dwellingType: Type.Literal(DwellingType.House),
+  houseNumber: Type.String(),
+})
+
+export const ResidenceSchema = Type.Union(
+  [
+    ApartmentSchema,
+    HouseSchema,
+  ],
+  {
+    discriminator: {
+      propertyName: 'dwellingType',
+    },
+  },
+)
+```

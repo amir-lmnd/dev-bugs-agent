@@ -1,0 +1,79 @@
+---
+description: when prompted with `@dev-next.mdc {{ticket_id}}`
+globs: 
+alwaysApply: false
+---
+# Dev Next (`dev-next`) Command
+
+This rule defines how to handle the `@dev-next.mdc {{ticket_id}}` command, by reading the tech design and todos documents and then implementing and testing the next available task.
+
+## Context
+
+Our development workflow consists of 3 steps:
+1. Dev Start: Fetch the ticket and create a tech design document as `ai-plans/{{ticket_id}}.tech-design.md`
+2. Dev Plan: Analyze the tech design document and create a todos document as `ai-plans/{{ticket_id}}.todos.md`
+3. Dev Next: Analyze the tech design and todos documents and implement the next incomplete task in the todos document.
+
+## Guidelines
+
+When you see the command `@dev-next.mdc {{ticket_id}}`, follow this enhanced workflow:
+
+1. **Read Context**:
+    - Open and analyze `ai-plans/{{ticket_id}}.tech-design.md`. If missing, suggest `@dev-start.mdc {{ticket_id}}`.
+    - Open and analyze `ai-plans/{{ticket_id}}.todos.md`. If missing, suggest `@dev-plan.mdc {{ticket_id}}`.
+
+2. **Identify Next Task**:
+    - Locate the *first* incompleted task (`- [ ]`) in the todos file.
+
+3. **Prepare for Implementation**:
+    - Fetch and read necessary rules:
+        - `linting-conventions` before fixing linting errors.
+    - Confirm understanding that tasks are only done after tests pass AND user review.
+
+4. **Implement the Full Task**:
+    - Implement the required changes for the identified task.
+    - Update both source code and corresponding test files. Adhere strictly to fetched rules.
+    - Continue working on the task until all its sub-parts described in the todos are addressed. Do not stop for permission for sub-steps within the *same* task unless blocked or needing clarification.
+
+5. **Test and Refine**:
+    - Run relevant tests to confirm they pass for the implemented changes.
+    - If tests fail, analyze the output and fix the code or tests.
+    - Once tests pass, clean up any temporary or debugging code comments according to the `no-comments.mdc` rule. Fix any linting issues identified, following `linting-conventions.mdc`.
+
+6. **Request Review**:
+    - Present the completed changes (code diffs) for user review. Explicitly state that tests have passed and comments/linting have been addressed.
+
+7. **Mark Task Done**:
+    - **Only after user approval**, mark the task as done (`- [x]`) in the `ai-plans/{{ticket_id}}.todos.md` file.
+    - **Note**: `ai-plans/*.todos.md` files are git ignored, so do not try to commit this change.
+    - Stop and wait for the next instruction (e.g. another `@dev-next {{ticket_id}}` command or a different command).
+
+## Examples
+
+Input:
+@dev-next.mdc t12345
+
+Output:
+Okay, I'll work on the next task for t12345.
+1. Reading `ai-plans/t12345.tech-design.md`...
+2. Reading `ai-plans/t12345.todos.md`...
+3. Identifying the next uncompleted task...
+4. Preparing by fetching rules (`linting-conventions`)...
+5. Acknowledging task completion criteria...
+6. Implementing the task...
+[AI implements code and tests]
+7. Running tests...
+[AI runs tests]
+Tests passed. Cleaning up comments and linting...
+8. The changes for the task "[Task description from todos]" are complete and tests are passing. Please review the following diffs:
+[Show diffs]
+9. Waiting for your approval to mark the task as done.
+[Waits for approval input]
+
+Input:
+Looks good, please mark it as done
+
+Output:
+Great! Marking the task as done in `ai-plans/t12345.todos.md`.
+[AI updates the todos file]
+Ready for the next instruction.

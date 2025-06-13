@@ -1,0 +1,1 @@
+Ultrathink and reflect on your approach during the session. Document effective strategies, challenges faced, and emerging best practices in CLAUDE.md. Focus on generalizable insights that will streamline future work and improve accuracy, user experience, and collaboration. Avoid specific details in favor of principles that can be broadly applied. $ARGUMENTS

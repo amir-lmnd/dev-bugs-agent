@@ -1,0 +1,83 @@
+---
+description: Prohit adding comments to code unless explicitly requested by the user
+globs: *.ts
+alwaysApply: false
+---
+# No Comments in Code
+
+## Guidelines
+
+Adding comments to code is prohibited unless explicitly requested by the user.
+When writing or modifying code:
+
+1. DO NOT add comments to code unless explicitly requested by the user
+2. This includes:
+    - Explanatory comments above functions/methods
+    - Inline comments explaining logic
+    - TODO comments
+    - Block comments describing code sections
+    - JSDoc style comments
+    - "Self-documenting" placeholder comments
+3. Focus on writing clear, self-explanatory code instead
+4. If code requires explanation, mention it in your response to the user instead of adding comments
+5. When removing comments from code, remove ONLY the comments without modifying any other aspect of the code
+
+This rule applies to all code files including source, tests, and configuration files.
+
+## Examples
+
+### Bad: Adding unrequested comments
+
+User: "Create a function to calculate the total price"
+
+AI: ```typescript
+// This function calculates the total price by adding tax
+function calculateTotalPrice(basePrice: number, taxRate: number): number {
+  // Calculate the tax amount
+  const taxAmount = basePrice * taxRate;
+  // Return price plus tax
+  return basePrice + taxAmount;
+}
+```
+
+### Bad: Adding JSDoc when not requested
+
+User: "Create a helper function for date formatting"
+
+AI: ```typescript
+/**
+  * Formats a date according to the specified format
+  * @param date - The date to format
+  * @param format - The format string
+  * @returns The formatted date string
+  */
+function formatDate(date: Date, format: string): string {
+  // Implementation...
+}
+```
+
+### Good: Writing clear code without comments
+
+User: "Create a function to calculate the total price"
+
+AI: ```typescript
+function calculateTotalPrice(basePrice: number, taxRate: number): number {
+  const taxAmount = basePrice * taxRate;
+  return basePrice + taxAmount;
+}
+```
+
+### Good: Explaining code in the response, not in comments
+
+User: "Create a helper function for date formatting"
+
+AI: ```typescript
+function formatDate(date: Date, format: string): string {
+  // Implementation...
+}
+```
+
+I've created a formatDate function that takes a Date object and a format string. 
+The function parses the format string and applies the corresponding transformations 
+to the date components. If you'd like me to add documentation comments to this function, 
+just let me know.

@@ -1,0 +1,57 @@
+---
+description: when prompted with `@dev-start.mdc {{ticket_id}}`
+globs: 
+alwaysApply: false
+---
+# Dev Start (`dev-start`) Command
+
+This rule defines how to handle the `@dev-start.mdc {{ticket_id}}` command.
+
+The command should ONLY fetch the ticket and create a tech design document, and should not make any changes to the code, nor create a todos document.
+
+## Context
+
+Our development workflow consists of 3 steps:
+1. Dev Start: Fetch the ticket and create a tech design document as `ai-plans/{{ticket_id}}.tech-design.md`
+2. Dev Plan: Analyze the tech design document and create a todos document as `ai-plans/{{ticket_id}}.todos.md`
+3. Dev Next: Analyze the tech design and todos documents and implement the next incomplete task in the todos document.
+
+## Guidelines
+
+When you see the command `@dev-start.mdc {{ticket_id}}`, follow this workflow:
+
+1. **Fetch the ticket information**:
+    - Use an MCP tool to fetch ticket details for {{ticket_id}}
+    - Extract the ticket title, description, acceptance criteria, and any relevant attachments
+
+‼️ **VERIFICATION STEP** ‼️
+Before proceeding, you MUST:
+- [ ] Fetch and read the [tech-design-documentation.mdc](mdc:rules/typescript/tech-design-documentation.mdc) rule
+- [ ] Understand the required document structure and all sections
+- [ ] Confirm you will apply ALL required sections from the template
+
+2. **Create a tech design document**:
+    - Create `ai-plans/{{ticket_id}}.tech-design.md`
+    - Follow the structure and guidelines in the tech-design-documentation.mdc rule
+    - Ensure all sections are properly filled in based on the ticket information
+
+## Examples
+
+Input:
+@dev-start.mdc t12345
+
+Outcome:
+I'll help you start working on ticket t12345.
+
+1. First, I'll fetch the ticket details using the relevant MCP tool
+
+2. Before proceeding, I'll:
+    - Read the tech-design-documentation.mdc rule
+    - Understand the required structure and format for the tech design file
+    - Ensure I apply ALL sections from the template
+
+3. Then I'll create a tech design document in ai-plans/t12345.tech-design.md following the exact required structure
+
+After completing these steps, you can use "@dev-plan.mdc t12345" to create the todos file.
+
+Note: I will only create the tech design document, not the todos file.

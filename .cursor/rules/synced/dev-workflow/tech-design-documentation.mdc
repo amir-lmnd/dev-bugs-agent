@@ -1,0 +1,86 @@
+---
+description: Guidelines for creating and working on a tech design document
+globs: 
+alwaysApply: false
+---
+# Technical Design Documentation
+
+This rule defines the process and structure for creating technical design documents.
+
+## Guidelines
+
+After clarifying requirements, create a comprehensive technical design document:
+
+1. Save all technical designs in the `ai-plans/` directory
+2. Use the ticket ID as the filename (`{{ticket_id}}.tech-design.md`)
+3. Follow the standardized structure outlined below
+
+### Technical Design Document Structure:
+
+```markdown
+# Context
+Describe the feature, problem, and previous handling.
+
+# Affected Components & Services
+- List each bounded-context, service, provider, module, or class to modify, including:
+  - Repo/module name
+  - Package or namespace
+  - Class/file path(s)
+  - Method(s) or API surface to update
+
+# Component Flow & Interaction
+
+## Diagram
+[Insert Mermaid flowchart illustrating component interactions]
+
+## Interaction Details
+For each step in the diagram, specify the involved component/provider and the method signature or HTTP endpoint.
+
+# API Design
+Describe enhancements to existing endpoints or new APIs, referencing controller/handler classes and DTOs.
+
+# Special Considerations
+
+## DB / Data Changes
+Detail schema, model, and domain object modifications.
+
+## Performance
+Assess potential performance impacts and mitigations.
+
+## Security
+Call out authentication, authorization, and sensitive data handling.
+
+## Monitoring
+Identify metrics, tags, and alerting strategies.
+
+## Documentation
+Note required updates to external and internal docs.
+
+## Tech Debt
+Highlight any follow-up tasks to reduce future maintenance complexity.
+
+# Implementation Plan
+1. Update `SomeService.calculate()` to set explicit reasons.
+2. Add `someProperty` field to `SomeModel` domain model.
+3. Modify `SomeController` and DTO mapping to include the new field.
+5. Write unit tests for service logic and integration tests for the API.
+```
+
+Always create this document before starting implementation and share it with the user for approval.
+
+## Examples
+
+Input:
+Ticket: t12342
+Type: FEATURE
+Title: Add VIN validation for vehicle registration
+
+Output (After requirements clarification):
+I'll create a technical design document for this feature. You'll find it at `ai-plans/t12342.tech-design.md` once complete.
+
+The document will follow our standardized technical design format covering:
+- Context of the VIN validation feature
+- Affected components & services
+- Component flow & interaction
+- API design details
+- Special considerations and implementation plan

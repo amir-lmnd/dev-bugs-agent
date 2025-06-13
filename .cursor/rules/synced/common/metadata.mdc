@@ -1,0 +1,50 @@
+---
+description: Writing and organizing Cursor Rules files
+globs:
+alwaysApply: false
+---
+
+# Metadata for AI: Cursor Rule File Creation & Editing
+
+This file provides explicit instructions for AI systems on how to create, edit, and finalize Cursor rule files.
+
+## Rule File Workflow
+
+- **Create and edit rule files as `.md` (Markdown) files.**
+- **After editing, manually rename the file to `.mdc`.**
+  - This is required due to editing issues with `.mdc` files directly.
+
+## Naming & Location
+
+- Use **kebab-case** for filenames (e.g., `prefer-function-components.md`).
+- Place rule files under `.cursor/rules/` or a subfolder (e.g., `typescript/` for TypeScript rules).
+- Make filenames descriptive of the rule's purpose.
+
+## Required Frontmatter
+
+Each rule file must start with a single YAML frontmatter block:
+
+```yaml
+---
+description: "A clear, short description of what is the rule purpose Do NOT just summarize the entire rule—explain its purpose."
+alwaysApply: false
+globs:
+---
+```
+- `description` must NOT be empty.
+- `globs` must be empty.
+- `alwaysApply` must be `false`.
+- Only one frontmatter block per file.
+
+**Example of a good `description`:**
+> This file provides explicit instructions systems on how to create, edit, and finalize eslint files.
+
+## Example Workflow
+
+1. Create `your-rule-name.md` in the appropriate folder.
+2. Edit the file using Markdown and the required frontmatter.
+3. When finished, rename `your-rule-name.md` to `your-rule-name.mdc`.
+
+---
+
+**This file is intended for AI systems to ensure correct rule file handling and compliance with project conventions.** 

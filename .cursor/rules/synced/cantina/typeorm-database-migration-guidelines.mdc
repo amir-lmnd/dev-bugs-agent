@@ -1,0 +1,54 @@
+---
+description: 
+globs: db/**/*.ts,*.entity.ts
+alwaysApply: false
+---
+# Guidelines For DB Migrations using TypeORM
+
+## Guidelines
+
+- In most cases you should not generate TypeORM migration files manually. Instead, you should modify the relevant entity classes, and ask the user to run the `migrate generate` command themselves.
+- Sometimes the auto-generated migration file can be problematic, and we might need to modify it. An example is when converting the type of a DB column to another type, and the auto-generated migration removes and recreates the column - we should instead just alter the type to preserve the existing column values.
+- TypeORM migration files start with a date in epoch time in milliseconds. The same date appears inside the migration file as the class name and migration name too. Get the current time in this format by running: `date +'%s000'`.
+- When analyzing a migration, first analyze all previous migrations of the same table and column.
+
+## Examples
+
+### Converting the type of an integer column to double precision floating points
+
+User: I changed ItemAppraisal entity's quantity column so it support floats and generated the migration file, please review it.
+The auto-generated migration file contents:
+```typescript
+import { MigrationInterface, QueryRunner } from "typeorm"
+
+export class ConvertAppraisalQuantityToFloat1745756797343 implements MigrationInterface {
+  name = 'ConvertAppraisalQuantityToFloat1745756797343'
+
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(`ALTER TABLE "item_appraisals" DROP COLUMN "quantity"`, undefined)
+    await queryRunner.query(`ALTER TABLE "item_appraisals" ADD "quantity" double precision`, undefined)
+  }
+
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(`ALTER TABLE "item_appraisals" DROP COLUMN "quantity"`, undefined)
+    await queryRunner.query(`ALTER TABLE "item_appraisals" ADD "quantity" integer`, undefined)
+  }
+}
+```
+
+AI: I will fix the migration so we don't lose data, by altering the column type:
+```typescript
+import { MigrationInterface, QueryRunner } from "typeorm"
+
+export class ConvertAppraisalQuantityToFloat1745756797343 implements MigrationInterface {
+  name = 'ConvertAppraisalQuantityToFloat1745756797343'
+
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(`ALTER TABLE "item_appraisals" ALTER COLUMN "quantity" SET DATA TYPE double precision`, undefined)
+  }
+
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(`ALTER TABLE "item_appraisals" ALTER COLUMN "quantity" SET DATA TYPE integer`, undefined)
+  }
+}
+```

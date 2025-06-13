@@ -1,0 +1,55 @@
+---
+description: Handling linting errors
+globs: *.ts
+alwaysApply: false
+---
+# Handling linting errors
+
+## Guidelines
+
+When encountering linting errors, follow these steps in order:
+
+1. **Always try auto-fix first**
+    - Run the linter with the --fix flag before manual fixes
+    - Command: `npm run lint -- --fix` or equivalent
+
+2. **Review auto-fixes**
+    - Check that auto-fixes didn't introduce new issues
+    - Verify that the changes maintain code functionality
+
+3. **Manual fixes (if needed)**
+    - Only proceed with your own manual fixes if auto-fix didn't resolve all issues
+    - Follow existing code style patterns
+    - Keep changes minimal and focused
+
+4. **Verification**
+    - Run linter again to ensure no new issues were introduced
+    - Test affected functionality if changes were significant
+
+### Best practices
+
+- Don't make unrelated style changes while fixing linting errors
+- When intentionally disabling linting rules, document why they are disabled
+- Keep code style consistent within each file
+- When in doubt, match the style of surrounding code
+
+## Examples
+
+### Bad: Directly making manual fixes
+
+User: "There are linting errors in the file"
+AI: *Makes manual changes to fix linting*
+
+### Bad: Ignoring auto-fix capability
+
+User: "How should I fix these linting errors?"
+AI: "Let's manually change each line..."
+
+### Good: Try auto-fix first
+User: "There are linting errors in the file"
+AI: "Let's first try running the linter with auto-fix:"
+AI: *executes command: npx eslint -- --fix*
+
+### Good: Only manual fixes if needed
+User: "Auto-fix didn't resolve all issues"
+AI: "I will try manually fix the remaining issues ..."

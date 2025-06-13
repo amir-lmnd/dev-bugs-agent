@@ -1,0 +1,64 @@
+---
+description: when prompted with `@dev-plan.mdc {{ticket_id}}`
+globs: 
+alwaysApply: false
+---
+# Dev Plan (`dev-plan`) Command
+
+This rule defines how to handle the `@dev-plan.mdc {{ticket_id}}` command.
+
+The command should ONLY analyze the previously created tech design document and create a todos document, and should not make any changes to the code.
+
+## Context
+
+Our development workflow consists of 3 steps:
+1. Dev Start: Fetch the ticket and create a tech design document as `ai-plans/{{ticket_id}}.tech-design.md`
+2. Dev Plan: Analyze the tech design document and create a todos document as `ai-plans/{{ticket_id}}.todos.md`
+3. Dev Next: Analyze the tech design and todos documents and implement the next incomplete task in the todos document.
+
+## Guidelines
+
+When you see the command `@dev-plan.mdc {{ticket_id}}`, follow this workflow:
+
+1. **Read the tech design document**:
+    - Open and analyze `ai-plans/{{ticket_id}}.tech-design.md`
+    - If the tech design doesn't exist, suggest using `@dev-start.mdc {{ticket_id}}` first
+
+‼️ **VERIFICATION STEP** ‼️
+Before proceeding, you MUST:
+- [ ] Fetch and read the [todos-conventions.mdc](mdc:rules/typescript/todos-conventions.mdc) rule
+- [ ] Understand the required todos structure and format
+- [ ] Confirm you will apply ALL required sections and formatting from the rule
+
+2. **Create a todos file**:
+    - Create `ai-plans/{{ticket_id}}.todos.md`
+    - Follow the structure and guidelines in the todos-conventions.mdc rule
+    - Each task should include test updates as part of its "Definition of Done"
+
+3. **Next Steps**:
+    - Suggest using `@dev-next.mdc {{ticket_id}}` to begin working on the first task
+
+**IMPORTANT**:
+- Do NOT start implementing any code - this is done in the `@dev-next` command
+- Only suggest using `@dev-next.mdc {{ticket_id}}` as the next step
+
+## Examples
+
+Input:
+@dev-plan.mdc t12345
+
+Outcome:
+I'll help you create a todo list for t12345.
+
+1. First, I'll read the tech design in ai-plans/t12345.tech-design.md
+
+2. Before proceeding, I'll:
+    - Read the todos-conventions.mdc rule
+    - Understand the required structure and format for the todos file
+    - Ensure I apply ALL sections and formatting from the rule
+
+3. Then I'll create a structured todos file in ai-plans/t12345.todos.md following the exact required format
+
+After completing these steps, you can use "@dev-next.mdc t12345" to start implementing the first task.
+
+NOTE: I will ONLY create the todos file, not start implementing any code.

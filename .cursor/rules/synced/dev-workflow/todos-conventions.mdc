@@ -1,0 +1,81 @@
+---
+description: Structure and format for AI-generated todos file (tasks file)
+globs: 
+alwaysApply: false
+---
+# Structure and Format For AI-Generated Todos File (Tasks File)
+
+## Todos File Structure
+
+When creating or updating a todos file, follow this structure:
+
+```markdown
+# {TICKET_ID}: {TICKET_TITLE}
+
+## Commit 1: {DESCRIPTIVE TITLE}
+
+- [ ] Task 1 description
+- [ ] Task 2 description
+  ```typescript
+  // Example code if needed
+  ```
+- [ ] Task 3 description
+- [ ] Update tests in `tests/path/to/relevant_file.test.ts`:
+  - Follow testing-conventions rule
+  - Ensure test coverage for changes
+
+## Commit 2: {DESCRIPTIVE TITLE}
+
+- [ ] Task 1 description
+- [ ] Task 2 description
+- [ ] Task 3 description
+- [ ] Update tests in `tests/path/to/relevant_file.test.ts`
+```
+
+## Definition of Done for Tasks
+
+A task is considered complete ONLY when:
+
+1. The source code changes have been implemented correctly
+2. The corresponding test files have been updated:
+    - For source file at `src/path/to/file.ts`, test file at `tests/path/to/file.test.ts` must be updated
+    - Tests must follow the testing-conventions rule
+    - New functionality must be covered by tests
+3. The task is marked as complete in the todos file with the checkbox checked `[x]`
+4. Test updates are documented in the todos file
+5. User feedback has been received and incorporated:
+    - Always wait for explicit user feedback before considering a task done
+    - Treat user feedback as a code review that may require additional changes
+    - Do not move to the next task until current changes are approved
+
+## Creating Task Items
+
+When creating task items:
+
+1. Break down implementation into small, focused tasks
+2. Include explicit test update tasks for each file modified
+3. Include code snippets where helpful
+4. Define clear boundaries between tasks
+5. Always include test updates as part of the task's Definition of Done
+
+## Example
+
+Input:
+Create a todos file for ticket t12345
+
+Output:
+# t12345: Feature Title
+
+## Commit 1: Update user authentication
+
+- [ ] Add new authentication provider to AuthService
+- [ ] Update UserService to use new provider
+- [ ] Update tests in tests/services/user.service.test.ts:
+  - Follow testing-conventions rule
+  - Add test cases for new auth flow
+
+## Commit 2: Add UI components
+
+- [ ] Create new login form component
+- [ ] Add routing for authentication pages
+- [ ] Update tests in tests/components/login-form.test.ts

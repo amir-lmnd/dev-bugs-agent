@@ -1,0 +1,258 @@
+---
+description: This rule is helpful when migrating class-validator classes to Typebox schemas
+globs: 
+alwaysApply: false
+---
+# Migrating From Class-Validator To TypeBox
+
+## Guidelines
+
+When converting class validator classes to Typebox schemas:
+
+1. File Naming:
+    - Place schema files next to their class validator counterparts
+    - Use `.schema.ts` extension
+    - Example: `response.type.ts` -> `response.schema.ts`
+
+2. Converting Decorators:
+    - @ApiProperty() -> Type.Object() with description and example
+    - @IsEnum() -> Type.Enum()
+    - @IsString() -> Type.String()
+    - @IsNumber() -> Type.Number()
+    - @IsBoolean() -> Type.Boolean()
+    - @IsArray() -> Type.Array()
+    - @IsOptional() -> Make the property optional in the schema
+    - @ValidateNested() -> Use nested schema definition
+
+3. Composing Schemas:
+    - Use `Type.Composite` instead of `Type.Intersect`
+    - Example:
+
+      ```typescript
+      export const ComposedSchema = Type.Composite([
+        BaseSchema,
+        Type.Object({
+          additionalProps: Type.String(),
+        })
+      ])
+      ```
+
+4. Schema Properties:
+    - Include descriptions using the description field
+    - Add example (not examples) where applicable
+    - Specify defaults when available
+
+    ```typescript
+    const AddressSchema = Type.Object({
+      state: Type.String({
+        description: 'The US state, specified as a 2 letter abbreviation',
+        example: 'IL',
+      }),
+    })
+    ```
+
+5. Minimal Comments:
+    - Keep the schema file clean without explanatory comments
+    - Let the schema definitions be self-documenting
+
+6. Validation Rules:
+    - Maintain the same validation rules as the original class
+    - Use Type.Number({ minimum: 0 }) for @Min(0)
+    - Use Type.String({ maxLength: 100 }) for @MaxLength(100)
+
+7. Converting Type Unions:
+    - Use Type.Union with discriminator for polymorphic types
+    - Always include a discriminant property that distinguishes between variants
+    - Example converting from class validator discriminator to TypeBox:
+
+      ```typescript
+      // Original class validator with discriminator
+      @ApiProperty({
+        oneOf: [
+          { $ref: getSchemaPath(ResidenceType1) },
+          { $ref: getSchemaPath(ResidenceType2) },
+        ],
+        discriminator: {
+          propertyName: 'dwellingType',
+          mapping: {
+            [ResidenceDwellingType.Type1]: getSchemaPath(ResidenceType1),
+            [ResidenceDwellingType.Type2]: getSchemaPath(ResidenceType2),
+          },
+        },
+      })
+
+      // In TypeBox schema
+      export const ResidenceSchema = Type.Union(
+        [
+          ResidenceType1Schema,
+          ResidenceType2Schema
+        ],
+        {
+          discriminator: 'dwellingType',
+          example: { dwellingType: 'apartment', floor: 3 }
+        }
+      )
+
+      // When creating the individual schemas, ensure each has the discriminator field
+      export const ResidenceType1Schema = Type.Object({
+        dwellingType: Type.Literal(SchemaResidenceDwellingType.Type1),
+        // ... other properties
+      })
+
+      export const ResidenceType2Schema = Type.Object({
+        dwellingType: Type.Literal(SchemaResidenceDwellingType.Type2),
+        // ... other properties
+      })
+      ```
+
+## Examples
+
+### Simple example
+
+Input:
+```typescript
+// Original file (response.type.ts)
+export enum ResponseStatus {
+  Success = 'success',
+  Error = 'error'
+}
+
+export class ApiResponse {
+  @ApiProperty({ description: 'Status of the response' })
+  @IsEnum(ResponseStatus)
+  status: ResponseStatus
+
+  @ApiProperty({ description: 'Request ID' })
+  @IsString()
+  requestId: string
+}
+```
+
+Output:
+```typescript
+// Schema file (response.schema.ts)
+import { Type } from '@sinclair/typebox'
+
+export enum SchemaResponseStatus {
+  Success = 'success',
+  Error = 'error'
+}
+
+export const ApiResponseSchema = Type.Object({
+  status: Type.Enum(SchemaResponseStatus),
+  requestId: Type.String()
+}, {
+  $id: 'ApiResponse'
+})
+```
+
+### Example with disciminated union
+
+Input:
+```typescript
+// Original file with discriminator (residence.type.ts)
+export enum ResidenceDwellingType {
+  Apartment = 'apartment',
+  House = 'house'
+}
+
+class BaseResidence {
+  @ApiProperty({
+    example: ResidenceDwellingType.Apartment,
+    enum: ResidenceDwellingType,
+    enumName: 'ResidenceDwellingType',
+  })
+  @IsEnum(ResidenceDwellingType)
+  public dwellingType: ResidenceDwellingType
+}
+
+class ApartmentResidence extends BaseResidence {
+  @ApiProperty({ example: 3 })
+  @IsNumber()
+  public floor: number
+}
+
+class HouseResidence extends BaseResidence {
+  @ApiProperty({ example: 200 })
+  @IsNumber()
+  public landSize: number
+}
+
+export class ResidenceData {
+  @ApiProperty({
+    oneOf: [
+      { $ref: getSchemaPath(ApartmentResidence) },
+      { $ref: getSchemaPath(HouseResidence) },
+    ],
+    discriminator: {
+      propertyName: 'dwellingType',
+      mapping: {
+        [ResidenceDwellingType.Apartment]: getSchemaPath(ApartmentResidence),
+        [ResidenceDwellingType.House]: getSchemaPath(HouseResidence),
+      },
+    },
+  })
+  @ValidateNested()
+  @TransformType(() => BaseResidence, {
+    discriminator: {
+      property: 'dwellingType',
+      subTypes: [
+        { value: ApartmentResidence, name: ResidenceDwellingType.Apartment },
+        { value: HouseResidence, name: ResidenceDwellingType.House },
+      ],
+    },
+  })
+  public residenceInfo: ApartmentResidence | HouseResidence
+}
+```
+
+Output:
+```typescript
+// Schema file (residence.schema.ts)
+import { Type } from '@sinclair/typebox'
+
+export enum SchemaResidenceDwellingType {
+  Apartment = 'apartment',
+  House = 'house'
+}
+
+export const BaseResidenceSchema = Type.Object({
+  dwellingType: Type.Enum(SchemaResidenceDwellingType, {
+    description: 'Type of dwelling',
+    example: SchemaResidenceDwellingType.Apartment
+  })
+})
+
+export const ApartmentResidenceSchema = Type.Object({
+  dwellingType: Type.Literal(SchemaResidenceDwellingType.Apartment),
+  floor: Type.Number({
+    description: 'Floor number',
+    example: 3
+  })
+})
+
+export const HouseResidenceSchema = Type.Object({
+  dwellingType: Type.Literal(SchemaResidenceDwellingType.House),
+  landSize: Type.Number({
+    description: 'Land size in square meters',
+    example: 200
+  })
+})
+
+export const ResidenceSchema = Type.Union(
+  [
+    ApartmentResidenceSchema,
+    HouseResidenceSchema
+  ],
+  {
+    discriminator: 'dwellingType',
+    example: { dwellingType: 'apartment', floor: 3 }
+  }
+)
+
+export const ResidenceDataSchema = Type.Object({
+  residenceInfo: ResidenceSchema
+}, {
+  $id: 'ResidenceData'
+})
+```

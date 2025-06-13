@@ -1,0 +1,126 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# NestJS Import Conventions
+
+<rule>
+name: prefer-cantina-over-nestjs-imports
+description: Standards for importing NestJS and related functionality from @lemonade-hq/cantina-core
+
+filters:
+  - type: content
+    pattern: "import.*(@nestjs/common|@nestjs/swagger|class-validator|class-transformer)"
+
+actions:
+  - type: suggest
+    message: |
+      When writing new code or creating new files:
+
+      1. Always import from @lemonade-hq/cantina-core instead of the following packages:
+         - @nestjs/common
+         - @nestjs/swagger
+         - class-validator
+         - class-transformer
+
+         ```typescript
+         // Bad
+         import { Injectable, Controller } from '@nestjs/common'
+         import { ApiProperty } from '@nestjs/swagger'
+         import { IsString, IsOptional } from 'class-validator'
+         import { Transform } from 'class-transformer'
+         
+         // Good
+         import { 
+           Injectable, 
+           Controller,
+           ApiProperty,
+           IsString,
+           IsOptional,
+           Transform
+         } from '@lemonade-hq/cantina-core'
+         ```
+
+      2. This applies to all functionality from these packages, including but not limited to:
+         From @nestjs/common:
+         - Module, Injectable, Controller
+         - Get, Post, Put, Delete, etc.
+         - Body, Param, Query
+         - UseFilters, UseInterceptors
+         - Inject
+
+         From @nestjs/swagger:
+         - ApiProperty
+         - ApiOperation
+         - ApiResponse
+         - ApiTags
+         - ApiParam
+         
+         From class-validator:
+         - IsString
+         - IsNumber
+         - IsBoolean
+         - IsOptional
+         - IsEnum
+         - ValidateNested
+         - Min, Max
+         - MinLength, MaxLength
+         
+         From class-transformer:
+         - Transform
+         - Type
+         - Expose
+         - Exclude
+
+      3. Exception: Only import directly from these packages if the functionality is:
+         - Not available in @lemonade-hq/cantina-core
+         - From a specific NestJS package other than the ones listed above
+
+      4. Important Note: This rule is for new code only. Do not automatically migrate existing imports unless specifically requested. Existing code should maintain its current import structure.
+
+
+examples:
+  - input: |
+      // Bad: Using direct imports
+      import { Injectable, Controller } from '@nestjs/common'
+      import { ApiProperty, ApiTags } from '@nestjs/swagger'
+      import { IsString, IsOptional } from 'class-validator'
+      import { Transform } from 'class-transformer'
+      
+      @ApiTags('Users')
+      @Controller('users')
+      export class UsersController {
+        @ApiProperty()
+        @IsString()
+        @IsOptional()
+        @Transform(({ value }) => value.trim())
+        name: string
+      }
+    output: |
+      // Good: Using @lemonade-hq/cantina-core
+      import { 
+        Injectable, 
+        Controller,
+        ApiProperty,
+        ApiTags,
+        IsString,
+        IsOptional,
+        Transform
+      } from '@lemonade-hq/cantina-core'
+      
+      @ApiTags('Users')
+      @Controller('users')
+      export class UsersController {
+        @ApiProperty()
+        @IsString()
+        @IsOptional()
+        @Transform(({ value }) => value.trim())
+        name: string
+      }
+
+metadata:
+  priority: high
+  version: 1.0
+  agent_requested: true
+</rule> 
