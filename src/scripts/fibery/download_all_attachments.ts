@@ -81,40 +81,59 @@ async function downloadAndSaveAttachments(
   attachments: Attachment[]
 ): Promise<string[]> {
   console.log(`🗂️ 🟢 Downloading ${attachments.length} attachments`);
+  console.log("");
+
   const saveDir = path.resolve(__dirname, "../../../data/attachments");
   fs.mkdirSync(saveDir, { recursive: true });
-  const savedFiles: string[] = [];
+  let totalSuccesses = 0;
+  let totalFailures = 0;
+  let totalSkipped = 0;
 
-  for (const attachment of attachments) {
+  const downloadPromises = attachments.map(async (attachment) => {
     try {
       const urlParts = attachment.url.split("/");
       const filePrefix = `${attachment.ticketId}_`;
       const fileName = urlParts[urlParts.length - 1];
       const filePath = path.join(saveDir, filePrefix + fileName);
-      console.log(`🗂️ Downloading ${fileName} to ${filePath}`);
+      console.log(`🗂️ ⬇️ ${fileName}`);
 
       if (fs.existsSync(filePath)) {
-        savedFiles.push(filePath);
         console.log(`🗂️ ⚠️ ${fileName} already exists`);
-        continue;
+        totalSkipped++;
+        return filePath;
       }
 
       const response = await axios.get(attachment.url, {
         responseType: "arraybuffer",
       });
       fs.writeFileSync(filePath, response.data);
-      savedFiles.push(filePath);
+      totalSuccesses++;
+      return filePath;
     } catch (err) {
       console.error(
         `🗂️ ❌ Failed to download attachment from ${attachment.url}:`,
         err
       );
+      totalFailures++;
+
+      return null;
+    } finally {
+      console.log("");
     }
-  }
-  return savedFiles;
+  });
+
+  const results = await Promise.all(downloadPromises);
+  console.log("");
+  console.log(`🗂️ 🟢 ${attachments.length} attachments to download`);
+  console.log(`🗂️ 🟢 ${totalSuccesses} attachments downloaded`);
+  console.log(`🗂️ ⚠️ ${totalSkipped} attachments already downloaded`);
+  console.log(`🗂️ ❌ ${totalFailures} attachments failed to download`);
+  console.log("");
+
+  return results.filter(Boolean) as string[];
 }
 
 if (require.main === module) {
   const urls = extractAttachments();
-  downloadAndSaveAttachments(urls.slice(0, 10));
+  downloadAndSaveAttachments(urls);
 }
