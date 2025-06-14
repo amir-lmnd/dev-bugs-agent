@@ -25,7 +25,7 @@
 #### **clx-service**:
 
 - **Tech Stack**: NestJS + TypeScript + PostgreSQL + TypeORM
-- **Purpose**: Multi-product claims experience. it has: Adjusters management, backend for queuing system in Blender that shows the adjuster the status of all the claim assigned to him. Task prioritization logic, and more!
+- **Purpose**: Multi-product claims experience. it has: Adjusters management, user surveys, backend for queuing system in Blender that shows the adjuster the status of all the claim assigned to him. Task prioritization logic, and more!
 
 #### **home-claims-service**
 
@@ -47,4 +47,3 @@
 
 - **Tech Stack**: NestJS + TypeScript + PostgreSQL + TypeORM
 - **Purpose**: workflow management. "Workflows" is a skeleton of tasks that needs to be completed to handle the incoming claims.
-
