@@ -4,12 +4,20 @@ import { TUIApp } from "./tui-app";
 
 async function main(): Promise<void> {
   try {
-    const app = new TUIApp();
-    await app.initialize();
-    app.run();
+    const args = process.argv.slice(2);
+    let publicId: string;
+
+    if (args.length > 0) {
+      publicId = args[0];
+      console.log(publicId);
+    } else {
+      const app = new TUIApp();
+      publicId = await app.selectBugCard();
+      console.log(publicId);
+    }
   } catch (error) {
     console.error(
-      "Failed to start application:",
+      "Failed to get bug card:",
       error instanceof Error ? error.message : error
     );
     process.exit(1);

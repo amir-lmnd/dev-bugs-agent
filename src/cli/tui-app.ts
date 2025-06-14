@@ -11,6 +11,7 @@ export class TUIApp {
   private selectedIndex: number = 0;
   private scrollOffset: number = 0;
   private visibleRows: number = 0;
+  private selectionResolver?: (publicId: string) => void;
 
   constructor() {
     this.screen = blessed.screen({
@@ -103,7 +104,7 @@ export class TUIApp {
     });
 
     this.table.key(["enter"], () => {
-      // Reserved for future functionality
+      this.handleEnterSelection();
     });
 
     this.table.on("select", (item, index) => {
@@ -138,6 +139,16 @@ export class TUIApp {
     const selectedBugCard = this.bugCards[this.selectedIndex];
     if (selectedBugCard) {
       this.showDetailView(selectedBugCard);
+    }
+  }
+
+  private handleEnterSelection(): void {
+    if (this.tableRows.length === 0) return;
+
+    const selectedBugCard = this.bugCards[this.selectedIndex];
+    if (selectedBugCard && this.selectionResolver) {
+      this.screen.destroy();
+      this.selectionResolver(selectedBugCard.publicId);
     }
   }
 
@@ -207,7 +218,7 @@ export class TUIApp {
           )} shown)`
         : "";
     this.statusBar.setContent(
-      `{center}Bug ${current}/${total}${scrollInfo} | Use ↑↓ to navigate, V to view details, ESC/Q to quit{/center}`
+      `{center}Bug ${current}/${total}${scrollInfo} | Use ↑↓ to navigate, Enter to select, V to view details, ESC/Q to quit{/center}`
     );
     this.screen.render();
   }
@@ -284,5 +295,14 @@ export class TUIApp {
 
   public run(): void {
     this.screen.render();
+  }
+
+  public async selectBugCard(): Promise<string> {
+    await this.initialize();
+
+    return new Promise<string>((resolve) => {
+      this.selectionResolver = resolve;
+      this.run();
+    });
   }
 }
