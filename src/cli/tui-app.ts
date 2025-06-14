@@ -57,8 +57,8 @@ export class TUIApp {
       },
       align: "left",
       tags: true,
-      keys: true,
-      vi: true,
+      keys: false,
+      vi: false,
       mouse: true,
       interactive: true,
       scrollable: true,
@@ -74,6 +74,7 @@ export class TUIApp {
         selected: {
           bg: "blue",
           fg: "white",
+          bold: true,
         },
         item: {
           fg: "white",
@@ -82,6 +83,7 @@ export class TUIApp {
           selected: {
             bg: "blue",
             fg: "white",
+            bold: true,
           },
         },
       },
@@ -104,26 +106,28 @@ export class TUIApp {
       // Reserved for future functionality
     });
 
-    this.table.key(["up", "k"], () => {
-      if (this.selectedIndex > 0) {
-        this.selectedIndex--;
-        this.adjustScrollForSelection();
-        this.updateDisplay();
-      }
-    });
-
-    this.table.key(["down", "j"], () => {
-      if (this.selectedIndex < this.tableRows.length - 1) {
-        this.selectedIndex++;
-        this.adjustScrollForSelection();
-        this.updateDisplay();
-      }
-    });
-
     this.table.on("select", (item, index) => {
       if (index > 0) {
         this.selectedIndex = this.scrollOffset + index - 1;
         this.updateStatusBar();
+      }
+    });
+
+    this.screen.key(["up", "k"], () => {
+      if (this.selectedIndex > 0) {
+        this.selectedIndex--;
+        this.adjustScrollForSelection();
+        this.updateDisplay();
+        this.syncTableSelection();
+      }
+    });
+
+    this.screen.key(["down", "j"], () => {
+      if (this.selectedIndex < this.tableRows.length - 1) {
+        this.selectedIndex++;
+        this.adjustScrollForSelection();
+        this.updateDisplay();
+        this.syncTableSelection();
       }
     });
   }
@@ -181,7 +185,7 @@ export class TUIApp {
 
     detailBox.setContent(content);
 
-    detailBox.key(["escape", "q"], () => {
+    detailBox.key(["escape", "q", "v"], () => {
       this.screen.remove(detailBox);
       this.screen.render();
       this.table.focus();
@@ -226,6 +230,20 @@ export class TUIApp {
     }
   }
 
+  private syncTableSelection(): void {
+    const displayIndex = this.selectedIndex - this.scrollOffset + 1;
+    if (displayIndex >= 1) {
+      const maxDisplayIndex = Math.min(
+        this.visibleRows,
+        this.tableRows.length - this.scrollOffset
+      );
+      if (displayIndex <= maxDisplayIndex) {
+        this.table.select(displayIndex);
+        this.screen.render();
+      }
+    }
+  }
+
   public async initialize(): Promise<void> {
     try {
       this.bugCards = await DataLoader.loadBugCards();
@@ -234,6 +252,7 @@ export class TUIApp {
       this.calculateVisibleRows();
       this.populateTable();
       this.updateStatusBar();
+      this.syncTableSelection();
       this.table.focus();
       this.screen.render();
     } catch (error) {

@@ -6,6 +6,7 @@ export class DataLoader {
   private static readonly DATA_FILE_PATH = path.join(
     __dirname,
     "..",
+    "..",
     "data",
     "bug_cards.json"
   );
@@ -37,7 +38,7 @@ export class DataLoader {
   public static convertToTableRows(bugCards: BugCard[]): TableRow[] {
     return bugCards.map((card) => ({
       id: card.publicId,
-      title: this.truncateText(card.title, 50),
+      title: this.formatTitle(card.title, 50),
       description: this.truncateText(card.description, 80),
     }));
   }
@@ -47,5 +48,22 @@ export class DataLoader {
       return text;
     }
     return text.substring(0, maxLength - 3) + "...";
+  }
+
+  private static formatTitle(title: string, maxLength: number): string {
+    const stringsToRemoveFromTitle = [
+      "Renters - Internal handling - ",
+      "Home US - Internal handling - ",
+      "Home EU - Internal handling - 🇪🇺 ",
+      "Home EU - Internal handling - 🇳🇱 ",
+      "Home EU - Internal handling - ",
+    ];
+    const titleWithoutPrefix = stringsToRemoveFromTitle.reduce(
+      (acc, prefix) => {
+        return acc.replace(prefix, "");
+      },
+      title
+    );
+    return this.truncateText(titleWithoutPrefix, maxLength);
   }
 }
