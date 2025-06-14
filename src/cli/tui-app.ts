@@ -122,6 +122,7 @@ export class TUIApp {
       interactive: true,
       scrollable: true,
       alwaysScroll: true,
+      columnWidth: [15, 50, 30],
       style: {
         border: {
           fg: "cyan",
@@ -424,11 +425,23 @@ export class TUIApp {
         const actualIndex = this.scrollOffset + displayIndex;
         const isSelected = actualIndex === this.selectedIndex;
         const prefix = isSelected ? "→ " : "  ";
-        return [prefix + row.id, row.title, row.description];
+
+        const truncatedId = this.truncateText(prefix + row.id, 13);
+        const truncatedTitle = this.truncateText(row.title, 48);
+        const truncatedDescription = this.truncateText(row.description, 28);
+
+        return [truncatedId, truncatedTitle, truncatedDescription];
       });
 
     const rows = [headers, ...visibleRowsData];
     this.table.setData(rows);
+  }
+
+  private truncateText(text: string, maxLength: number): string {
+    if (text.length <= maxLength) {
+      return text;
+    }
+    return text.substring(0, maxLength - 3) + "...";
   }
 
   private showError(message: string): void {
