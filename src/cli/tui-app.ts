@@ -6,12 +6,16 @@ export class TUIApp {
   private screen: blessed.Widgets.Screen;
   private table!: blessed.Widgets.ListTableElement;
   private statusBar!: blessed.Widgets.BoxElement;
+  private searchInput!: blessed.Widgets.TextboxElement;
   private bugCards: BugCard[] = [];
+  private filteredBugCards: BugCard[] = [];
   private tableRows: TableRow[] = [];
   private selectedIndex: number = 0;
   private scrollOffset: number = 0;
   private visibleRows: number = 0;
   private selectionResolver?: (publicId: string) => void;
+  private searchQuery: string = "";
+  private isSearchFocused: boolean = false;
 
   constructor() {
     this.screen = blessed.screen({
@@ -19,9 +23,63 @@ export class TUIApp {
       title: "Bug Cards Viewer",
     });
 
+    this.setupSearchInput();
     this.setupStatusBar();
     this.setupTable();
     this.setupKeyHandlers();
+  }
+
+  private setupSearchInput(): void {
+    this.searchInput = blessed.textbox({
+      top: 0,
+      left: 0,
+      right: 0,
+      height: 3,
+      border: {
+        type: "line",
+      },
+      style: {
+        fg: "white",
+        bg: "black",
+        border: {
+          fg: "cyan",
+        },
+        focus: {
+          border: {
+            fg: "yellow",
+          },
+        },
+      },
+      label: " Search by Public ID ",
+      tags: true,
+      keys: true,
+      mouse: true,
+      inputOnFocus: true,
+    });
+
+    this.searchInput.on("submit", () => {
+      this.isSearchFocused = false;
+      this.table.focus();
+      this.screen.render();
+    });
+
+    this.searchInput.on("cancel", () => {
+      this.isSearchFocused = false;
+      this.table.focus();
+      this.screen.render();
+    });
+
+    this.searchInput.key(["C-c"], () => {
+      process.exit(0);
+    });
+
+    // Additional event listener for input changes
+    this.searchInput.on("action", () => {
+      const currentValue = this.searchInput.getValue();
+      this.handleSearch(currentValue);
+    });
+
+    this.screen.append(this.searchInput);
   }
 
   private setupStatusBar(): void {
@@ -49,7 +107,7 @@ export class TUIApp {
 
   private setupTable(): void {
     this.table = blessed.listtable({
-      top: 0,
+      top: 3,
       left: 0,
       right: 0,
       bottom: 3,
@@ -99,6 +157,24 @@ export class TUIApp {
       process.exit(0);
     });
 
+    // Search functionality
+    this.screen.key(["/"], () => {
+      this.isSearchFocused = true;
+      this.searchInput.focus();
+      this.screen.render();
+    });
+
+    this.screen.key(["C-f"], () => {
+      this.isSearchFocused = true;
+      this.searchInput.focus();
+      this.screen.render();
+    });
+
+    // Clear search
+    this.screen.key(["C-u"], () => {
+      this.clearSearch();
+    });
+
     this.table.key(["v"], () => {
       this.handleSelection();
     });
@@ -115,7 +191,7 @@ export class TUIApp {
     });
 
     this.screen.key(["up", "k"], () => {
-      if (this.selectedIndex > 0) {
+      if (!this.isSearchFocused && this.selectedIndex > 0) {
         this.selectedIndex--;
         this.adjustScrollForSelection();
         this.updateDisplay();
@@ -124,19 +200,75 @@ export class TUIApp {
     });
 
     this.screen.key(["down", "j"], () => {
-      if (this.selectedIndex < this.tableRows.length - 1) {
+      if (
+        !this.isSearchFocused &&
+        this.selectedIndex < this.tableRows.length - 1
+      ) {
         this.selectedIndex++;
         this.adjustScrollForSelection();
         this.updateDisplay();
         this.syncTableSelection();
       }
     });
+
+    // Handle typing for search when table is focused
+    this.screen.on("keypress", (ch, key) => {
+      if (!this.isSearchFocused && ch && /[a-zA-Z0-9-_]/.test(ch)) {
+        this.isSearchFocused = true;
+        this.searchInput.clearValue();
+        this.searchInput.setValue(ch);
+        this.searchInput.focus();
+        this.handleSearch(ch);
+        this.screen.render();
+      }
+    });
+
+    // Listen to search input changes
+    this.searchInput.on("keypress", (ch, key) => {
+      setTimeout(() => {
+        const currentValue = this.searchInput.getValue();
+        this.handleSearch(currentValue);
+      }, 10);
+    });
+  }
+
+  private handleSearch(query: string): void {
+    this.searchQuery = query.toLowerCase();
+    this.filterBugCards();
+    this.selectedIndex = 0;
+    this.scrollOffset = 0;
+    this.updateDisplay();
+    this.syncTableSelection();
+  }
+
+  private filterBugCards(): void {
+    if (this.searchQuery.trim() === "") {
+      this.filteredBugCards = [...this.bugCards];
+    } else {
+      this.filteredBugCards = this.bugCards.filter((card) =>
+        card.publicId.toLowerCase().includes(this.searchQuery)
+      );
+    }
+    this.tableRows = DataLoader.convertToTableRows(this.filteredBugCards);
+  }
+
+  private clearSearch(): void {
+    this.searchQuery = "";
+    this.searchInput.clearValue();
+    this.filterBugCards();
+    this.selectedIndex = 0;
+    this.scrollOffset = 0;
+    this.updateDisplay();
+    this.syncTableSelection();
+    this.table.focus();
+    this.isSearchFocused = false;
+    this.screen.render();
   }
 
   private handleSelection(): void {
     if (this.tableRows.length === 0) return;
 
-    const selectedBugCard = this.bugCards[this.selectedIndex];
+    const selectedBugCard = this.filteredBugCards[this.selectedIndex];
     if (selectedBugCard) {
       this.showDetailView(selectedBugCard);
     }
@@ -145,7 +277,7 @@ export class TUIApp {
   private handleEnterSelection(): void {
     if (this.tableRows.length === 0) return;
 
-    const selectedBugCard = this.bugCards[this.selectedIndex];
+    const selectedBugCard = this.filteredBugCards[this.selectedIndex];
     if (selectedBugCard && this.selectionResolver) {
       this.screen.destroy();
       this.selectionResolver(selectedBugCard.publicId);
@@ -217,8 +349,18 @@ export class TUIApp {
             total
           )} shown)`
         : "";
+
+    const searchInfo = this.searchQuery
+      ? ` | Search: "${this.searchQuery}"`
+      : "";
+    const totalBugCards = this.bugCards.length;
+    const filteredInfo =
+      this.searchQuery && total !== totalBugCards
+        ? ` (${total}/${totalBugCards} filtered)`
+        : "";
+
     this.statusBar.setContent(
-      `{center}Bug ${current}/${total}${scrollInfo} | Use ↑↓ to navigate, Enter to select, V to view details, ESC/Q to quit{/center}`
+      `{center}Bug ${current}/${total}${filteredInfo}${scrollInfo}${searchInfo} | Use ↑↓ to navigate, Enter to select, V to view, / to search, Ctrl+U to clear, ESC/Q to quit{/center}`
     );
     this.screen.render();
   }
@@ -258,7 +400,8 @@ export class TUIApp {
   public async initialize(): Promise<void> {
     try {
       this.bugCards = await DataLoader.loadBugCards();
-      this.tableRows = DataLoader.convertToTableRows(this.bugCards);
+      this.filteredBugCards = [...this.bugCards];
+      this.tableRows = DataLoader.convertToTableRows(this.filteredBugCards);
 
       this.calculateVisibleRows();
       this.populateTable();
