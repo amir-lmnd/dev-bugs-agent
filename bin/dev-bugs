@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const { spawn } = require('child_process');
+
+// Get the directory where this script is located
+const scriptDir = path.dirname(__filename);
+// Get the project root (one level up from bin/)
+const projectRoot = path.resolve(scriptDir, '..');
+// Path to the TypeScript CLI entry point
+const cliPath = path.join(projectRoot, 'src', 'cli', 'index.ts');
+
+// Use ts-node to run the TypeScript file directly
+const child = spawn('npx', ['ts-node', cliPath, ...process.argv.slice(2)], {
+  stdio: 'inherit',
+  cwd: projectRoot
+});
+
+child.on('exit', (code) => {
+  process.exit(code);
+}); 
