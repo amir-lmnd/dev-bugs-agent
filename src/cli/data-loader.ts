@@ -37,9 +37,9 @@ export class DataLoader {
 
   public static convertToTableRows(bugCards: BugCard[]): TableRow[] {
     return bugCards.map((card) => ({
-      id: card.publicId,
-      title: this.formatTitle(card.title, 50),
-      description: this.truncateText(card.description, 80),
+      id: card.bugPublicId,
+      title: this.formatTitle(card.bugTitle, 50),
+      description: this.truncateText(card.bugDescription, 80),
     }));
   }
 

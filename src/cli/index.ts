@@ -18,7 +18,9 @@ async function main(): Promise<void> {
   }
 
   const bugCards = await DataLoader.loadBugCards();
-  const selectedBugCard = bugCards.find((card) => card.publicId === publicId);
+  const selectedBugCard = bugCards.find(
+    (card) => card.bugPublicId === publicId
+  );
 
   if (!selectedBugCard) {
     console.error(`Bug card with ID '${publicId}' not found`);

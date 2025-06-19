@@ -4,10 +4,12 @@ export interface BugCardComment {
 }
 
 export interface BugCard {
-  publicId: string;
-  title: string;
-  description: string;
-  comments: BugCardComment[];
+  bugPublicId: string;
+  bugCreatedAt: string;
+  claimPublicId: string | null;
+  bugTitle: string;
+  bugDescription: string;
+  // comments: BugCardComment[];
 }
 
 export interface TableRow {

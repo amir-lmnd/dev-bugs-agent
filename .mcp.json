@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "lmcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://lmcp-production.lmndprod.com/api/mcp"
+      ],
+      "env": {}
+    }
+  }
+}

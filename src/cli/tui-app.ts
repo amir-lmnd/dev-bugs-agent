@@ -247,7 +247,7 @@ export class TUIApp {
       this.filteredBugCards = [...this.bugCards];
     } else {
       this.filteredBugCards = this.bugCards.filter((card) =>
-        card.publicId.toLowerCase().includes(this.searchQuery)
+        card.bugPublicId.toLowerCase().includes(this.searchQuery)
       );
     }
     this.tableRows = DataLoader.convertToTableRows(this.filteredBugCards);
@@ -281,7 +281,7 @@ export class TUIApp {
     const selectedBugCard = this.filteredBugCards[this.selectedIndex];
     if (selectedBugCard && this.selectionResolver) {
       this.screen.destroy();
-      this.selectionResolver(selectedBugCard.publicId);
+      this.selectionResolver(selectedBugCard.bugPublicId);
     }
   }
 
@@ -308,23 +308,19 @@ export class TUIApp {
     });
 
     const content = [
-      `{bold}ID:{/bold} ${bugCard.publicId}`,
+      `{bold}ID:{/bold} ${bugCard.bugPublicId}`,
       "",
       `{bold}Title:{/bold}`,
-      bugCard.title,
+      bugCard.bugTitle,
       "",
       `{bold}Description:{/bold}`,
-      bugCard.description,
+      bugCard.bugDescription,
       "",
-      `{bold}Comments (${bugCard.comments.length}):{/bold}`,
-      ...bugCard.comments.map(
-        (comment, index) =>
-          `\n{bold}Comment ${index + 1}:{/bold}\n${
-            comment.content
-          }\n{dim}Created: ${new Date(
-            comment.createdAt
-          ).toLocaleString()}{/dim}`
-      ),
+      // `{bold}Comments (${bugCard.comments?.length}):{/bold}`,
+      // ...(bugCard.comments?.map((comment, index) => {
+      //   // TODO: add comments
+      //   return "";
+      // }) || []), // TODO: add comments
     ].join("\n");
 
     detailBox.setContent(content);

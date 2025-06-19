@@ -21,7 +21,11 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jon.vanderlaan:", "screenshot of issue", "attachment 1"],
+          "text": [
+            "jon.vanderlaan:",
+            "screenshot of issue",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F0439MLKVRV/download/screen_shot_2022-09-23_at_1.56.23_pm.png",
@@ -34,7 +38,11 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["Product area ", "Claims", " was selected"],
+          "text": [
+            "Product area ",
+            "Claims",
+            " was selected"
+          ],
           "attachments": []
         },
         "createdAt": "2022-09-23T18:58:23.616Z"
@@ -83,7 +91,9 @@
       {
         "authorName": "ohad.kedar",
         "content": {
-          "text": ["when all items are no longer open"],
+          "text": [
+            "when all items are no longer open"
+          ],
           "attachments": []
         },
         "createdAt": "2022-10-10T17:22:40.006Z"
@@ -112,7 +122,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ohad.kedar:", "@lior.eliyahu @yarin.goldman :point_up:"],
+          "text": [
+            "ohad.kedar:",
+            "@lior.eliyahu @yarin.goldman :point_up:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T05:57:19.140Z"
@@ -131,7 +144,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["melissa.robertson:", "@yarin.goldman Yes!"],
+          "text": [
+            "melissa.robertson:",
+            "@yarin.goldman Yes!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T13:17:16.534Z"
@@ -139,7 +155,10 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": [null, " Claim closed!"],
+          "text": [
+            null,
+            " Claim closed!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T06:55:39.395Z"
@@ -191,7 +210,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["olandria.edwards:"],
+          "text": [
+            "olandria.edwards:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-01-27T05:37:42.508Z"
@@ -460,7 +481,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "@amir.namdar I've found it"],
+          "text": [
+            "igor.eisenberg:",
+            "@amir.namdar I've found it"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-27T08:39:03.745Z"
@@ -537,7 +561,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kayla.shoemaker:", "attachment 1"],
+          "text": [
+            "kayla.shoemaker:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08EV2K19T6/download/screen_recording_2025-02-24_at_12.20.22___pm.mov",
@@ -629,7 +656,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-24T21:44:13.055Z"
@@ -689,7 +718,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["fallon.orejel:", "@marilyn.hutton"],
+          "text": [
+            "fallon.orejel:",
+            "@marilyn.hutton"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-24T22:44:35.055Z"
@@ -697,7 +729,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ebony.heslip:"],
+          "text": [
+            "ebony.heslip:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-26T17:22:57.683Z"
@@ -803,7 +837,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["fallon.orejel:", "Sure, checking now...."],
+          "text": [
+            "fallon.orejel:",
+            "Sure, checking now...."
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-04T16:16:08.403Z"
@@ -811,7 +848,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["fallon.orejel:", "Still showing the same error"],
+          "text": [
+            "fallon.orejel:",
+            "Still showing the same error"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-04T16:16:58.315Z"
@@ -915,7 +955,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["carly.frank:"],
+          "text": [
+            "carly.frank:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-25T15:16:24.921Z"
@@ -923,7 +965,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["amir.namdar:", "Hey @carly.frank this is fixed now"],
+          "text": [
+            "amir.namdar:",
+            "Hey @carly.frank this is fixed now"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-27T08:40:24.695Z"
@@ -976,7 +1021,9 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["Hey Alexis, I see you managed to close the claim"],
+          "text": [
+            "Hey Alexis, I see you managed to close the claim"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-27T07:43:06.485Z"
@@ -1018,7 +1065,9 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["Hey, this claim is now closed"],
+          "text": [
+            "Hey, this claim is now closed"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-27T07:41:19.089Z"
@@ -1072,7 +1121,11 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:", "cross-posted", " to <#C03QMC1BUBG|>"],
+          "text": [
+            "nathan.boettcher:",
+            "cross-posted",
+            " to <#C03QMC1BUBG|>"
+          ],
           "attachments": [
             {
               "url": "https://team-lemonade.slack.com/archives/C03QMC1BUBG/p1741127098892979",
@@ -1130,7 +1183,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "@nathan.boettcher I'll try than!"],
+          "text": [
+            "igor.eisenberg:",
+            "@nathan.boettcher I'll try than!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-06T07:52:52.603Z"
@@ -1157,7 +1213,9 @@
       {
         "authorName": "stephanie.schustermann",
         "content": {
-          "text": ["I've fixed the item manually"],
+          "text": [
+            "I've fixed the item manually"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-09T07:17:24.539Z"
@@ -1277,7 +1335,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["justice.miller:", "Yep! all works! Thank you all!"],
+          "text": [
+            "justice.miller:",
+            "Yep! all works! Thank you all!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-04T17:29:21.518Z"
@@ -1320,7 +1381,11 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["timo.oppermann:", "FYI", "attachment 1"],
+          "text": [
+            "timo.oppermann:",
+            "FYI",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08F3AN8GS3/download/screen_recording_2025-02-28_at_13.46.49.mov",
@@ -1384,7 +1449,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nikki.warnaar:", "@tim.stegink @judith.dewilde FIY"],
+          "text": [
+            "nikki.warnaar:",
+            "@tim.stegink @judith.dewilde FIY"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-28T13:06:11.218Z"
@@ -1585,7 +1653,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nikki.warnaar:", "Same here!"],
+          "text": [
+            "nikki.warnaar:",
+            "Same here!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-28T15:36:24.778Z"
@@ -1615,7 +1686,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brendan.liebeskind:", "Nope still down for me"],
+          "text": [
+            "brendan.liebeskind:",
+            "Nope still down for me"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-28T15:39:49.505Z"
@@ -1767,7 +1841,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["shai.gon.paz:", "@stephanie.schustermann "],
+          "text": [
+            "shai.gon.paz:",
+            "@stephanie.schustermann "
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-04T08:13:05.566Z"
@@ -1866,7 +1943,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["april.holmes:"],
+          "text": [
+            "april.holmes:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-02-28T14:29:13.424Z"
@@ -1903,7 +1982,13 @@
       {
         "authorName": "stephanie.schustermann",
         "content": {
-          "text": ["Hi ", null, " ", null, "  I've fixed the item status"],
+          "text": [
+            "Hi ",
+            null,
+            " ",
+            null,
+            "  I've fixed the item status"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-09T06:58:08.638Z"
@@ -1952,7 +2037,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-03T14:21:55.613Z"
@@ -2056,7 +2143,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jesse.rutten:"],
+          "text": [
+            "jesse.rutten:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-03T18:43:21.333Z"
@@ -2116,7 +2205,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jesse.rutten:"],
+          "text": [
+            "jesse.rutten:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-03T19:36:49.177Z"
@@ -2254,7 +2345,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["carlo.spacone:"],
+          "text": [
+            "carlo.spacone:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-03T20:51:07.127Z"
@@ -2310,7 +2403,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["carlo.spacone:", "Will do, thank you!"],
+          "text": [
+            "carlo.spacone:",
+            "Will do, thank you!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-04T17:44:42.460Z"
@@ -2370,7 +2466,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Here is the error I receive."],
+          "text": [
+            "marques.harris:",
+            "Here is the error I receive."
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-05T20:33:02.813Z"
@@ -2467,7 +2566,10 @@
       {
         "authorName": "shai.slobodov",
         "content": {
-          "text": [null, " can you please confirm this today? thanks!"],
+          "text": [
+            null,
+            " can you please confirm this today? thanks!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-12T06:35:35.202Z"
@@ -2551,7 +2653,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "@brian.roundy"],
+          "text": [
+            "alex.garcia:",
+            "@brian.roundy"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-05T20:15:53.947Z"
@@ -2586,7 +2691,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:"],
+          "text": [
+            "alex.garcia:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-05T20:17:58.457Z"
@@ -2657,7 +2764,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "@brian.roundy"],
+          "text": [
+            "alex.garcia:",
+            "@brian.roundy"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-05T20:19:44.666Z"
@@ -2787,7 +2897,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-06T16:45:43.748Z"
@@ -2875,7 +2987,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jessica.ramos:"],
+          "text": [
+            "jessica.ramos:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-06T17:17:56.480Z"
@@ -2917,7 +3031,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-06T17:38:36.876Z"
@@ -3078,7 +3194,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ben.endres:"],
+          "text": [
+            "ben.endres:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-12T23:12:05.012Z"
@@ -3086,7 +3204,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "you need to open one"],
+          "text": [
+            "stephanie.schustermann:",
+            "you need to open one"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-13T08:04:15.483Z"
@@ -3094,7 +3215,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ben.endres:", "I Put a manual note in the <#C03B6C0NF5W|>"],
+          "text": [
+            "ben.endres:",
+            "I Put a manual note in the <#C03B6C0NF5W|>"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-17T21:19:36.640Z"
@@ -3136,7 +3260,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-07T18:19:08.236Z"
@@ -3208,7 +3334,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kassandra.esquinca:", "This can be dismissed"],
+          "text": [
+            "kassandra.esquinca:",
+            "This can be dismissed"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-13T12:59:56.284Z"
@@ -3307,7 +3436,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-11T12:12:52.797Z"
@@ -3436,7 +3567,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:", "surely!!"],
+          "text": [
+            "conor.martin:",
+            "surely!!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-11T19:41:33.034Z"
@@ -3543,7 +3677,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-11T18:19:57.211Z"
@@ -3610,7 +3746,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["melissa.robertson:", "@thomas.hudson can you help?"],
+          "text": [
+            "melissa.robertson:",
+            "@thomas.hudson can you help?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-13T17:00:20.923Z"
@@ -3629,7 +3768,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["yarin.goldman:", "Fixed manually, try now."],
+          "text": [
+            "yarin.goldman:",
+            "Fixed manually, try now."
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-13T21:29:47.988Z"
@@ -3693,7 +3835,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-11T19:54:44.092Z"
@@ -3868,7 +4012,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kiva.felder:", "Adding @shad.casconi"],
+          "text": [
+            "kiva.felder:",
+            "Adding @shad.casconi"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-17T12:33:34.458Z"
@@ -3957,7 +4104,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["melinda.strohman:", "attachment 1"],
+          "text": [
+            "melinda.strohman:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08J4UY5PRP/download/screenshare_-_2025-03-14_2_44_09_pm.mp4",
@@ -4015,7 +4165,9 @@
       {
         "authorName": "aaron.mireles",
         "content": {
-          "text": ["two more examples: "],
+          "text": [
+            "two more examples: "
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-17T20:49:30.041Z"
@@ -4132,7 +4284,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-17T21:33:06.330Z"
@@ -4216,7 +4370,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["andre.martell:", "@nathan.boettcher closed it. thank you"],
+          "text": [
+            "andre.martell:",
+            "@nathan.boettcher closed it. thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-24T07:50:29.055Z"
@@ -4254,7 +4411,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tamika.brazile:"],
+          "text": [
+            "tamika.brazile:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-18T15:49:57.814Z"
@@ -4394,7 +4553,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["julia.condon:"],
+          "text": [
+            "julia.condon:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-18T19:07:33.678Z"
@@ -4443,7 +4604,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["julia.condon:", "There were no error messages."],
+          "text": [
+            "julia.condon:",
+            "There were no error messages."
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-18T19:34:23.089Z"
@@ -4480,7 +4644,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:", "cc "],
+          "text": [
+            "nathan.boettcher:",
+            "cc "
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-18T21:26:16.154Z"
@@ -4540,7 +4707,9 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["Closing here for now"],
+          "text": [
+            "Closing here for now"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-06T09:57:00.079Z"
@@ -4602,7 +4771,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "@javiera.verdugo for John Brant"],
+          "text": [
+            "marilyn.hutton:",
+            "@javiera.verdugo for John Brant"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-19T12:59:38.897Z"
@@ -4727,7 +4899,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "@katy.diamond can you link your claim"],
+          "text": [
+            "marilyn.hutton:",
+            "@katy.diamond can you link your claim"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-24T17:43:43.181Z"
@@ -4878,7 +5053,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["hailee.phillips:"],
+          "text": [
+            "hailee.phillips:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-19T15:08:55.248Z"
@@ -4983,7 +5160,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-19T15:41:01.975Z"
@@ -4991,7 +5170,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:", "@marilyn.hutton tagging for visibility"],
+          "text": [
+            "conor.martin:",
+            "@marilyn.hutton tagging for visibility"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-19T15:48:20.498Z"
@@ -4999,7 +5181,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:", "@bonnie.walker tagging"],
+          "text": [
+            "conor.martin:",
+            "@bonnie.walker tagging"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-19T17:47:14.643Z"
@@ -5029,7 +5214,9 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["Hey team this is fixed"],
+          "text": [
+            "Hey team this is fixed"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-24T07:48:45.620Z"
@@ -5083,7 +5270,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["andre.martell:", "@nathan.boettcher thank you, it worked"],
+          "text": [
+            "andre.martell:",
+            "@nathan.boettcher thank you, it worked"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-27T04:30:07.583Z"
@@ -5125,7 +5315,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:"],
+          "text": [
+            "brandon.tipton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-20T12:18:42.921Z"
@@ -5223,7 +5415,9 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["ignore the previous comment, was meant for another ticket"],
+          "text": [
+            "ignore the previous comment, was meant for another ticket"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-26T07:43:30.604Z"
@@ -5283,7 +5477,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["sasha.olaguez:", "attachment 1"],
+          "text": [
+            "sasha.olaguez:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08K80BQMPS/download/screen_recording_2025-03-20_at_8.29.05___am.mov",
@@ -5341,7 +5538,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-20T19:10:08.213Z"
@@ -5349,7 +5548,10 @@
       {
         "authorName": "lior.eliyahu",
         "content": {
-          "text": [null, " can you take a look?"],
+          "text": [
+            null,
+            " can you take a look?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-25T09:58:09.946Z"
@@ -5490,7 +5692,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["carly.schrader:"],
+          "text": [
+            "carly.schrader:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-20T21:04:30.796Z"
@@ -5683,7 +5887,9 @@
       {
         "authorName": "lior.eliyahu",
         "content": {
-          "text": ["Hey I see few issues here from my review:"],
+          "text": [
+            "Hey I see few issues here from my review:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-14T07:01:35.043Z"
@@ -5944,7 +6150,11 @@
       {
         "authorName": "lior.eliyahu",
         "content": {
-          "text": ["Hey ", null, " ,"],
+          "text": [
+            "Hey ",
+            null,
+            " ,"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-14T05:32:32.549Z"
@@ -6084,7 +6294,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["molly.gresham:"],
+          "text": [
+            "molly.gresham:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-24T15:53:10.991Z"
@@ -6183,7 +6395,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["katy.diamond:", "Same issue as noted in this bug report"],
+          "text": [
+            "katy.diamond:",
+            "Same issue as noted in this bug report"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-24T17:43:55.839Z"
@@ -6278,7 +6493,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["keith.taylor:"],
+          "text": [
+            "keith.taylor:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-25T01:04:42.773Z"
@@ -6320,7 +6537,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["christina.benson:"],
+          "text": [
+            "christina.benson:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-25T19:29:55.698Z"
@@ -6445,7 +6664,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:"],
+          "text": [
+            "javiera.verdugo:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-26T13:53:30.606Z"
@@ -6691,7 +6912,11 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["thomas.hudson:", "bug submission", " is a duplicate."],
+          "text": [
+            "thomas.hudson:",
+            "bug submission",
+            " is a duplicate."
+          ],
           "attachments": [
             {
               "url": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1743009965527969",
@@ -6704,7 +6929,9 @@
       {
         "authorName": "igor.eisenberg",
         "content": {
-          "text": ["This is internal VC issue, which was resolved."],
+          "text": [
+            "This is internal VC issue, which was resolved."
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-30T09:00:34.417Z"
@@ -6712,7 +6939,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jackie.lovato:", "NOTHING WAS FIXED"],
+          "text": [
+            "jackie.lovato:",
+            "NOTHING WAS FIXED"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-02T14:57:11.792Z"
@@ -6940,7 +7170,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-27T13:42:09.805Z"
@@ -7081,7 +7313,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["henry.flores2:"],
+          "text": [
+            "henry.flores2:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-27T15:01:56.701Z"
@@ -7107,7 +7341,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["henry.flores2:", ":-1::skin-tone-3:"],
+          "text": [
+            "henry.flores2:",
+            ":-1::skin-tone-3:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-27T15:02:58.833Z"
@@ -7115,7 +7352,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "Fixed manually"],
+          "text": [
+            "igor.eisenberg:",
+            "Fixed manually"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T09:51:16.662Z"
@@ -7157,7 +7397,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-27T16:32:13.747Z"
@@ -7195,7 +7437,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "Fixed manually"],
+          "text": [
+            "igor.eisenberg:",
+            "Fixed manually"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T09:51:53.128Z"
@@ -7244,7 +7489,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "@justin.barber"],
+          "text": [
+            "alex.garcia:",
+            "@justin.barber"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-27T16:32:46.212Z"
@@ -7310,7 +7558,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-27T21:44:56.463Z"
@@ -7330,7 +7580,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:", "Changing ACV and change it in Blender"],
+          "text": [
+            "harris.baumann:",
+            "Changing ACV and change it in Blender"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T13:23:27.953Z"
@@ -7360,7 +7613,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "Yes, please"],
+          "text": [
+            "igor.eisenberg:",
+            "Yes, please"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T14:36:34.593Z"
@@ -7368,7 +7624,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:", "Thank you"],
+          "text": [
+            "harris.baumann:",
+            "Thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T15:27:46.489Z"
@@ -7538,7 +7797,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "Good morning, I change in blender"],
+          "text": [
+            "tracy.cook-green:",
+            "Good morning, I change in blender"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-30T10:57:52.200Z"
@@ -7712,7 +7974,11 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "Another example", "Not in Stella"],
+          "text": [
+            "marilyn.hutton:",
+            "Another example",
+            "Not in Stella"
+          ],
           "attachments": [
             {
               "url": "https://blender.lemonade.com/backoffice/home/claims/LC6E933253/comms-timeline#",
@@ -7900,7 +8166,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["luke.wargo:", "Reversion initiated, should take 5 minutes"],
+          "text": [
+            "luke.wargo:",
+            "Reversion initiated, should take 5 minutes"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T20:57:05.200Z"
@@ -7975,7 +8244,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["luke.wargo:", "all CLX changes are rolled back"],
+          "text": [
+            "luke.wargo:",
+            "all CLX changes are rolled back"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T21:11:34.847Z"
@@ -7995,7 +8267,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["liz.mansfield:", "Got it - thanks for the clarification."],
+          "text": [
+            "liz.mansfield:",
+            "Got it - thanks for the clarification."
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-31T21:16:48.810Z"
@@ -8037,7 +8312,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "I will, thanks"],
+          "text": [
+            "stephanie.schustermann:",
+            "I will, thanks"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T12:50:59.266Z"
@@ -8166,7 +8444,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["luke.wargo:", "yep yep - I let Jason at Stella know"],
+          "text": [
+            "luke.wargo:",
+            "yep yep - I let Jason at Stella know"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T22:01:06.602Z"
@@ -8218,7 +8499,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["luke.wargo:", "Deployed Now"],
+          "text": [
+            "luke.wargo:",
+            "Deployed Now"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-17T17:30:42.040Z"
@@ -8226,7 +8510,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["liz.mansfield:", ":pink-clap: :pink-clap: :pink-clap:"],
+          "text": [
+            "liz.mansfield:",
+            ":pink-clap: :pink-clap: :pink-clap:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-17T17:30:55.929Z"
@@ -8315,7 +8602,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-03-30T17:29:50.755Z"
@@ -8421,7 +8710,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:", "attachment 1"],
+          "text": [
+            "javiera.verdugo:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08LAH4GFU3/download/screen_recording_2025-03-30_at_2.26.10___pm.mov",
@@ -8508,7 +8800,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:", "it works! TYSM :blob_excited:"],
+          "text": [
+            "javiera.verdugo:",
+            "it works! TYSM :blob_excited:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-03T12:20:13.045Z"
@@ -8550,7 +8845,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["vivian.le:"],
+          "text": [
+            "vivian.le:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T13:18:55.761Z"
@@ -8570,7 +8867,9 @@
       {
         "authorName": "stephanie.schustermann",
         "content": {
-          "text": ["fix is deploying now"],
+          "text": [
+            "fix is deploying now"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-09T12:35:38.750Z"
@@ -8612,7 +8911,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["katy.diamond:"],
+          "text": [
+            "katy.diamond:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T15:31:29.658Z"
@@ -8620,7 +8921,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "Same issue on my end"],
+          "text": [
+            "marilyn.hutton:",
+            "Same issue on my end"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T15:32:09.675Z"
@@ -8721,7 +9025,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T15:54:44.300Z"
@@ -8775,7 +9081,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jenessa.marschke:"],
+          "text": [
+            "jenessa.marschke:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T16:31:15.636Z"
@@ -8898,7 +9206,9 @@
       {
         "authorName": "stephanie.schustermann",
         "content": {
-          "text": ["fix is deploying now"],
+          "text": [
+            "fix is deploying now"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-09T12:34:25.735Z"
@@ -8988,7 +9298,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kristofer.yerby:", "@nathan.boettcher Yes... I did"],
+          "text": [
+            "kristofer.yerby:",
+            "@nathan.boettcher Yes... I did"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T17:50:02.037Z"
@@ -9048,7 +9361,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T18:34:52.572Z"
@@ -9218,7 +9533,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T20:14:52.804Z"
@@ -9248,7 +9565,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:", "cc @shai.gon.paz"],
+          "text": [
+            "nathan.boettcher:",
+            "cc @shai.gon.paz"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-04T17:33:31.803Z"
@@ -9267,7 +9587,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:", "Yes it is"],
+          "text": [
+            "harris.baumann:",
+            "Yes it is"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-14T15:06:55.194Z"
@@ -9386,7 +9709,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:"],
+          "text": [
+            "brandon.tipton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T21:56:13.138Z"
@@ -9474,7 +9799,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:"],
+          "text": [
+            "brandon.tipton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-03T14:06:26.239Z"
@@ -9482,7 +9809,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "Blender's PDF report or VC?"],
+          "text": [
+            "igor.eisenberg:",
+            "Blender's PDF report or VC?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-03T14:18:52.161Z"
@@ -9535,7 +9865,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "checking"],
+          "text": [
+            "igor.eisenberg:",
+            "checking"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-08T07:22:12.651Z"
@@ -9701,7 +10034,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:", "IT JUST UPDATED YAYYYY"],
+          "text": [
+            "brandon.tipton:",
+            "IT JUST UPDATED YAYYYY"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T14:31:49.316Z"
@@ -9753,7 +10089,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:", "triple checking... :please-hold:"],
+          "text": [
+            "brandon.tipton:",
+            "triple checking... :please-hold:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T15:23:30.008Z"
@@ -9761,7 +10100,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:", "Yes!!"],
+          "text": [
+            "brandon.tipton:",
+            "Yes!!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T15:26:31.616Z"
@@ -9769,7 +10111,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "Yasssss! Thank you!!!"],
+          "text": [
+            "igor.eisenberg:",
+            "Yasssss! Thank you!!!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T17:37:03.775Z"
@@ -9811,7 +10156,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gabe.perez:", "No Liability workflow:"],
+          "text": [
+            "gabe.perez:",
+            "No Liability workflow:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T22:49:24.595Z"
@@ -9819,7 +10167,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gabe.perez:", "What its supposed to look like:"],
+          "text": [
+            "gabe.perez:",
+            "What its supposed to look like:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T22:49:39.313Z"
@@ -9872,7 +10223,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["henry.flores2:"],
+          "text": [
+            "henry.flores2:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-01T23:02:24.780Z"
@@ -10032,7 +10385,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:"],
+          "text": [
+            "alex.garcia:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-02T12:33:04.302Z"
@@ -10074,7 +10429,9 @@
       {
         "authorName": "stephanie.schustermann",
         "content": {
-          "text": ["We reverted all cat temporary disabling "],
+          "text": [
+            "We reverted all cat temporary disabling "
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-09T12:31:59.062Z"
@@ -10123,7 +10480,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["vanessa.dauphin:"],
+          "text": [
+            "vanessa.dauphin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-02T13:14:49.685Z"
@@ -10131,7 +10490,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jackie.lovato:", "I am also having this problem"],
+          "text": [
+            "jackie.lovato:",
+            "I am also having this problem"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-02T14:49:47.452Z"
@@ -10488,7 +10850,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["hailee.phillips:"],
+          "text": [
+            "hailee.phillips:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-02T19:41:56.957Z"
@@ -10560,7 +10924,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["erin.flor:"],
+          "text": [
+            "erin.flor:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-02T19:56:33.985Z"
@@ -10676,7 +11042,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["peter.gonnella:"],
+          "text": [
+            "peter.gonnella:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-03T15:59:21.666Z"
@@ -10755,7 +11123,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tolliver:"],
+          "text": [
+            "brandon.tolliver:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-03T17:50:46.448Z"
@@ -10786,7 +11156,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "Sorry I didnt see you posted this!"],
+          "text": [
+            "marilyn.hutton:",
+            "Sorry I didnt see you posted this!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-03T19:51:47.711Z"
@@ -10794,7 +11167,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tolliver:", "no, it helped!"],
+          "text": [
+            "brandon.tolliver:",
+            "no, it helped!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-03T19:53:11.366Z"
@@ -10894,7 +11270,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["eryk.rahm:", "Screenshot of the error"],
+          "text": [
+            "eryk.rahm:",
+            "Screenshot of the error"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-04T15:58:44.801Z"
@@ -10930,7 +11309,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:"],
+          "text": [
+            "alex.garcia:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-04T18:26:16.271Z"
@@ -10954,7 +11335,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lakeisha.turner:", "Same issue"],
+          "text": [
+            "lakeisha.turner:",
+            "Same issue"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-04T19:41:54.662Z"
@@ -10996,7 +11380,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lakeisha.turner:", "@shai.gon.paz still no change"],
+          "text": [
+            "lakeisha.turner:",
+            "@shai.gon.paz still no change"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-07T16:32:00.804Z"
@@ -11015,7 +11402,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lakeisha.turner:", "This has been resolved. Thank you"],
+          "text": [
+            "lakeisha.turner:",
+            "This has been resolved. Thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-09T12:39:26.493Z"
@@ -11064,7 +11454,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-04T18:49:35.556Z"
@@ -11072,7 +11464,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-04T18:49:52.658Z"
@@ -11091,7 +11485,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["shravanthi.bathey:", "@liz.mansfield"],
+          "text": [
+            "shravanthi.bathey:",
+            "@liz.mansfield"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-04T23:58:58.040Z"
@@ -11099,7 +11496,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["luke.wargo:", "Checking "],
+          "text": [
+            "luke.wargo:",
+            "Checking "
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-05T00:03:08.698Z"
@@ -11489,7 +11889,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "Good morning, Thank you"],
+          "text": [
+            "tracy.cook-green:",
+            "Good morning, Thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-09T12:49:41.952Z"
@@ -11568,7 +11971,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "Yes"],
+          "text": [
+            "tracy.cook-green:",
+            "Yes"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T14:17:22.848Z"
@@ -11576,7 +11982,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "give a couple of minutes"],
+          "text": [
+            "stephanie.schustermann:",
+            "give a couple of minutes"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T14:17:32.595Z"
@@ -11584,7 +11993,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "Thank you"],
+          "text": [
+            "tracy.cook-green:",
+            "Thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T14:17:48.268Z"
@@ -11592,7 +12004,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "done :slightly_smiling_face:"],
+          "text": [
+            "stephanie.schustermann:",
+            "done :slightly_smiling_face:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T14:26:40.714Z"
@@ -11644,7 +12059,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "can you try now?"],
+          "text": [
+            "stephanie.schustermann:",
+            "can you try now?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T15:26:50.116Z"
@@ -11652,7 +12070,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "okay let me try"],
+          "text": [
+            "tracy.cook-green:",
+            "okay let me try"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T15:27:07.140Z"
@@ -11728,7 +12149,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "I can do that"],
+          "text": [
+            "tracy.cook-green:",
+            "I can do that"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T15:44:35.807Z"
@@ -11836,7 +12260,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "Okay"],
+          "text": [
+            "tracy.cook-green:",
+            "Okay"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T16:09:32.494Z"
@@ -11900,7 +12327,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", ":thumbs-up:"],
+          "text": [
+            "tracy.cook-green:",
+            ":thumbs-up:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T16:41:36.676Z"
@@ -11919,7 +12349,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lior.eliyahu:", "@tracy.cook-green can you try? "],
+          "text": [
+            "lior.eliyahu:",
+            "@tracy.cook-green can you try? "
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T16:42:31.987Z"
@@ -11995,7 +12428,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-07T11:39:08.120Z"
@@ -12082,7 +12517,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:"],
+          "text": [
+            "javiera.verdugo:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-07T14:22:51.647Z"
@@ -12160,7 +12597,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["viveka.thompson:"],
+          "text": [
+            "viveka.thompson:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-07T16:28:35.237Z"
@@ -12361,7 +12800,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["viveka.thompson:", "found it"],
+          "text": [
+            "viveka.thompson:",
+            "found it"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T15:30:50.722Z"
@@ -12512,7 +12954,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["chelsea.keller:", "@candace.loyd for visibility"],
+          "text": [
+            "chelsea.keller:",
+            "@candace.loyd for visibility"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-07T16:32:59.585Z"
@@ -12590,7 +13035,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lior.eliyahu:", "@bonnie.walker can you help define it?"],
+          "text": [
+            "lior.eliyahu:",
+            "@bonnie.walker can you help define it?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-17T14:51:37.102Z"
@@ -12621,7 +13069,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:", "bug report reopened, it auto-closed"],
+          "text": [
+            "nathan.boettcher:",
+            "bug report reopened, it auto-closed"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-02T16:29:16.267Z"
@@ -12651,7 +13102,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:", "cc @shai.gon.paz @yarin.goldman"],
+          "text": [
+            "nathan.boettcher:",
+            "cc @shai.gon.paz @yarin.goldman"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T18:58:16.238Z"
@@ -12659,7 +13113,9 @@
       {
         "authorName": "lior.eliyahu",
         "content": {
-          "text": ["Update logic by:"],
+          "text": [
+            "Update logic by:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T12:27:00.708Z"
@@ -12778,7 +13234,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kayla.shoemaker:", "@igor.eisenberg Yes! Thank you!"],
+          "text": [
+            "kayla.shoemaker:",
+            "@igor.eisenberg Yes! Thank you!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-14T13:05:43.936Z"
@@ -12820,7 +13279,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:"],
+          "text": [
+            "javiera.verdugo:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-08T13:16:06.149Z"
@@ -12960,7 +13421,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:", "yes, all works now! thanks guys"],
+          "text": [
+            "javiera.verdugo:",
+            "yes, all works now! thanks guys"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-08T17:07:43.375Z"
@@ -13002,7 +13466,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marcelino.barrera1:"],
+          "text": [
+            "marcelino.barrera1:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-08T14:10:54.994Z"
@@ -13080,7 +13546,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kayla.shoemaker:"],
+          "text": [
+            "kayla.shoemaker:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-08T22:10:54.173Z"
@@ -13088,7 +13556,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "looks good now"],
+          "text": [
+            "stephanie.schustermann:",
+            "looks good now"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-10T08:24:43.568Z"
@@ -13244,7 +13715,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-09T15:41:07.574Z"
@@ -13378,7 +13851,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["justin.barber:"],
+          "text": [
+            "justin.barber:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-09T21:20:05.016Z"
@@ -13567,7 +14042,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["justin.barber:"],
+          "text": [
+            "justin.barber:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-11T12:24:18.977Z"
@@ -13575,7 +14052,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["justin.barber:", "FYI @tom.duris @laura.neal"],
+          "text": [
+            "justin.barber:",
+            "FYI @tom.duris @laura.neal"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-11T12:24:28.463Z"
@@ -13583,7 +14063,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["justin.barber:", "@aaron.mireles"],
+          "text": [
+            "justin.barber:",
+            "@aaron.mireles"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-11T12:24:46.820Z"
@@ -13787,7 +14270,9 @@
       {
         "authorName": "shai.gon.paz",
         "content": {
-          "text": ["this issue is very common and causes many bug reports."],
+          "text": [
+            "this issue is very common and causes many bug reports."
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-23T09:08:10.025Z"
@@ -13829,7 +14314,9 @@
       {
         "authorName": "shai.gon.paz",
         "content": {
-          "text": ["seems to load. please LMK if you can't load it."],
+          "text": [
+            "seems to load. please LMK if you can't load it."
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-15T07:09:38.367Z"
@@ -13882,7 +14369,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kayla.shoemaker:", "attachment 1"],
+          "text": [
+            "kayla.shoemaker:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08N2LEP1KP/download/kayla_-_vc_lc711427484__found_possible_bug___.mov",
@@ -13895,7 +14385,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kayla.shoemaker:", "attachment 1"],
+          "text": [
+            "kayla.shoemaker:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08N99HM9NE/download/kayla_-_vc_lc711427484__found_possible_bug___._.mov",
@@ -13976,7 +14469,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lior.eliyahu:", "yes"],
+          "text": [
+            "lior.eliyahu:",
+            "yes"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-15T12:51:00.008Z"
@@ -14034,7 +14530,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["timo.oppermann:", "@noemie.awandi @hugo.thome FYI"],
+          "text": [
+            "timo.oppermann:",
+            "@noemie.awandi @hugo.thome FYI"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-15T07:27:14.984Z"
@@ -14103,7 +14602,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["louis.chicot:"],
+          "text": [
+            "louis.chicot:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-15T15:20:14.831Z"
@@ -14219,7 +14720,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nayeli.jimenez:"],
+          "text": [
+            "nayeli.jimenez:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-15T16:34:21.284Z"
@@ -14280,7 +14783,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "Yes thank you"],
+          "text": [
+            "tracy.cook-green:",
+            "Yes thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T21:53:27.646Z"
@@ -14422,7 +14928,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "@lior.eliyahu yes"],
+          "text": [
+            "stephanie.schustermann:",
+            "@lior.eliyahu yes"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-21T07:40:12.220Z"
@@ -14469,7 +14978,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["timo.oppermann:", "attachment 1"],
+          "text": [
+            "timo.oppermann:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08PSULQBH9/download/tp.mov",
@@ -14646,7 +15158,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["katy.diamond:"],
+          "text": [
+            "katy.diamond:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T16:09:28.819Z"
@@ -14733,7 +15247,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alexis.venzen:"],
+          "text": [
+            "alexis.venzen:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-17T12:57:03.030Z"
@@ -14782,7 +15298,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alexis.venzen:", "@shai.slobodov yes, are you free now?"],
+          "text": [
+            "alexis.venzen:",
+            "@shai.slobodov yes, are you free now?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-17T15:01:39.124Z"
@@ -14813,7 +15332,10 @@
       {
         "authorName": "yonathan.leibovich",
         "content": {
-          "text": [null, " Added a task to the backlog"],
+          "text": [
+            null,
+            " Added a task to the backlog"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-17T15:21:01.400Z"
@@ -14870,7 +15392,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:"],
+          "text": [
+            "javiera.verdugo:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T19:57:37.827Z"
@@ -15002,7 +15526,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T21:51:20.849Z"
@@ -15107,7 +15633,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kiva.felder:"],
+          "text": [
+            "kiva.felder:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-16T22:18:58.120Z"
@@ -15239,7 +15767,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:"],
+          "text": [
+            "brandon.tipton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-17T19:28:41.089Z"
@@ -15378,7 +15908,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ginna.cranston:"],
+          "text": [
+            "ginna.cranston:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-18T13:41:07.349Z"
@@ -15398,7 +15930,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "fixed manually, please try now"],
+          "text": [
+            "igor.eisenberg:",
+            "fixed manually, please try now"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-24T09:19:15.053Z"
@@ -15500,7 +16035,10 @@
       {
         "authorName": "igor.eisenberg",
         "content": {
-          "text": ["Will be handled in ", null],
+          "text": [
+            "Will be handled in ",
+            null
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-28T12:13:34.230Z"
@@ -15544,7 +16082,10 @@
       {
         "authorName": "igor.eisenberg",
         "content": {
-          "text": ["will be handled in ", null],
+          "text": [
+            "will be handled in ",
+            null
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-28T12:14:06.479Z"
@@ -15588,7 +16129,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-21T19:53:35.407Z"
@@ -15631,7 +16174,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "got it! Closing"],
+          "text": [
+            "igor.eisenberg:",
+            "got it! Closing"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-24T12:39:55.534Z"
@@ -15673,7 +16219,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["bill.beaudoin:"],
+          "text": [
+            "bill.beaudoin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-22T14:22:50.123Z"
@@ -15714,7 +16262,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["bill.beaudoin:", "Looks good now!"],
+          "text": [
+            "bill.beaudoin:",
+            "Looks good now!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-22T14:37:36.822Z"
@@ -15757,7 +16308,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-22T18:24:22.462Z"
@@ -15765,7 +16318,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lior.eliyahu:", "Same limits issue @thomas.hudson"],
+          "text": [
+            "lior.eliyahu:",
+            "Same limits issue @thomas.hudson"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-23T16:10:21.405Z"
@@ -15819,7 +16375,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-22T20:08:22.957Z"
@@ -15909,7 +16467,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["andre.martell:", "screenshot of bug"],
+          "text": [
+            "andre.martell:",
+            "screenshot of bug"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-23T15:54:26.326Z"
@@ -16008,7 +16569,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["chelsea.keller:"],
+          "text": [
+            "chelsea.keller:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-23T12:35:20.045Z"
@@ -16027,7 +16590,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["dave.salgo:", "Is there an answer on this yet?"],
+          "text": [
+            "dave.salgo:",
+            "Is there an answer on this yet?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-23T21:07:39.578Z"
@@ -16162,7 +16728,9 @@
       {
         "authorName": "stephanie.schustermann",
         "content": {
-          "text": ["I see the dwelling group has been created"],
+          "text": [
+            "I see the dwelling group has been created"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-04T12:11:40.572Z"
@@ -16257,7 +16825,11 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["Hey ", null, " can you please elaborate on the issue?"],
+          "text": [
+            "Hey ",
+            null,
+            " can you please elaborate on the issue?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T06:03:00.656Z"
@@ -16265,7 +16837,10 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": [null, " i'm closing here fyi"],
+          "text": [
+            null,
+            " i'm closing here fyi"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T06:08:29.080Z"
@@ -16348,7 +16923,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "@lior.eliyahu, no, this one's ours"],
+          "text": [
+            "igor.eisenberg:",
+            "@lior.eliyahu, no, this one's ours"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-29T07:17:20.153Z"
@@ -16356,7 +16934,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["lior.eliyahu:", "'I mean its related to VC integration -"],
+          "text": [
+            "lior.eliyahu:",
+            "'I mean its related to VC integration -"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-29T07:17:54.008Z"
@@ -16595,7 +17176,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["april.holmes:"],
+          "text": [
+            "april.holmes:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-24T22:25:23.776Z"
@@ -16727,7 +17310,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-27T17:22:24.206Z"
@@ -16862,7 +17447,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-29T13:44:12.806Z"
@@ -16900,7 +17487,9 @@
       {
         "authorName": "shai.slobodov",
         "content": {
-          "text": ["I don't think it's related to us."],
+          "text": [
+            "I don't think it's related to us."
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T10:57:56.747Z"
@@ -16954,7 +17543,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-29T14:14:41.424Z"
@@ -17102,7 +17693,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conora.dyson:"],
+          "text": [
+            "conora.dyson:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-04-29T17:30:28.419Z"
@@ -17129,7 +17722,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:"],
+          "text": [
+            "nathan.boettcher:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-02T18:47:54.765Z"
@@ -17275,7 +17870,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-01T15:55:28.042Z"
@@ -17653,7 +18250,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["carissa.champion:", "The claim is closed"],
+          "text": [
+            "carissa.champion:",
+            "The claim is closed"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-02T18:52:13.687Z"
@@ -17695,7 +18295,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["vanessa.dauphin:"],
+          "text": [
+            "vanessa.dauphin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-02T14:25:33.045Z"
@@ -17737,7 +18339,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T21:44:52.163Z"
@@ -17964,7 +18568,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["carlo.spacone:", "attachment 1"],
+          "text": [
+            "carlo.spacone:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08R32DR6G3/download/screen_recording_2025-05-05_at_1.19.29___pm.mov",
@@ -18073,7 +18680,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["candace.loyd:", "Here is a screenshot"],
+          "text": [
+            "candace.loyd:",
+            "Here is a screenshot"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T13:58:25.621Z"
@@ -18114,7 +18724,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["amir.namdar:", "On it :+1::skin-tone-3:"],
+          "text": [
+            "amir.namdar:",
+            "On it :+1::skin-tone-3:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T15:24:34.827Z"
@@ -18167,7 +18780,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["samantha.heffington:"],
+          "text": [
+            "samantha.heffington:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T14:21:34.936Z"
@@ -18222,7 +18837,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["stephanie.schustermann:", "can we zoom?"],
+          "text": [
+            "stephanie.schustermann:",
+            "can we zoom?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T14:30:36.896Z"
@@ -18230,7 +18848,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["samantha.heffington:", "Sure!"],
+          "text": [
+            "samantha.heffington:",
+            "Sure!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T14:31:04.489Z"
@@ -18510,7 +19131,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kayla.shoemaker:"],
+          "text": [
+            "kayla.shoemaker:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T14:38:42.262Z"
@@ -18546,7 +19169,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kayla.shoemaker:", "Yep, all good! Thank you"],
+          "text": [
+            "kayla.shoemaker:",
+            "Yep, all good! Thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T17:54:38.073Z"
@@ -18595,7 +19221,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["viveka.thompson:"],
+          "text": [
+            "viveka.thompson:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T15:39:10.932Z"
@@ -18659,7 +19287,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jenessa.marschke:", "COMPLETED! IDK WHY IT WASNT WORKING"],
+          "text": [
+            "jenessa.marschke:",
+            "COMPLETED! IDK WHY IT WASNT WORKING"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T16:44:30.991Z"
@@ -18701,7 +19332,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T16:53:05.625Z"
@@ -18709,7 +19342,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "@antonio.pruitt for Kasey Harris"],
+          "text": [
+            "marilyn.hutton:",
+            "@antonio.pruitt for Kasey Harris"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T16:53:11.943Z"
@@ -18735,7 +19371,10 @@
       {
         "authorName": "shai.gon.paz",
         "content": {
-          "text": [null, " is this the only claim?"],
+          "text": [
+            null,
+            " is this the only claim?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-06T17:29:45.671Z"
@@ -18883,7 +19522,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Yes it is,"],
+          "text": [
+            "marques.harris:",
+            "Yes it is,"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T15:33:40.262Z"
@@ -18891,7 +19533,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Blender - Prodf"],
+          "text": [
+            "marques.harris:",
+            "Blender - Prodf"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T15:33:46.240Z"
@@ -18911,7 +19556,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:"],
+          "text": [
+            "marques.harris:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T15:40:35.966Z"
@@ -18930,7 +19577,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:"],
+          "text": [
+            "marques.harris:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T15:53:25.547Z"
@@ -18950,7 +19599,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Ok, restarted. Same result"],
+          "text": [
+            "marques.harris:",
+            "Ok, restarted. Same result"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T16:30:45.048Z"
@@ -18989,7 +19641,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Updated banyan clear cache, Etc"],
+          "text": [
+            "marques.harris:",
+            "Updated banyan clear cache, Etc"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T16:43:05.184Z"
@@ -18997,7 +19652,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:"],
+          "text": [
+            "marques.harris:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T16:44:43.639Z"
@@ -19028,7 +19685,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Yes I have"],
+          "text": [
+            "marques.harris:",
+            "Yes I have"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T18:52:29.154Z"
@@ -19047,7 +19707,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "I've tried that also"],
+          "text": [
+            "marques.harris:",
+            "I've tried that also"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T19:06:55.937Z"
@@ -19066,7 +19729,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:"],
+          "text": [
+            "marques.harris:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-09T13:23:57.553Z"
@@ -19197,7 +19862,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:"],
+          "text": [
+            "marques.harris:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T20:58:25.751Z"
@@ -19216,7 +19883,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Ok now what?"],
+          "text": [
+            "marques.harris:",
+            "Ok now what?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T13:40:05.836Z"
@@ -19247,7 +19917,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:", "Not at this time"],
+          "text": [
+            "marques.harris:",
+            "Not at this time"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-27T16:13:48.252Z"
@@ -19289,7 +19962,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T18:58:49.997Z"
@@ -19371,7 +20046,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["viveka.thompson:"],
+          "text": [
+            "viveka.thompson:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-08T20:47:55.597Z"
@@ -19455,7 +20132,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["conor.martin:"],
+          "text": [
+            "conor.martin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-09T00:38:57.118Z"
@@ -19559,7 +20238,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["timo.oppermann:", "@angele.balcerek FYI"],
+          "text": [
+            "timo.oppermann:",
+            "@angele.balcerek FYI"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-09T14:04:12.109Z"
@@ -19596,7 +20278,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["angele.balcerek:", "@noemie.awandi FYI"],
+          "text": [
+            "angele.balcerek:",
+            "@noemie.awandi FYI"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T09:04:18.109Z"
@@ -19734,7 +20419,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["aaron.mireles:", "error page and URL attached"],
+          "text": [
+            "aaron.mireles:",
+            "error page and URL attached"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-09T19:08:43.063Z"
@@ -19827,7 +20515,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:", "cc @rita.pleasant @melissa.robertson"],
+          "text": [
+            "nathan.boettcher:",
+            "cc @rita.pleasant @melissa.robertson"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T16:54:52.477Z"
@@ -19865,7 +20556,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "I closed the claim"],
+          "text": [
+            "tracy.cook-green:",
+            "I closed the claim"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T18:07:57.525Z"
@@ -20064,7 +20758,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["abbey.stumbaugh:"],
+          "text": [
+            "abbey.stumbaugh:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T16:20:41.959Z"
@@ -20094,7 +20790,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["shai.slobodov:", "You’re not connected to Bunyan "],
+          "text": [
+            "shai.slobodov:",
+            "You’re not connected to Bunyan "
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T17:31:15.009Z"
@@ -20175,7 +20874,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:"],
+          "text": [
+            "nathan.boettcher:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T17:48:20.847Z"
@@ -20205,7 +20906,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["abbey.stumbaugh:"],
+          "text": [
+            "abbey.stumbaugh:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T18:45:17.401Z"
@@ -20309,7 +21012,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["abbey.stumbaugh:", "@ovun.aslan"],
+          "text": [
+            "abbey.stumbaugh:",
+            "@ovun.aslan"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T20:16:49.254Z"
@@ -20369,7 +21075,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["abbey.stumbaugh:", "GOT IT!!"],
+          "text": [
+            "abbey.stumbaugh:",
+            "GOT IT!!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T20:31:48.560Z"
@@ -20394,7 +21103,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["abbey.stumbaugh:"],
+          "text": [
+            "abbey.stumbaugh:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T20:34:37.134Z"
@@ -20413,7 +21124,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:"],
+          "text": [
+            "marques.harris:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T13:39:58.771Z"
@@ -20421,7 +21134,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marques.harris:"],
+          "text": [
+            "marques.harris:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T13:51:38.633Z"
@@ -20556,7 +21271,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nick.kosmas:", "Thanks @raine.davis :thank-you-2:"],
+          "text": [
+            "nick.kosmas:",
+            "Thanks @raine.davis :thank-you-2:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-14T16:29:51.847Z"
@@ -20598,7 +21316,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["vivian.le:"],
+          "text": [
+            "vivian.le:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-12T18:46:40.185Z"
@@ -20671,7 +21391,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["amir.namdar:", "@alex.garcia available for a quick zoom?"],
+          "text": [
+            "amir.namdar:",
+            "@alex.garcia available for a quick zoom?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-20T16:02:57.851Z"
@@ -20729,7 +21452,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "Since it's a newer built"],
+          "text": [
+            "alex.garcia:",
+            "Since it's a newer built"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-20T16:31:14.856Z"
@@ -20749,7 +21475,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "Got it that makes sense.."],
+          "text": [
+            "alex.garcia:",
+            "Got it that makes sense.."
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-20T16:56:39.391Z"
@@ -20845,7 +21574,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ryan.santiago:", "CC: @allard.kampschoer @sarah.connolly"],
+          "text": [
+            "ryan.santiago:",
+            "CC: @allard.kampschoer @sarah.connolly"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T14:50:18.108Z"
@@ -21072,7 +21804,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["peter.gonnella:"],
+          "text": [
+            "peter.gonnella:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T19:42:42.781Z"
@@ -21216,7 +21950,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gabe.perez:", "Submitting for @esau.dorrough claim"],
+          "text": [
+            "gabe.perez:",
+            "Submitting for @esau.dorrough claim"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-13T20:47:55.528Z"
@@ -21269,7 +22006,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["esau.dorrough:", "Ok, thank you."],
+          "text": [
+            "esau.dorrough:",
+            "Ok, thank you."
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-04T13:02:03.354Z"
@@ -21458,7 +22198,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "@jimmy.booth for Helena"],
+          "text": [
+            "marilyn.hutton:",
+            "@jimmy.booth for Helena"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-14T16:17:16.716Z"
@@ -21466,7 +22209,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-14T16:19:58.036Z"
@@ -21491,7 +22236,9 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["Fixed!"],
+          "text": [
+            "Fixed!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T12:00:04.774Z"
@@ -21562,7 +22309,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jill.dolan:", "@noemie.awandi "],
+          "text": [
+            "jill.dolan:",
+            "@noemie.awandi "
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T15:13:17.004Z"
@@ -21617,7 +22367,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["luke.wargo:", "fyi @stephanie.schustermann "],
+          "text": [
+            "luke.wargo:",
+            "fyi @stephanie.schustermann "
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-20T16:41:21.845Z"
@@ -21673,7 +22426,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["luke.wargo:", "cc "],
+          "text": [
+            "luke.wargo:",
+            "cc "
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-21T07:40:16.137Z"
@@ -21848,7 +22604,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kiva.felder:"],
+          "text": [
+            "kiva.felder:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T13:00:23.329Z"
@@ -22039,7 +22797,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["tracy.cook-green:", "Thank you"],
+          "text": [
+            "tracy.cook-green:",
+            "Thank you"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-21T14:42:16.525Z"
@@ -22092,7 +22853,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["bonnie.walker:", "FYI @katy.diamond @lior.eliyahu"],
+          "text": [
+            "bonnie.walker:",
+            "FYI @katy.diamond @lior.eliyahu"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T14:45:05.908Z"
@@ -22100,7 +22864,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["bonnie.walker:"],
+          "text": [
+            "bonnie.walker:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T14:45:41.731Z"
@@ -22150,7 +22916,12 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": [null, " ", null, " "],
+          "text": [
+            null,
+            " ",
+            null,
+            " "
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-10T11:49:52.142Z"
@@ -22214,7 +22985,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["carlo.spacone:", "attachment 1"],
+          "text": [
+            "carlo.spacone:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08SHRT9Y3F/download/screen_recording_2025-05-15_at_10.08.53___am.mov",
@@ -22249,7 +23023,10 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": [null, " seems like a product feedback"],
+          "text": [
+            null,
+            " seems like a product feedback"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-10T11:52:14.925Z"
@@ -22302,7 +23079,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:"],
+          "text": [
+            "brandon.tipton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-15T20:59:00.581Z"
@@ -22340,7 +23119,9 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": ["Fixed "],
+          "text": [
+            "Fixed "
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-19T09:05:49.492Z"
@@ -22348,7 +23129,10 @@
       {
         "authorName": "amir.namdar",
         "content": {
-          "text": [null, "  fyi, still happens"],
+          "text": [
+            null,
+            "  fyi, still happens"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-19T09:06:02.833Z"
@@ -22531,7 +23315,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gabe.perez:"],
+          "text": [
+            "gabe.perez:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-19T15:18:48.656Z"
@@ -22830,7 +23616,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-20T14:11:40.120Z"
@@ -22933,7 +23721,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["glen.sisco:"],
+          "text": [
+            "glen.sisco:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-20T17:24:38.625Z"
@@ -22941,7 +23731,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["glen.sisco:", "@alex.garcia"],
+          "text": [
+            "glen.sisco:",
+            "@alex.garcia"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-20T17:24:52.030Z"
@@ -22961,7 +23754,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["igor.eisenberg:", "@glen.sisco Fixed. Please try again"],
+          "text": [
+            "igor.eisenberg:",
+            "@glen.sisco Fixed. Please try again"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-28T14:21:28.828Z"
@@ -23003,7 +23799,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["peter.gonnella:", "This is where I get stuck."],
+          "text": [
+            "peter.gonnella:",
+            "This is where I get stuck."
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-21T16:36:09.799Z"
@@ -23055,7 +23854,11 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["peter.gonnella:", "Hopefully this helps", "attachment 1"],
+          "text": [
+            "peter.gonnella:",
+            "Hopefully this helps",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08UWQG2NP8/download/screen_recording_2025-06-02_at_3.56.33___pm.mov",
@@ -23132,7 +23935,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["sean.saldana:"],
+          "text": [
+            "sean.saldana:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-21T18:12:57.438Z"
@@ -23238,7 +24043,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["april.holmes:"],
+          "text": [
+            "april.holmes:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-21T20:32:12.979Z"
@@ -23257,7 +24064,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["april.holmes:", "Hi, that worked! thanks!"],
+          "text": [
+            "april.holmes:",
+            "Hi, that worked! thanks!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-27T23:30:44.706Z"
@@ -23409,7 +24219,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:"],
+          "text": [
+            "alex.garcia:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-22T14:41:22.242Z"
@@ -23417,7 +24229,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:"],
+          "text": [
+            "alex.garcia:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-22T14:41:39.479Z"
@@ -23656,7 +24470,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-22T19:18:06.686Z"
@@ -23752,7 +24568,7 @@
     "createdAt": "2025-05-22T20:07:50.117Z",
     "subIssueType": null,
     "priority": "Low",
-    "closingReason": null,
+    "closingReason": "Won't Fix",
     "tags": [],
     "errorLog": null,
     "countOfRelatedBugs": 0,
@@ -23768,6 +24584,18 @@
           "attachments": []
         },
         "createdAt": "2025-05-29T19:56:01.991Z"
+      },
+      {
+        "authorName": "amir.namdar",
+        "content": {
+          "text": [
+            "Hey ",
+            null,
+            " last time this kind of bug occured was 2025-04-17 since then we made changes to the surveys mechanism so if thats ok with you im gonna consider this as resolved unless it will resurface. Thanks"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T20:22:15.711Z"
       }
     ]
   },
@@ -23927,7 +24755,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["harris.baumann:"],
+          "text": [
+            "harris.baumann:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-23T14:41:15.336Z"
@@ -23980,7 +24810,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["esau.dorrough:"],
+          "text": [
+            "esau.dorrough:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-23T15:05:07.591Z"
@@ -24034,7 +24866,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["vanessa.dauphin:"],
+          "text": [
+            "vanessa.dauphin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-23T19:13:50.232Z"
@@ -24087,7 +24921,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jackie.lovato:"],
+          "text": [
+            "jackie.lovato:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-26T14:12:30.796Z"
@@ -24173,7 +25009,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jackie.lovato:", "And another"],
+          "text": [
+            "jackie.lovato:",
+            "And another"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-05T13:55:53.360Z"
@@ -24248,7 +25087,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["sabrina.contente:"],
+          "text": [
+            "sabrina.contente:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-27T08:57:43.525Z"
@@ -24336,7 +25177,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gabe.perez:"],
+          "text": [
+            "gabe.perez:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-27T14:53:35.998Z"
@@ -24344,7 +25187,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gabe.perez:", "False alarm. Claim closed with workaround."],
+          "text": [
+            "gabe.perez:",
+            "False alarm. Claim closed with workaround."
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-27T15:09:08.504Z"
@@ -24443,7 +25289,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["julia.condon:", "Here is the screenshot"],
+          "text": [
+            "julia.condon:",
+            "Here is the screenshot"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-28T17:53:55.982Z"
@@ -24594,7 +25443,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ebony.heslip:"],
+          "text": [
+            "ebony.heslip:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-29T14:48:32.718Z"
@@ -24602,7 +25453,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ebony.heslip:", "@gabe.perez"],
+          "text": [
+            "ebony.heslip:",
+            "@gabe.perez"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-29T14:48:54.452Z"
@@ -24641,7 +25495,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ebony.heslip:", "Hello has there been any update?"],
+          "text": [
+            "ebony.heslip:",
+            "Hello has there been any update?"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-02T16:37:49.715Z"
@@ -24694,7 +25551,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["rita.pleasant:", "Here is a screenshot of it."],
+          "text": [
+            "rita.pleasant:",
+            "Here is a screenshot of it."
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-30T13:47:38.986Z"
@@ -24781,7 +25641,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["vivian.le:", "@alex.garcia @nathan.boettcher"],
+          "text": [
+            "vivian.le:",
+            "@alex.garcia @nathan.boettcher"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-30T14:23:37.711Z"
@@ -24811,7 +25674,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "Thank you so much @nathan.boettcher"],
+          "text": [
+            "alex.garcia:",
+            "Thank you so much @nathan.boettcher"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-02T18:51:05.514Z"
@@ -24859,7 +25725,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gerry.mcginley:", "@timo.oppermann"],
+          "text": [
+            "gerry.mcginley:",
+            "@timo.oppermann"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-30T15:42:41.594Z"
@@ -24867,7 +25736,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gerry.mcginley:", "@mark.debont"],
+          "text": [
+            "gerry.mcginley:",
+            "@mark.debont"
+          ],
           "attachments": []
         },
         "createdAt": "2025-05-30T15:59:38.550Z"
@@ -24945,7 +25817,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gerry.mcginley:"],
+          "text": [
+            "gerry.mcginley:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-02T16:17:41.581Z"
@@ -24953,7 +25827,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gerry.mcginley:", "@paul.klop @timo.oppermann"],
+          "text": [
+            "gerry.mcginley:",
+            "@paul.klop @timo.oppermann"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-02T16:18:05.975Z"
@@ -25162,7 +26039,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kiva.felder:"],
+          "text": [
+            "kiva.felder:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-03T18:20:50.264Z"
@@ -25170,7 +26049,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kiva.felder:", "@shad.casconi"],
+          "text": [
+            "kiva.felder:",
+            "@shad.casconi"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-03T20:56:18.667Z"
@@ -25197,7 +26079,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["kiva.felder:", "hi yes, the issue is ok now. thanks!"],
+          "text": [
+            "kiva.felder:",
+            "hi yes, the issue is ok now. thanks!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-04T13:56:17.956Z"
@@ -25239,7 +26124,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ryleigh.walker:"],
+          "text": [
+            "ryleigh.walker:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-04T17:01:52.763Z"
@@ -25247,7 +26134,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["ryleigh.walker:"],
+          "text": [
+            "ryleigh.walker:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-04T17:02:07.469Z"
@@ -25318,7 +26207,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["nathan.boettcher:", "Okay great! :raised_hands:"],
+          "text": [
+            "nathan.boettcher:",
+            "Okay great! :raised_hands:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-11T16:21:49.596Z"
@@ -25418,7 +26310,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["javiera.verdugo:", "attachment 1"],
+          "text": [
+            "javiera.verdugo:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F08V8AAKJKG/download/screen_recording_2025-06-04_at_2.32.30___pm.mov",
@@ -25508,7 +26403,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jackie.lovato:", "Apologies for the duplicate!"],
+          "text": [
+            "jackie.lovato:",
+            "Apologies for the duplicate!"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-05T16:07:37.595Z"
@@ -25557,7 +26455,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["jackie.lovato:"],
+          "text": [
+            "jackie.lovato:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-05T16:08:34.551Z"
@@ -25629,7 +26529,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "@steven.barry"],
+          "text": [
+            "alex.garcia:",
+            "@steven.barry"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-05T18:53:13.120Z"
@@ -25681,7 +26584,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["alex.garcia:", "Thank you guys"],
+          "text": [
+            "alex.garcia:",
+            "Thank you guys"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-11T16:41:48.409Z"
@@ -25726,7 +26632,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["samantha.heffington:"],
+          "text": [
+            "samantha.heffington:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-06T15:02:25.938Z"
@@ -25734,7 +26642,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["samantha.heffington:", "CC @erin.valentine"],
+          "text": [
+            "samantha.heffington:",
+            "CC @erin.valentine"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-06T15:08:30.735Z"
@@ -25787,6 +26698,18 @@
           "attachments": []
         },
         "createdAt": "2025-06-12T10:59:42.561Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "samantha.heffington:",
+            "Looking at the same issue here on LC414061308 (Two Payments from 5/28 & 6/9), funds will need to be reverted on the Blender end. Reverse has been selected for both payments on the Stripe end.",
+            "CC @alex.garcia"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T20:20:20.045Z"
       }
     ]
   },
@@ -25816,7 +26739,7 @@
     "createdAt": "2025-06-06T19:08:48.254Z",
     "subIssueType": null,
     "priority": "Medium",
-    "closingReason": null,
+    "closingReason": "No Response",
     "tags": [],
     "errorLog": null,
     "countOfRelatedBugs": 0,
@@ -25871,7 +26794,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["katie.bettisrobinson:", "attachment 1"],
+          "text": [
+            "katie.bettisrobinson:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F090Q9TK6AE/download/screen_recording_2025-06-09_at_1.55.50___pm.mov",
@@ -26005,7 +26931,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["robert.rumsey:"],
+          "text": [
+            "robert.rumsey:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-11T19:21:19.487Z"
@@ -26100,7 +27028,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["vivian.le:"],
+          "text": [
+            "vivian.le:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-12T15:05:47.402Z"
@@ -26219,7 +27149,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["gabe.perez:", "attachment 1"],
+          "text": [
+            "gabe.perez:",
+            "attachment 1"
+          ],
           "attachments": [
             {
               "url": "https://files.slack.com/files-pri/T048YFJN0-F091K724G0H/download/screen_recording_2025-06-12_at_9.05.56___am.mov",
@@ -26268,7 +27201,7 @@
     "createdAt": "2025-06-12T16:32:04.079Z",
     "subIssueType": null,
     "priority": "Medium",
-    "closingReason": null,
+    "closingReason": "Cannot Reproduce",
     "tags": [],
     "errorLog": null,
     "countOfRelatedBugs": 0,
@@ -26277,7 +27210,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["bill.beaudoin:"],
+          "text": [
+            "bill.beaudoin:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-12T16:32:35.925Z"
@@ -26330,7 +27265,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-12T21:15:37.225Z"
@@ -26338,7 +27275,10 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:", "@dennis.edmunds for Leana Lopez"],
+          "text": [
+            "marilyn.hutton:",
+            "@dennis.edmunds for Leana Lopez"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-12T21:15:47.241Z"
@@ -26346,10 +27286,190 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["marilyn.hutton:"],
+          "text": [
+            "marilyn.hutton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-12T21:15:52.654Z"
+      },
+      {
+        "authorName": "amir.namdar",
+        "content": {
+          "text": [
+            "Hey ",
+            null,
+            " ",
+            null,
+            " ",
+            null,
+            "  Gonna need a video of this and an HAR file please"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-14T15:23:40.445Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "marilyn.hutton:",
+            "Im not sure what an HAR file is, but here is a video.",
+            "We need to get the customer paid asap.",
+            "attachment 1"
+          ],
+          "attachments": [
+            {
+              "url": "https://files.slack.com/files-tmb/T048YFJN0-F091EQTQ5M3-e7a4dfa3b8/download/screenshare_-_2025-06-14_8_52_39_am.mp4",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-14T15:53:12.309Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "marilyn.hutton:",
+            "attachment 1"
+          ],
+          "attachments": [
+            {
+              "url": "https://files.slack.com/files-pri/T048YFJN0-F091115L1CP/download/blender.lemonade.com.har",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-14T16:02:01.804Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "marilyn.hutton:",
+            "Just checking for a status/ETA on this one. Customer needs payment as soon as possible."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T17:10:36.798Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@amir.namdar Network (screenshots), HAR file (attached), and ",
+            "Datadog",
+            " for `/backoffice/payee` show error:",
+            "```POST /backoffice/payee [json] => backoffice/payee#create - 400 in 4334.52ms (db=17.22ms, view=0.21ms)``` ",
+            "Viewed in Context",
+            " shows error: ```Billing Client: Failed to create payment method - You cannot use this bank account because previous payments or payouts with this account have failed. Please double-check the account details, and contact us via ",
+            "https://support.stripe.com/contact",
+            " if you think this is in error. (code: bank_account_unusable)```",
+            "attachment 1"
+          ],
+          "attachments": [
+            {
+              "url": "https://app.datadoghq.com/logs?query=%2Fbackoffice%2Fpayee&agg_m=count&agg_m_source=base&agg_t=count&cols=host%2Cservice&event=AwAAAZd5vS7F4dtCowAAABhBWmQ1dlRHT0FBQmpTa2t1TzFBNkt3Q0sAAAAkMDE5Nzc5YmUtNDcxNS00MWQwLWIzYTItNjVmZTA0ZTlmZTY2AAOTOA&fromUser=true&messageDisplay=inline&refresh_mode=sliding&storage=flex_tier&stream_sort=desc&viz=stream&from_ts=1750093335740&to_ts=1750094235740&live=true",
+              "name": null
+            },
+            {
+              "url": "https://app.datadoghq.com/logs?query=host%3Ai-055b501c7b44baf1a%20service%3Amonolith%20container_id%3A9208dbcdfcf4d7e34a19ddec4784fd3643f9ef2ba71fe1ae9af7133da1c15df8%20filename%3A0.log&agg_m=count&agg_m_source=base&agg_t=count&cols=host%2Cservice&context_event=AZd5vTGOAABjSkkuO1A6KwCK&event=AwAAAZd5vS7F4dtCoQAAABhBWmQ1dlRHT0FBQmpTa2t1TzFBNkt3Q0kAAAAkMDE5Nzc5YmUtNDcxNS00MWQwLWIzYTItNjVmZTA0ZTlmZTY2AAM6Qg&fromUser=true&messageDisplay=inline&refresh_mode=sliding&storage=flex_tier&stream_sort=time%2Cdesc&to_event=AwAAAZd5vkB3VHuU-wAAABhBWmQ1dmtNQ0FBRDhDZUtYdjZjQkVBQi0AAAAkMDE5Nzc5YmUtNzg1Yi00NjNjLTgyMzItMWJhYjlhMzAwMzUyAADGcg&viz=&from_ts=1750093830885&to_ts=1750094200952&live=false",
+              "name": null
+            },
+            {
+              "url": "https://support.stripe.com/contact",
+              "name": null
+            },
+            {
+              "url": "https://files.slack.com/files-pri/T048YFJN0-F091PJPGQAW/download/add_insured_payee_failure.har",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-16T17:24:43.544Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@marilyn.hutton Per the error above, we won't be able to use the ACH information the insured provided us due to previous payments or payouts with this account failing (either Lemonade or non-Lemonade payments/payouts that used Stripe)."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T17:25:55.560Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "marilyn.hutton:",
+            "Will we be able to add them without ACH details and issue a paper check?"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T17:26:17.246Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@marilyn.hutton Yes! If you just leave the ACH info blank and fill in the rest of the fields, the ADD button will turn pink. Then, when you go to issue the payout, you should be provided the Automated Paper Check option as payment method. Can you confirm if that works? :crossed_fingers:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T17:27:53.475Z"
+      }
+    ]
+  },
+  {
+    "publicId": "35914",
+    "title": "Home EU - Internal handling - ACH payment is not working for TP individual",
+    "description": [
+      "What was supposed to happen?",
+      "I should see the option ACH",
+      "What's actually happening?",
+      "I only get the option for a manual payment",
+      "Steps you took before finding this bug",
+      "Filling out all the boxes when adding the TP",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Tanja Felix | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1749806702731269",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC4ACBC884/claim-details",
+    "createdAt": "2025-06-13T09:25:10.246Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "tanja.felix:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-13T09:26:10.281Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "tanja.felix:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-13T09:26:22.442Z"
       }
     ]
   },
@@ -26388,7 +27508,9 @@
       {
         "authorName": "cooper",
         "content": {
-          "text": ["brandon.tipton:"],
+          "text": [
+            "brandon.tipton:"
+          ],
           "attachments": []
         },
         "createdAt": "2025-06-13T13:56:57.546Z"
@@ -26424,5 +27546,365 @@
         "createdAt": "2025-06-13T19:20:33.929Z"
       }
     ]
+  },
+  {
+    "publicId": "35971",
+    "title": "Renters - Internal handling - Claim will not close",
+    "description": [
+      "What was supposed to happen?",
+      "Once all tasks are complete claim is supposed to close.",
+      "What's actually happening?",
+      "Claim close button is marked grey.",
+      "Steps you took before finding this bug",
+      "Unable to do anything.",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Michael Hensley | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750009478856179",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC2B95A306/workflows#LTASK819-5929-319",
+    "createdAt": "2025-06-15T17:44:49.154Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "When hovering over the Close Claim action, the tooltip shows:",
+            "> To close claim, first complete all open subrogation activity The Subrogation tab shows status `Pending Estimation`. @michael.hensley This status seems accurate given Subrogation is still `Pending Estimation`. Once subrogation is closed, then the claim should be able to close as well. Does that seem right?"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T19:22:46.360Z"
+      }
+    ]
+  },
+  {
+    "publicId": "35972",
+    "title": "Renters - Internal handling - unable to generate a payment summary",
+    "description": [
+      "What was supposed to happen?",
+      "I used to be able to generate & send a payment summary doc to send to the customer or their rep",
+      "What's actually happening?",
+      "The \"payment summary\" option is greyed out",
+      "Steps you took before finding this bug",
+      "I tried to see if other claims were affected and it appears they are also not able to generate the summary. I also asked my teammates and lead to also try to generate the breakdown w/o success.",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " An issue is blocking me from doing something for a customer",
+      "Who is impacted?",
+      " Many Makers are impacted (>10)",
+      "Is there a workaround?",
+      " No",
+      "Sasha Olaguez | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750009602644489",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC4CA83584/payouts",
+    "createdAt": "2025-06-15T17:46:49.188Z",
+    "subIssueType": null,
+    "priority": "Critical",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "sasha.olaguez:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-15T17:50:28.660Z"
+      },
+      {
+        "authorName": "nathan.boettcher",
+        "content": {
+          "text": [
+            null,
+            " Can you help take a look here? There were 3 payouts to the Insured, so the Send Payment Summary action should be available. I'm not seeing any errors in Network or Console. Per the bug report description, this is happening on other claims too."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T16:54:15.722Z"
+      }
+    ]
+  },
+  {
+    "publicId": "35984",
+    "title": "Home US - Customer facing - Not letting me move forward with payment",
+    "description": [
+      "What was supposed to happen?",
+      "Should allow me to issue payment",
+      "What's actually happening?",
+      "Providing oops Bug",
+      "Steps you took before finding this bug",
+      "Attempted to issue payment",
+      "What area is the issue in?",
+      " Payments",
+      "What is the impact?",
+      " Payment issue (unexplained charge/overcharge/dunning)",
+      "Who is impacted?",
+      " A single customer is impacted",
+      "Is there a workaround?",
+      " No",
+      "Alex Garcia | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750085807351229",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC414061308/workflows#LTASK746-4848-836",
+    "createdAt": "2025-06-16T14:56:57.595Z",
+    "subIssueType": "Rating and Billing",
+    "priority": "Low",
+    "closingReason": "Not a Bug",
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "alex.garcia:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T14:57:02.872Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "alex.garcia:",
+            "I have checked on Stripe and no Errors are shown on there"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T14:57:37.339Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@alex.garcia Per the failure reason shown in Blender, the issue is:",
+            "```The bank account ba_1RTpuFPwEuBoFWBJ2oSTu0Ro has been deleted and can no longer be used.``` The ",
+            "logs",
+            " in Stripe show `ba_1RTpuFPwEuBoFWBJ2oSTu0Ro` (the CHASE Bank account ending in 2997) was deleted by you directly from Stripe on June 11, 2025. Later, the ",
+            "logs",
+            " also indicate `ba_1RadvdPwEuBoFWBJfqXpElpS` (the Truist Bank account ending in 0227) was added by you directly from Stripe today, June 16, 2025."
+          ],
+          "attachments": [
+            {
+              "url": "https://dashboard.stripe.com/acct_1RLNiNPwEuBoFWBJ/logs?starting_after=1749833358-req_e7dK3pwqBqQwOe",
+              "name": null
+            },
+            {
+              "url": "https://dashboard.stripe.com/acct_1RLNiNPwEuBoFWBJ/logs?starting_after=1750083750-req_RsXMhBwyhl6v1V",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-16T19:55:48.928Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "Please don't edit the external bank account directly in Stripe, only the Edit Payee action in Blender should be used."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T19:56:22.401Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@alex.garcia I believe the fix here will be to enter the preferred ACH information into Blender using the Edit Payee action.",
+            "This should flow through into Stripe, and ensure that Blender <> Stripe are referencing the correct bank account when you go to payout. Please try that, and let me know how it goes!"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T19:57:57.367Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "alex.garcia:",
+            "Will do that shortly & let you know how that works."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T20:05:11.179Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "alex.garcia:",
+            "Perfect @nathan.boettcher That seemed to work Thank you so much!"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T20:10:13.827Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "Fantastic @alex.garcia! In the future, just make sure to Edit Payee in Blender only, don't add/delete external accounts from Stripe directly."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T20:14:58.133Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "alex.garcia:",
+            "Yes of course, Usually we always do that. Just that this claim had some other issues going on that Finance and higher ups were involved so they actually had deleted Prior accounts since they were incorrect.",
+            "But thank you for all your Help."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T20:20:54.998Z"
+      }
+    ]
+  },
+  {
+    "publicId": "35988",
+    "title": "Home US - Internal handling - assignment created in XA and blender gives a bug",
+    "description": [
+      "What was supposed to happen?",
+      "blender would have stated the assignment was sent",
+      "What's actually happening?",
+      "Blander gives and error oops something went wrong. report a bug if this continues and check XA and found a pending assignment",
+      "Steps you took before finding this bug",
+      "refreshed page and resubmits a duplicate assignment",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " A few Makers are impacted (<10)",
+      "Is there a workaround?",
+      " Yes",
+      "Auriella Gonzalez | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750092056444409",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC4145AFA08/workflows#home",
+    "createdAt": "2025-06-16T16:41:06.030Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "auriella.gonzalez:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T16:43:26.592Z"
+      }
+    ]
+  },
+  {
+    "publicId": "35991",
+    "title": "Home US - Internal handling - Claim not closing",
+    "description": [
+      "What was supposed to happen?",
+      "Claim should be closed",
+      "What's actually happening?",
+      "Claim is in Final Payment/Settled status and all tasks are closed, but the claim keeps showing up on my idle claims.",
+      "Steps you took before finding this bug",
+      "Reopening and reclosing the claim, but it does not have this option.",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Erin Flor | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750093950792189",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC412F4BC08/workflows#home",
+    "createdAt": "2025-06-16T17:12:36.891Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": []
+  },
+  {
+    "publicId": "36003",
+    "title": "Renters - Internal handling - New claim did not come to high priority claims",
+    "description": [
+      "What was supposed to happen?",
+      "New claims should be listed in our claims dashboard as high priority",
+      "What's actually happening?",
+      "This one is not listed in my high priority claims",
+      "Steps you took before finding this bug",
+      "Checking messages and discovered I had an email in there over 24 hours that was attached to this claim.",
+      "Looked and it was just received as a new claim.",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " A few Makers are impacted (<10)",
+      "Is there a workaround?",
+      " No",
+      "Kayla Shoemaker | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750104122060739",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC2D95B506/workflows#home",
+    "createdAt": "2025-06-16T20:02:12.295Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": []
   }
 ]
