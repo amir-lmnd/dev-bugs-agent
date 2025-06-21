@@ -1,19 +1,8 @@
-import { exportTickets } from "../../lib/data_providers/fibery/export";
-import { FiberyBugReport } from "../../lib/data_providers/fibery/parsers/bug_report.parser";
-
-const dataCleaner = (tickets: FiberyBugReport[]) =>
-  tickets.map((ticket) => ({
-    ...ticket,
-    description: ticket.description,
-  }));
+import { pullBugDataFromFibery } from "../../lib/services/bug-data.service";
 
 async function main() {
   try {
-    const bugs = await exportTickets({
-      output: ["json"],
-      dataCleaner,
-    });
-
+    const bugs = await pullBugDataFromFibery();
     console.log(bugs);
   } catch (error) {
     console.error("❌ Error in main:", error);

@@ -40,3 +40,22 @@
 - Human in the loop feedback
 
 - Rerun with human inputs
+
+
+
+
+
+GTM 
+  - home bionics
+  - pet bionics
+
+  start using cli tool locally in  interactive mode
+  learn
+    iterate over prompt
+    build tools (mainly mcp)
+
+  deploy as a service
+  run agent on every incoming bug report
+    have investigation quality rating collection method
+
+  ....

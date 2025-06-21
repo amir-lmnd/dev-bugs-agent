@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
-import { BugCard, TableRow } from "./types";
+import { BugCard } from "../lib/services/bug-data.service";
+import { TableRow } from "./types";
 
 export class DataLoader {
   private static readonly DATA_FILE_PATH = path.join(

@@ -20644,7 +20644,7 @@
     "createdAt": "2025-05-12T15:26:32.813Z",
     "subIssueType": null,
     "priority": "Low",
-    "closingReason": null,
+    "closingReason": "No Response",
     "tags": [],
     "errorLog": null,
     "countOfRelatedBugs": 0,
@@ -23592,7 +23592,7 @@
     "closingReason": "Handled Manually",
     "tags": [],
     "errorLog": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC3D209D05&from_ts=1747145434009&to_ts=1747750234009&live=false",
-    "countOfRelatedBugs": 0,
+    "countOfRelatedBugs": 6,
     "tasks": [],
     "comments": [
       {
@@ -24195,7 +24195,7 @@
     "closingReason": "Handled Manually",
     "tags": [],
     "errorLog": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC3D4A9605&from_ts=1747320040429&to_ts=1747924840429&live=false",
-    "countOfRelatedBugs": 1,
+    "countOfRelatedBugs": 0,
     "tasks": [],
     "comments": [
       {
@@ -27140,7 +27140,7 @@
     "createdAt": "2025-06-12T16:07:36.903Z",
     "subIssueType": null,
     "priority": "High",
-    "closingReason": null,
+    "closingReason": "Not a Bug",
     "tags": [],
     "errorLog": null,
     "countOfRelatedBugs": 0,
@@ -27448,7 +27448,7 @@
     "closingReason": null,
     "tags": [],
     "errorLog": null,
-    "countOfRelatedBugs": 0,
+    "countOfRelatedBugs": 1,
     "tasks": [],
     "comments": [
       {
@@ -27619,11 +27619,18 @@
     "createdAt": "2025-06-15T17:46:49.188Z",
     "subIssueType": null,
     "priority": "Critical",
-    "closingReason": null,
+    "closingReason": "Fixed",
     "tags": [],
     "errorLog": null,
     "countOfRelatedBugs": 0,
-    "tasks": [],
+    "tasks": [
+      {
+        "fibery/public-id": "133065",
+        "fibery/id": "5f485e5d-3fbe-435e-bb6d-0335cb37fdd6",
+        "Software Dev/name": "Renters - Internal handling - unable to generate a payment summary",
+        "?access/check": true
+      }
+    ],
     "comments": [
       {
         "authorName": "cooper",
@@ -27905,6 +27912,1074 @@
     "errorLog": null,
     "countOfRelatedBugs": 0,
     "tasks": [],
-    "comments": []
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "kayla.shoemaker:",
+            "attachment 1"
+          ],
+          "attachments": [
+            {
+              "url": "https://files.slack.com/files-pri/T048YFJN0-F091HRB0MUK/download/screen_recording_2025-06-16_at_3.57.25___pm.mov",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-16T21:11:41.781Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36012",
+    "title": "Renters - Internal handling - Value checker list isnt syncing with the Blender reserve items",
+    "description": [
+      "What was supposed to happen?",
+      "the items will sync on both VC and Blender to reflect the same quanitity/ value of items.",
+      "What's actually happening?",
+      "error is showing VC isnt syncing with blender when trying to issue payment to the insured",
+      "Steps you took before finding this bug",
+      "Tried to issue the itemize amount for payment",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " An issue is blocking me from doing something for a customer",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Sean Saldana | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750107808566979",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC712526BA4/workflows#LTASK441-0912-037",
+    "createdAt": "2025-06-16T21:03:38.833Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "sean.saldana:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-16T21:04:14.233Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "sean.saldana:",
+            "Hey guys, i wanted to follow up on the resolution since one of the insured is delayed on payment due to this issue."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T15:19:17.484Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36026",
+    "title": "Home EU - Internal handling - (CLX) ACH option not populating for '3rd party payees'",
+    "description": [
+      "What was supposed to happen?",
+      "✅ Claims agent creates 3rd Party Payee (Company)",
+      "✅ 3rd party payee is listed under payees",
+      "✅ Claims agent selects to pay out damages",
+      "✅ Claims agent selects 3rd party payee",
+      "✅ Claims agent selects ACH payment",
+      "What's actually happening?",
+      "✅ Claims agent creates 3rd Party Payee (Company)",
+      "✅ 3rd party payee is listed under payees",
+      "✅ Claims agent selects to pay out damages",
+      "✅ Claims agent selects 3rd party payee",
+      "❌ Claims agent is unable to select ACH payout → is only able to select manual bank cheque",
+      "Steps you took before finding this bug",
+      "TESTING → Ran testing, and all details were filled out accurately. Still no option for ACH payout appeared",
+      "REPORTING → Reported to bionics team || was informed that it seems the 3rd party Payee data is not populating in Hyperwallet",
+      "DATADOG → No evident erros",
+      "Who is impacted?",
+      " Many Makers are impacted (>10)",
+      "Timo Oppermann | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750161477268529",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC3CC3DC05/workflows#home",
+    "createdAt": "2025-06-17T11:58:06.668Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "timo.oppermann:",
+            "@amir.namdar FYI! I know you probably have more pressing concerns. But just wanted to tag you, so that you have visibility.",
+            "attachment 1"
+          ],
+          "attachments": [
+            {
+              "url": "https://files.slack.com/files-pri/T048YFJN0-F092GCGA1GQ/download/ach_3rd_party_company__1_.mov",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-17T12:00:20.215Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@amir.namdar This same type of behavior was ",
+            "previously reported",
+            " (Fibery ",
+            "35914",
+            ")"
+          ],
+          "attachments": [
+            {
+              "url": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1749806702731269",
+              "name": null
+            },
+            {
+              "url": "https://team-lemonade.fibery.io/Quality/Bug_Report/35914",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T00:07:36.120Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36029",
+    "title": "Renters - Internal handling - I am not able to get info blender production",
+    "description": [
+      "What was supposed to happen?",
+      "The app should open through Otka",
+      "What's actually happening?",
+      "Getting the error \"this site can't be reached\"",
+      "Steps you took before finding this bug",
+      "Asked a team member if they were having the same issue",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " An issue is blocking me from doing something for a customer",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Kaprice Williams | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750167182804319",
+    "exampleUrl": "https://blender.lemonade.com/api/v1/auth/auth_service_callback?code=5slof9-oo3adZR4Jq0RO7Bl25d4FDero7qIUIm3vn5O&iss=https%3A%2F%2Fwww.lemonade.com",
+    "createdAt": "2025-06-17T13:33:09.031Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": "Not a Bug",
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "kaprice.williams:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T13:33:40.641Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "kaprice.williams:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T13:35:17.527Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "michal.dromi:",
+            "@kaprice.williams this looks like a banyan error can you try to relogin to Banyan?"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T13:43:36.786Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "kaprice.williams:",
+            "yes, attempting to now.."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T13:44:47.347Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "kaprice.williams:",
+            "@michal.dromi Banyan says \"unable to connect to access tier\""
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T13:45:59.343Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "kaprice.williams:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T13:46:15.084Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@kaprice.williams Since this is a Banyan issue, can you please post to <#C05N6U5827P|> for assistance? The Unthread AI will provide some troubleshooting steps and escalate to a human if those steps don't work."
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T16:40:06.392Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "kaprice.williams:",
+            "it's fixed, thank you!"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T17:02:14.517Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36034",
+    "title": "Renters - Internal handling - unable to close claim",
+    "description": [
+      "What was supposed to happen?",
+      "claim close",
+      "What's actually happening?",
+      "unable to close",
+      "Steps you took before finding this bug",
+      "i have set new reserves and closed them. normally it will allow me to close the close. but still unable to",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Viveka Thompson | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750170866695409",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC6D2D7B53/workflows#LTASK610-1900-647",
+    "createdAt": "2025-06-17T14:34:36.910Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "viveka.thompson:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T14:35:09.840Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36053",
+    "title": "Renters - Internal handling - Payment Button Spinning",
+    "description": [
+      "What was supposed to happen?",
+      "Payment issued",
+      "What's actually happening?",
+      "Payment button clicked, spinning, unable to issue payment",
+      "Steps you took before finding this bug",
+      "Refreshed claim",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " An issue is blocking me from doing something for a customer",
+      "Who is impacted?",
+      " A few Makers are impacted (<10)",
+      "Is there a workaround?",
+      " No",
+      "Gabe Perez | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750196441645239",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC3D5FCC05/workflows#LTASK483-7912-297",
+    "createdAt": "2025-06-17T21:40:51.916Z",
+    "subIssueType": null,
+    "priority": "High",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gabe.perez:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T21:41:03.620Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gabe.perez:",
+            "Submitting on behalf of @chdel.newman"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T21:41:17.564Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36054",
+    "title": "Home US - Internal handling - cant reject line item",
+    "description": [
+      "What was supposed to happen?",
+      "I should be able to click on the line item and hit reject and then the line item should disappear or go gray",
+      "What's actually happening?",
+      "I'm getting an error message",
+      "Steps you took before finding this bug",
+      "I tried to reject the line item",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " An issue is blocking me from doing something for a customer",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Jackie Lovato | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750197210991959",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC7FDD3264/workflows#LTASK340-5949-807",
+    "createdAt": "2025-06-17T21:53:41.982Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": "Handled Manually",
+    "tags": [],
+    "errorLog": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC7FDD3264&from_ts=1749592410991&to_ts=1750197210991&live=false",
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "Wild Moose:",
+            "Repeated *500 errors* from *home-blender* when rejecting line items for claim *LC7FDD3264*, with failures in both public and internal endpoints, indicate a backend/server-side issue is blocking this action. This is actionable for backend investigation. For more details, see the relevant logs at: ",
+            "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC7FDD3264&from_ts=1749592410991&to_ts=1750197210991&live=false",
+            " _*Disclaimer:* These error logs have been located and analyzed by AI. Human review is advised for final confirmation._"
+          ],
+          "attachments": [
+            {
+              "url": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC7FDD3264&from_ts=1749592410991&to_ts=1750197210991&live=false",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-17T21:54:07.416Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "jackie.lovato:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T21:54:18.559Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "jackie.lovato:",
+            "I am unable to issue a payment due to this bug"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-17T21:54:34.034Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "jackie.lovato:",
+            "Hey there, just checking in on this bug?"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T14:00:51.480Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@stephanie.schustermann Same type of behavior as ",
+            "previous report",
+            " (Fibery ",
+            "35196",
+            "), and others.",
+            "```[home-blender] PUT /api/v1/claims/LC7FDD3264/items/reject completed with [500] in 205 ms NoMethodError: undefined method `id' for nil /app/lib/services/claim_item/reject.rb:72:in `reapply_deductible?' /app/lib/services/claim_item/reject.rb:66:in `handle_deductible' /app/lib/services/claim_item/reject.rb:27:in `block in perform'``` @jackie.lovato Can you provide more information about the steps you took with the contents items? Where were those items created, inside ValueChecker or manually in Blender? Did you waive the deductible? Any further context about the steps taken will help with finding the root cause. Thank you!"
+          ],
+          "attachments": [
+            {
+              "url": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1747750234009619",
+              "name": null
+            },
+            {
+              "url": "https://team-lemonade.fibery.io/Quality/Bug_Report/Renters---Internal-handling---Can't-reject-line-items-35196",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T21:50:50.584Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "stephanie.schustermann:",
+            "@nathan.boettcher I'm still trying to reproduce this edge case on our testing environment without luck, so I handled these claims manually until I find the issue.",
+            "From what it seems to be some existing claims when I changed the deductible algorithm got affected but just in a very specific edge case"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-19T13:41:45.632Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36058",
+    "title": "Home EU - Internal handling - Claim not closing",
+    "description": [
+      "What was supposed to happen?",
+      "🇩🇪Claim is settled and all tasks complete. Claim should be closed",
+      "✅ PH submits claim",
+      "✅ Claim is reviewed",
+      "✅ All workflow tasks completed",
+      "✅ Claim is closed",
+      "What's actually happening?",
+      "✅ PH submits claim",
+      "✅ Claim is reviewed",
+      "✅ Workflow tasks complete",
+      "❌ Claim not closing ",
+      "❌ Actions tab has “close claim” greyed out so advocate can not ",
+      "manually close claim",
+      "❌ Claim appearing as idle in \"high priority claim\" page. Claim should be closed from july 2024",
+      "Steps you took before finding this bug",
+      "Advocate did troubleshooting steps",
+      " Restarted the application",
+      " Restarted device",
+      "* cleared site cache",
+      "Who is impacted?",
+      " A few Makers are impacted (<10)",
+      "Gerry Mcginley | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750241545984169",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC6D240893/workflows#LTASK598-1884-888",
+    "createdAt": "2025-06-18T10:12:36.569Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gerry.mcginley:",
+            "attachment 1"
+          ],
+          "attachments": [
+            {
+              "url": "https://files.slack.com/files-pri/T048YFJN0-F092CH85W49/download/screen_recording_2025-06-16_at_08.23.22__1_.mov",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T10:16:04.638Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gerry.mcginley:",
+            "To note, this is a ongoing issue over many months for advocates across EU. Random claims will not close after declined or payouts made. Advocates only become aware when the claim pops up in \"high priority\" inbox on blender.",
+            "I can see the last issue was 2/6/25 with advocate Paul Klopp and issue was dealt with \"manually\". Is this manual process something Ops or advocates themselves could do when this issue arises? to prevent constant bug reporting"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T10:22:34.917Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gerry.mcginley:",
+            "@timo.oppermann"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T10:22:43.967Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gerry.mcginley:",
+            "@judith.schouten"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T10:27:24.810Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gerry.mcginley:",
+            "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1748881012435049",
+            " Previous bug with similar issue"
+          ],
+          "attachments": [
+            {
+              "url": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1748881012435049",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T10:42:45.915Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36060",
+    "title": "Home EU - Internal handling - Can not process vendor payment on blender",
+    "description": [
+      "What was supposed to happen?",
+      "🇬🇧 Claim, can not pay vendor on blender to close/settle claim",
+      "✅Dispatch expense vendor",
+      "✅Review vendor report and fee",
+      "✅Adjust reserves on “Pay vendors” task",
+      "✅“Pay” under “Pay vendors” task",
+      "✅Close claim",
+      "What's actually happening?",
+      "✅Dispatch expense vendor",
+      "✅Review vendor report and fee",
+      "✅Adjust reserves on “Pay vendors” task",
+      "❌“Pay” under “Pay vendors” task",
+      "States “pending approval” and “Pay” is greyed out",
+      "Steps you took before finding this bug",
+      "Advocate did troubleshooting steps",
+      " Restarted the application",
+      " Restarted device",
+      "* cleared site cache",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Gerry Mcginley | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750244132568959",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC911D818B2/workflows#LTASK474-2284-514",
+    "createdAt": "2025-06-18T10:55:42.874Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gerry.mcginley:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T10:57:33.972Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "gerry.mcginley:",
+            "@timo.oppermann @john.ohagan"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T10:57:51.654Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36071",
+    "title": "Home US - Internal handling - Unable to close claim",
+    "description": [
+      "What was supposed to happen?",
+      "I should be able to close my claim as nothing is pending.",
+      "What's actually happening?",
+      "I am receiving a bug error when I try to reject my reserve and close the claim",
+      "Steps you took before finding this bug",
+      "Asked a colleague to try it for me and they received the same message on the claim",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Thalia Gilder | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750263924460099",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC91232C992/comms-timeline",
+    "createdAt": "2025-06-18T16:25:34.711Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": "Handled Manually",
+    "tags": [],
+    "errorLog": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC91232C992&from_ts=1749659124460&to_ts=1750263924460&live=false",
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "Wild Moose:",
+            "Persistent *500 errors* from *home-blender* and *monolith-api* when closing claim or rejecting items for *LC91232C992*. This confirms a backend failure matching the user report and is actionable for developers. For more details, see the relevant logs at: ",
+            "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC91232C992&from_ts=1749659124460&to_ts=1750263924460&live=false",
+            " _*Disclaimer:* These error logs have been located and analyzed by AI. Human review is advised for final confirmation._"
+          ],
+          "attachments": [
+            {
+              "url": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC91232C992&from_ts=1749659124460&to_ts=1750263924460&live=false",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T16:26:14.594Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@stephanie.schustermann Same type of behavior as ",
+            "previous report",
+            " (Fibery ",
+            "35196",
+            "), and others.",
+            "```[home-blender] PUT /api/v1/claims/LC91232C992/items/reject completed with [500] in 220 ms [home-blender] POST /api/v1/claims/LC91232C992/close completed with [500] in 134 ms NoMethodError: undefined method `id' for nil /app/lib/services/claim_item/reject.rb:72:in `reapply_deductible?' /app/lib/services/claim_item/reject.rb:66:in `handle_deductible' /app/lib/services/claim_item/reject.rb:27:in `block in perform'``` @thalia.gilder Can you provide more information about the steps you took with the Dwelling items? Was the deductible waived at any point? Any further context about the steps taken will help with finding the root cause. Thank you!"
+          ],
+          "attachments": [
+            {
+              "url": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1747750234009619",
+              "name": null
+            },
+            {
+              "url": "https://team-lemonade.fibery.io/Quality/Bug_Report/Renters---Internal-handling---Can't-reject-line-items-35196",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T21:57:48.177Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36072",
+    "title": "Home US - Internal handling - Unable to reject or issue pmnts under contents",
+    "description": [
+      "What was supposed to happen?",
+      "I am unable to reject line items under contents payment and I am unable to issue any further payments under contents",
+      "What's actually happening?",
+      "I am receiving an error the items cannot be rejected and it is telling me to complete the claim determination which has been done",
+      "Steps you took before finding this bug",
+      "attempted to issue payments, created new line items, attempted to reject previous concerns",
+      "What area is the issue in?",
+      " Payment method",
+      "What is the impact?",
+      " An issue is blocking me from doing something for a customer",
+      "Who is impacted?",
+      " A few Makers are impacted (<10)",
+      "Is there a workaround?",
+      " No",
+      "Candace Loyd | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750264109289719",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC711F3D5E4/workflows#LTASK753-0134-319",
+    "createdAt": "2025-06-18T16:28:38.942Z",
+    "subIssueType": null,
+    "priority": "High",
+    "closingReason": "Handled Manually",
+    "tags": [],
+    "errorLog": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC711F3D5E4&from_ts=1749659309289&to_ts=1750264109289&live=false",
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "candace.loyd:",
+            "@chelsea.keller FYI"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T16:28:47.676Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "Wild Moose:",
+            "Repeated *500 errors* from *home-blender* and its downstream *monolith-api* endpoint when rejecting claim items for *LC711F3D5E4* indicate a persistent backend failure, not a user or transient issue. Backend investigation is required. For more details, see the relevant logs at: ",
+            "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC711F3D5E4&from_ts=1749659309289&to_ts=1750264109289&live=false",
+            " _*Disclaimer:* These error logs have been located and analyzed by AI. Human review is advised for final confirmation._"
+          ],
+          "attachments": [
+            {
+              "url": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC711F3D5E4&from_ts=1749659309289&to_ts=1750264109289&live=false",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T16:29:09.989Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "candace.loyd:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-18T16:29:58.559Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "nathan.boettcher:",
+            "@stephanie.schustermann Same type of behavior as ",
+            "previous report",
+            " (Fibery ",
+            "35196",
+            "), and others.",
+            "```[home-blender] PUT /api/v1/claims/LC711F3D5E4/items/reject completed with [500] in 194 ms NoMethodError: undefined method `id' for nil /app/lib/services/claim_item/reject.rb:72:in `reapply_deductible?' /app/lib/services/claim_item/reject.rb:66:in `handle_deductible' /app/lib/services/claim_item/reject.rb:27:in `block in perform'``` @candace.loyd Can you provide more information about the steps you took with the contents items? Where were those items created, inside ValueChecker or manually in Blender? Did you waive the deductible? Any further context about the steps taken will help with finding the root cause. Thank you!"
+          ],
+          "attachments": [
+            {
+              "url": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1747750234009619",
+              "name": null
+            },
+            {
+              "url": "https://team-lemonade.fibery.io/Quality/Bug_Report/Renters---Internal-handling---Can't-reject-line-items-35196",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-18T21:32:00.258Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36097",
+    "title": "Home EU - Internal handling - (CLX) Unable to update Sub-Loss Type || OOPS... Something went wrong.",
+    "description": [
+      "What was supposed to happen?",
+      "✅ CLX Agent navigates to 'Incident Details'",
+      "✅ CLX Agent select 'Update Loss Type'",
+      "✅ CLX Agent fills in the 'Loss Type' & 'Sub-Type' fields",
+      "✅ CLX Agents selects 'Update'",
+      "✅ 'Loss Type' & 'Sub-Loss Type' fields get updated",
+      "What's actually happening?",
+      "✅ CLX Agent navigates to 'Incident Details'",
+      "✅ CLX Agent select 'Update Loss Type'",
+      "✅ CLX Agent fills in the 'Loss Type' & 'Sub-Type' fields",
+      "✅ CLX Agents selects 'Update'",
+      "❌ Agent gets an error \"OOPS... Something went wrong.\"",
+      "Steps you took before finding this bug",
+      "TESTING → Tested by multiple agents, all receive the same error",
+      "NETWORK DIAGNOSTICS → 500 Internal Server Error || Request failed with status code 500\"",
+      "DATADOG → ",
+      "- [home-blender] PUT /api/v1/claims/LC2D94B106/update completed with [500] in 122 ms",
+      "- HTTP monolith-api PUT /api/internal/claims/LC2D94B106 responded with 500",
+      "- Cart not found for claim LC2D94B106",
+      "Who is impacted?",
+      " Many Makers are impacted (>10)",
+      "Timo Oppermann | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750332694030199",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC2D94B106/workflows#incident_details",
+    "createdAt": "2025-06-19T11:31:44.601Z",
+    "subIssueType": null,
+    "priority": "Medium",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC2D94B106&from_ts=1749727894030&to_ts=1750332694030&live=false",
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "Wild Moose:",
+            "The *monolith* service is throwing a *KeyError: key not found: \"other\"* during claim update attempts, causing repeated *500 errors* on /api/v1/claims/LC2D94B106/update. This is the most actionable evidence for developers to investigate the root cause. For more details, see the relevant logs at: ",
+            "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC2D94B106&from_ts=1749727894030&to_ts=1750332694030&live=false",
+            " _*Disclaimer:* These error logs have been located and analyzed by AI. Human review is advised for final confirmation._"
+          ],
+          "attachments": [
+            {
+              "url": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC2D94B106&from_ts=1749727894030&to_ts=1750332694030&live=false",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-19T11:32:12.430Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "timo.oppermann:",
+            "@sabrina.contente FYI",
+            "*",
+            "DATADOG",
+            "* • [home-blender] PUT /api/v1/claims/LC2D94B106/update completed with [500] in 122 ms • HTTP monolith-api PUT /api/internal/claims/LC2D94B106 responded with 500 • Cart not found for claim LC2D94B106 ",
+            "attachment 1"
+          ],
+          "attachments": [
+            {
+              "url": "https://app.datadoghq.com/logs?query=env%3Aproduction%20LC2D94B106%20status%3Aerror&agg_m=count&agg_m_source=base&agg_t=count&cols=host%2Cservice&fromUser=true&messageDisplay=inline&refresh_mode=sliding&storage=flex_tier&stream_sort=desc&viz=stream&from_ts=1747567923943&to_ts=1750159923943&live=true",
+              "name": null
+            },
+            {
+              "url": "https://files.slack.com/files-pri/T048YFJN0-F092V2XR280/download/screen_recording_2025-06-19_at_13.26.41.mov",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-19T11:33:02.063Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36110",
+    "title": "Renters - Internal handling - claim wont close",
+    "description": [
+      "What was supposed to happen?",
+      "claim should close",
+      "What's actually happening?",
+      "no further actions are needed but claim wont close",
+      "Steps you took before finding this bug",
+      "have tried several times/ days",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Jessica Ramos | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750429882281769",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC2CFB7806/comms-timeline",
+    "createdAt": "2025-06-20T14:31:32.546Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "jessica.ramos:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-20T14:32:28.353Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36113",
+    "title": "Home US - Internal handling - Unable to close the claim after it has been settled.",
+    "description": [
+      "What was supposed to happen?",
+      "claim would close and be settled",
+      "What's actually happening?",
+      "Oops something went wrong and report a bug report",
+      "Steps you took before finding this bug",
+      "settled the claim, confirmed all tasks were completed",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " A tool is not working (but it's not blocking from serving customers)",
+      "Who is impacted?",
+      " I'm the only one with this issue",
+      "Is there a workaround?",
+      " No",
+      "Auriella Gonzalez | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750432190429409",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC134DF601/comms-timeline",
+    "createdAt": "2025-06-20T15:10:00.684Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC134DF601&from_ts=1749827390429&to_ts=1750432190429&live=false",
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "Wild Moose:",
+            "Repeated *500 errors* from the *home-blender* service when closing claim *LC134DF601* indicate a persistent backend failure. Related item rejection operations also fail, suggesting a broader issue with this claim's backend processing. For more details, see the relevant logs at: ",
+            "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC134DF601&from_ts=1749827390429&to_ts=1750432190429&live=false",
+            " _*Disclaimer:* These error logs have been located and analyzed by AI. Human review is advised for final confirmation._"
+          ],
+          "attachments": [
+            {
+              "url": "https://app.datadoghq.com/logs?query=%40level%3A(40%20OR%2050)%20env%3Aproduction%20stage%3Aproduction%20*%3ALC134DF601&from_ts=1749827390429&to_ts=1750432190429&live=false",
+              "name": null
+            }
+          ]
+        },
+        "createdAt": "2025-06-20T15:10:30.272Z"
+      },
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "auriella.gonzalez:",
+            "i will try but it is hard to get a screenshot"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-20T16:31:31.934Z"
+      }
+    ]
+  },
+  {
+    "publicId": "36120",
+    "title": "Renters - Internal handling - Value Checker isnt syncing with blender to allow payment to be issued",
+    "description": [
+      "What was supposed to happen?",
+      "value checker will sync to blender and payment can be issued",
+      "What's actually happening?",
+      "Value Checker isnt syncing with blender to allow payment to be issued for personal property.",
+      "Steps you took before finding this bug",
+      "confirm the items are valued the same on both blender and value checker but still issue with syncing. wont allow payment to process.",
+      "What area is the issue in?",
+      " Claims",
+      "What is the impact?",
+      " An issue is blocking me from doing something for a customer",
+      "Who is impacted?",
+      " A few Makers are impacted (<10)",
+      "Is there a workaround?",
+      " Yes",
+      "Sean Saldana | ",
+      " | "
+    ],
+    "threadUrl": "https://team-lemonade.slack.com/archives/C34MS4X5Z/p1750440304889779",
+    "exampleUrl": "https://blender.lemonade.com/backoffice/home/claims/LC9125B8DD2/workflows#LTASK903-0968-480",
+    "createdAt": "2025-06-20T17:25:14.084Z",
+    "subIssueType": null,
+    "priority": "Low",
+    "closingReason": null,
+    "tags": [],
+    "errorLog": null,
+    "countOfRelatedBugs": 0,
+    "tasks": [],
+    "comments": [
+      {
+        "authorName": "cooper",
+        "content": {
+          "text": [
+            "sean.saldana:"
+          ],
+          "attachments": []
+        },
+        "createdAt": "2025-06-20T17:26:47.771Z"
+      }
+    ]
   }
 ]

@@ -1860,5 +1860,103 @@
     "claimPublicId": "LC2D95B506",
     "bugTitle": "Renters - Internal handling - New claim did not come to high priority claims",
     "bugDescription": "What was supposed to happen?\nNew claims should be listed in our claims dashboard as high priority\nWhat's actually happening?\nThis one is not listed in my high priority claims\nSteps you took before finding this bug\nChecking messages and discovered I had an email in there over 24 hours that was attached to this claim.\nLooked and it was just received as a new claim.\nWhat area is the issue in?\n Claims\nWhat is the impact?\n A tool is not working (but it's not blocking from serving customers)\nWho is impacted?\n A few Makers are impacted (<10)\nIs there a workaround?\n No\nKayla Shoemaker | \n | "
+  },
+  {
+    "bugPublicId": "36012",
+    "bugCreatedAt": "2025-06-16T21:03:38.833Z",
+    "claimPublicId": "LC712526BA4",
+    "bugTitle": "Renters - Internal handling - Value checker list isnt syncing with the Blender reserve items",
+    "bugDescription": "What was supposed to happen?\nthe items will sync on both VC and Blender to reflect the same quanitity/ value of items.\nWhat's actually happening?\nerror is showing VC isnt syncing with blender when trying to issue payment to the insured\nSteps you took before finding this bug\nTried to issue the itemize amount for payment\nWhat area is the issue in?\n Claims\nWhat is the impact?\n An issue is blocking me from doing something for a customer\nWho is impacted?\n I'm the only one with this issue\nIs there a workaround?\n No\nSean Saldana | \n | "
+  },
+  {
+    "bugPublicId": "36026",
+    "bugCreatedAt": "2025-06-17T11:58:06.668Z",
+    "claimPublicId": "LC3CC3DC05",
+    "bugTitle": "Home EU - Internal handling - (CLX) ACH option not populating for '3rd party payees'",
+    "bugDescription": "What was supposed to happen?\n✅ Claims agent creates 3rd Party Payee (Company)\n✅ 3rd party payee is listed under payees\n✅ Claims agent selects to pay out damages\n✅ Claims agent selects 3rd party payee\n✅ Claims agent selects ACH payment\nWhat's actually happening?\n✅ Claims agent creates 3rd Party Payee (Company)\n✅ 3rd party payee is listed under payees\n✅ Claims agent selects to pay out damages\n✅ Claims agent selects 3rd party payee\n❌ Claims agent is unable to select ACH payout → is only able to select manual bank cheque\nSteps you took before finding this bug\nTESTING → Ran testing, and all details were filled out accurately. Still no option for ACH payout appeared\nREPORTING → Reported to bionics team || was informed that it seems the 3rd party Payee data is not populating in Hyperwallet\nDATADOG → No evident erros\nWho is impacted?\n Many Makers are impacted (>10)\nTimo Oppermann | \n | "
+  },
+  {
+    "bugPublicId": "36029",
+    "bugCreatedAt": "2025-06-17T13:33:09.031Z",
+    "claimPublicId": null,
+    "bugTitle": "Renters - Internal handling - I am not able to get info blender production",
+    "bugDescription": "What was supposed to happen?\nThe app should open through Otka\nWhat's actually happening?\nGetting the error \"this site can't be reached\"\nSteps you took before finding this bug\nAsked a team member if they were having the same issue\nWhat area is the issue in?\n Claims\nWhat is the impact?\n An issue is blocking me from doing something for a customer\nWho is impacted?\n I'm the only one with this issue\nIs there a workaround?\n No\nKaprice Williams | \n | "
+  },
+  {
+    "bugPublicId": "36034",
+    "bugCreatedAt": "2025-06-17T14:34:36.910Z",
+    "claimPublicId": "LC6D2D7B53",
+    "bugTitle": "Renters - Internal handling - unable to close claim",
+    "bugDescription": "What was supposed to happen?\nclaim close\nWhat's actually happening?\nunable to close\nSteps you took before finding this bug\ni have set new reserves and closed them. normally it will allow me to close the close. but still unable to\nWhat area is the issue in?\n Claims\nWhat is the impact?\n A tool is not working (but it's not blocking from serving customers)\nWho is impacted?\n I'm the only one with this issue\nIs there a workaround?\n No\nViveka Thompson | \n | "
+  },
+  {
+    "bugPublicId": "36053",
+    "bugCreatedAt": "2025-06-17T21:40:51.916Z",
+    "claimPublicId": "LC3D5FCC05",
+    "bugTitle": "Renters - Internal handling - Payment Button Spinning",
+    "bugDescription": "What was supposed to happen?\nPayment issued\nWhat's actually happening?\nPayment button clicked, spinning, unable to issue payment\nSteps you took before finding this bug\nRefreshed claim\nWhat area is the issue in?\n Claims\nWhat is the impact?\n An issue is blocking me from doing something for a customer\nWho is impacted?\n A few Makers are impacted (<10)\nIs there a workaround?\n No\nGabe Perez | \n | "
+  },
+  {
+    "bugPublicId": "36054",
+    "bugCreatedAt": "2025-06-17T21:53:41.982Z",
+    "claimPublicId": "LC7FDD3264",
+    "bugTitle": "Home US - Internal handling - cant reject line item",
+    "bugDescription": "What was supposed to happen?\nI should be able to click on the line item and hit reject and then the line item should disappear or go gray\nWhat's actually happening?\nI'm getting an error message\nSteps you took before finding this bug\nI tried to reject the line item\nWhat area is the issue in?\n Claims\nWhat is the impact?\n An issue is blocking me from doing something for a customer\nWho is impacted?\n I'm the only one with this issue\nIs there a workaround?\n No\nJackie Lovato | \n | "
+  },
+  {
+    "bugPublicId": "36058",
+    "bugCreatedAt": "2025-06-18T10:12:36.569Z",
+    "claimPublicId": "LC6D240893",
+    "bugTitle": "Home EU - Internal handling - Claim not closing",
+    "bugDescription": "What was supposed to happen?\n🇩🇪Claim is settled and all tasks complete. Claim should be closed\n✅ PH submits claim\n✅ Claim is reviewed\n✅ All workflow tasks completed\n✅ Claim is closed\nWhat's actually happening?\n✅ PH submits claim\n✅ Claim is reviewed\n✅ Workflow tasks complete\n❌ Claim not closing \n❌ Actions tab has “close claim” greyed out so advocate can not \nmanually close claim\n❌ Claim appearing as idle in \"high priority claim\" page. Claim should be closed from july 2024\nSteps you took before finding this bug\nAdvocate did troubleshooting steps\n Restarted the application\n Restarted device\n* cleared site cache\nWho is impacted?\n A few Makers are impacted (<10)\nGerry Mcginley | \n | "
+  },
+  {
+    "bugPublicId": "36060",
+    "bugCreatedAt": "2025-06-18T10:55:42.874Z",
+    "claimPublicId": "LC911D818B2",
+    "bugTitle": "Home EU - Internal handling - Can not process vendor payment on blender",
+    "bugDescription": "What was supposed to happen?\n🇬🇧 Claim, can not pay vendor on blender to close/settle claim\n✅Dispatch expense vendor\n✅Review vendor report and fee\n✅Adjust reserves on “Pay vendors” task\n✅“Pay” under “Pay vendors” task\n✅Close claim\nWhat's actually happening?\n✅Dispatch expense vendor\n✅Review vendor report and fee\n✅Adjust reserves on “Pay vendors” task\n❌“Pay” under “Pay vendors” task\nStates “pending approval” and “Pay” is greyed out\nSteps you took before finding this bug\nAdvocate did troubleshooting steps\n Restarted the application\n Restarted device\n* cleared site cache\nWho is impacted?\n I'm the only one with this issue\nGerry Mcginley | \n | "
+  },
+  {
+    "bugPublicId": "36071",
+    "bugCreatedAt": "2025-06-18T16:25:34.711Z",
+    "claimPublicId": "LC91232C992",
+    "bugTitle": "Home US - Internal handling - Unable to close claim",
+    "bugDescription": "What was supposed to happen?\nI should be able to close my claim as nothing is pending.\nWhat's actually happening?\nI am receiving a bug error when I try to reject my reserve and close the claim\nSteps you took before finding this bug\nAsked a colleague to try it for me and they received the same message on the claim\nWhat area is the issue in?\n Claims\nWhat is the impact?\n A tool is not working (but it's not blocking from serving customers)\nWho is impacted?\n I'm the only one with this issue\nIs there a workaround?\n No\nThalia Gilder | \n | "
+  },
+  {
+    "bugPublicId": "36072",
+    "bugCreatedAt": "2025-06-18T16:28:38.942Z",
+    "claimPublicId": "LC711F3D5E4",
+    "bugTitle": "Home US - Internal handling - Unable to reject or issue pmnts under contents",
+    "bugDescription": "What was supposed to happen?\nI am unable to reject line items under contents payment and I am unable to issue any further payments under contents\nWhat's actually happening?\nI am receiving an error the items cannot be rejected and it is telling me to complete the claim determination which has been done\nSteps you took before finding this bug\nattempted to issue payments, created new line items, attempted to reject previous concerns\nWhat area is the issue in?\n Payment method\nWhat is the impact?\n An issue is blocking me from doing something for a customer\nWho is impacted?\n A few Makers are impacted (<10)\nIs there a workaround?\n No\nCandace Loyd | \n | "
+  },
+  {
+    "bugPublicId": "36097",
+    "bugCreatedAt": "2025-06-19T11:31:44.601Z",
+    "claimPublicId": "LC2D94B106",
+    "bugTitle": "Home EU - Internal handling - (CLX) Unable to update Sub-Loss Type || OOPS... Something went wrong.",
+    "bugDescription": "What was supposed to happen?\n✅ CLX Agent navigates to 'Incident Details'\n✅ CLX Agent select 'Update Loss Type'\n✅ CLX Agent fills in the 'Loss Type' & 'Sub-Type' fields\n✅ CLX Agents selects 'Update'\n✅ 'Loss Type' & 'Sub-Loss Type' fields get updated\nWhat's actually happening?\n✅ CLX Agent navigates to 'Incident Details'\n✅ CLX Agent select 'Update Loss Type'\n✅ CLX Agent fills in the 'Loss Type' & 'Sub-Type' fields\n✅ CLX Agents selects 'Update'\n❌ Agent gets an error \"OOPS... Something went wrong.\"\nSteps you took before finding this bug\nTESTING → Tested by multiple agents, all receive the same error\nNETWORK DIAGNOSTICS → 500 Internal Server Error || Request failed with status code 500\"\nDATADOG → \n- [home-blender] PUT /api/v1/claims/LC2D94B106/update completed with [500] in 122 ms\n- HTTP monolith-api PUT /api/internal/claims/LC2D94B106 responded with 500\n- Cart not found for claim LC2D94B106\nWho is impacted?\n Many Makers are impacted (>10)\nTimo Oppermann | \n | "
+  },
+  {
+    "bugPublicId": "36110",
+    "bugCreatedAt": "2025-06-20T14:31:32.546Z",
+    "claimPublicId": "LC2CFB7806",
+    "bugTitle": "Renters - Internal handling - claim wont close",
+    "bugDescription": "What was supposed to happen?\nclaim should close\nWhat's actually happening?\nno further actions are needed but claim wont close\nSteps you took before finding this bug\nhave tried several times/ days\nWhat area is the issue in?\n Claims\nWhat is the impact?\n A tool is not working (but it's not blocking from serving customers)\nWho is impacted?\n I'm the only one with this issue\nIs there a workaround?\n No\nJessica Ramos | \n | "
+  },
+  {
+    "bugPublicId": "36113",
+    "bugCreatedAt": "2025-06-20T15:10:00.684Z",
+    "claimPublicId": "LC134DF601",
+    "bugTitle": "Home US - Internal handling - Unable to close the claim after it has been settled.",
+    "bugDescription": "What was supposed to happen?\nclaim would close and be settled\nWhat's actually happening?\nOops something went wrong and report a bug report\nSteps you took before finding this bug\nsettled the claim, confirmed all tasks were completed\nWhat area is the issue in?\n Claims\nWhat is the impact?\n A tool is not working (but it's not blocking from serving customers)\nWho is impacted?\n I'm the only one with this issue\nIs there a workaround?\n No\nAuriella Gonzalez | \n | "
+  },
+  {
+    "bugPublicId": "36120",
+    "bugCreatedAt": "2025-06-20T17:25:14.084Z",
+    "claimPublicId": "LC9125B8DD2",
+    "bugTitle": "Renters - Internal handling - Value Checker isnt syncing with blender to allow payment to be issued",
+    "bugDescription": "What was supposed to happen?\nvalue checker will sync to blender and payment can be issued\nWhat's actually happening?\nValue Checker isnt syncing with blender to allow payment to be issued for personal property.\nSteps you took before finding this bug\nconfirm the items are valued the same on both blender and value checker but still issue with syncing. wont allow payment to process.\nWhat area is the issue in?\n Claims\nWhat is the impact?\n An issue is blocking me from doing something for a customer\nWho is impacted?\n A few Makers are impacted (<10)\nIs there a workaround?\n Yes\nSean Saldana | \n | "
   }
 ]

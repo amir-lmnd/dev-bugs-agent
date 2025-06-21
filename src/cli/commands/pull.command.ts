@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { BaseCommand } from "./base.command";
+import { pullAndProcessBugData } from "../../lib/services/bug-data.service";
 
 export class PullCommand extends BaseCommand {
   static register(program: Command): void {
@@ -12,8 +13,6 @@ export class PullCommand extends BaseCommand {
         "Data source to pull from (fibery|all)",
         "all"
       )
-      .option("-f, --force", "Force refresh even if data is recent")
-      .option("--dry-run", "Show what would be pulled without actually pulling")
       .action(async (options) => {
         await PullCommand.execute(options);
       });
@@ -21,28 +20,27 @@ export class PullCommand extends BaseCommand {
 
   private static async execute(options: any): Promise<void> {
     try {
-      console.log("🚧 Pull command is not yet implemented");
-      console.log("");
-      console.log("Planned functionality:");
-      console.log("• 📥 Fetch bug data from Fibery");
-      console.log("• 🔄 Update local bug cards database");
-      console.log("• 📁 Download attachments");
-      console.log("• ✅ Validate data integrity");
-      console.log("");
-
-      if (options.dryRun) {
-        PullCommand.logInfo("Dry run mode (would show what would be pulled)");
-      }
-
-      if (options.force) {
-        PullCommand.logWarning("Force mode (would bypass cache checks)");
-      }
-
+      console.log("🚀 Starting pull operation...");
       console.log(`📊 Source: ${options.source}`);
       console.log("");
-      console.log("💡 This command will be implemented in a future version.");
+
+      if (options.source === "fibery" || options.source === "all") {
+        await this.pullFromFibery();
+      }
+
+      console.log("✅ Pull operation completed successfully!");
     } catch (error) {
       PullCommand.handleError(error, "Pull");
     }
+  }
+
+  private static async pullFromFibery(): Promise<void> {
+    console.log("📥 Fetching bug data from Fibery...");
+
+    const result = await pullAndProcessBugData();
+
+    console.log(`📋 Retrieved ${result.bugCount} bug reports from Fibery`);
+    console.log(`📄 Generated ${result.cardCount} bug cards`);
+    console.log(`💾 Saved to: ${result.outputPath}`);
   }
 }
