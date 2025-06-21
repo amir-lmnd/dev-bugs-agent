@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import { BaseCommand } from "./base.command";
 import { BugCard } from "../types";
+import { spawn } from "child_process";
 
 export class RunCommand extends BaseCommand {
   static register(program: Command): void {
@@ -23,62 +24,52 @@ export class RunCommand extends BaseCommand {
   private static async execute(bugId: string, options: any): Promise<void> {
     try {
       const selectedBugCard = await RunCommand.findBugCard(bugId);
-      const output = RunCommand.generateOutput(selectedBugCard, options.format);
-      await RunCommand.outputResult(output, options.output);
+      const prompt = RunCommand.generateInvestigationPrompt(selectedBugCard);
+      // console.log(prompt);
+      const result = await RunCommand.runInvestigation(prompt);
+      // console.log(result);
+      // await RunCommand.outputResult(output, options.output);
     } catch (error) {
       RunCommand.handleError(error, "Run");
     }
   }
 
-  private static generateOutput(bugCard: BugCard, format: string): string {
-    switch (format) {
-      case "json":
-        return JSON.stringify(bugCard, null, 2);
+  private static async runInvestigation(prompt: string): Promise<void> {
+    const result = await RunCommand.callClaudeCodeExecutable(prompt);
+    console.log(result);
+  }
 
-      case "summary":
-        return RunCommand.generateSummary(bugCard);
+  private static async callClaudeCodeExecutable(prompt: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const claude = spawn("claude", [], {
+        stdio: ["pipe", "inherit"],
+        shell: true,
+      });
 
-      case "prompt":
-      default:
-        return RunCommand.generateInvestigationPrompt(bugCard);
-    }
+      claude.stdin?.write(prompt);
+      claude.stdin?.end();
+
+      claude.on("close", (code) => {
+        if (code === 0) {
+          resolve();
+        } else {
+          reject(new Error(`Claude process exited with code ${code}`));
+        }
+      });
+
+      claude.on("error", (error) => {
+        reject(error);
+      });
+    });
   }
 
   private static generateInvestigationPrompt(bugCard: BugCard): string {
-    return `🔍 Investigation Prompt for Bug: ${bugCard.bugPublicId}
+    return `<instruction>
+    Investigate the following bug report
+    </instruction>
 
-Please investigate this bug with the following information:
-
-${JSON.stringify(bugCard, null, 2)}
-
-Analysis focus areas:
-1. Reproduce the issue based on the description
-2. Identify the root cause
-3. Assess the impact and severity  
-4. Propose potential solutions
-5. Consider any related bugs or patterns
-
-Investigation checklist:
-□ Environment details gathered
-□ Steps to reproduce confirmed
-□ Root cause identified
-□ Impact assessment completed
-□ Solution proposed
-□ Testing strategy defined`;
-  }
-
-  private static generateSummary(bugCard: BugCard): string {
-    return `📋 Bug Summary: ${bugCard.bugPublicId}
-
-Title: ${bugCard.bugTitle}
-
-Description Summary:
-${RunCommand.formatText(bugCard.bugDescription, 200)}
-
-Key Details:
-• Bug ID: ${bugCard.bugPublicId}
-• Title Length: ${bugCard.bugTitle.length} chars
-• Description Length: ${bugCard.bugDescription.length} chars
-• Analysis Status: Ready for investigation`;
+    <bug-report>
+    ${JSON.stringify(bugCard, null, 2)}
+    </bug-report>`;
   }
 }

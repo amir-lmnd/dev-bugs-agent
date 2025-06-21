@@ -4,7 +4,7 @@
       "mcp__lmcp__search_lemonade_github_code",
       "mcp__lmcp__get_lemonade_github_file_blob"
     ],
-    "deny": []
+    "deny": ["mcp__lmcp__query_logs"]
   },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": ["lmcp"]

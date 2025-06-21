@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "dev-bugs": "./bin/dev-bugs"
+    "dev-bugs": "./bin/dev-bugs",
+    "bs": "./bin/dev-bugs"
   },
   "scripts": {
     "start": "ts-node src/cli/index.ts",
