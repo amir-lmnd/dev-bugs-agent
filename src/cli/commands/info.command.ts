@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { BaseCommand } from "./base.command";
+import { CLIHelpers } from "../helpers";
 import { TUIApp } from "../tui-app";
 import { BugCard } from "../types";
 
@@ -56,7 +57,7 @@ export class InfoCommand extends BaseCommand {
     console.log(`📋 ID: ${bugCard.bugPublicId}`);
     console.log(`📝 Title: ${bugCard.bugTitle}`);
     console.log(`\n📄 Description:`);
-    console.log(InfoCommand.formatDescription(bugCard.bugDescription));
+    console.log(CLIHelpers.formatDescription(bugCard.bugDescription));
 
     if (options.verbose) {
       console.log(`\n🔍 Additional Details:`);
@@ -69,11 +70,5 @@ export class InfoCommand extends BaseCommand {
         );
       }
     }
-  }
-
-  private static formatDescription(description: string): string {
-    // Format the description with proper line breaks and indentation
-    const lines = description.split("\n");
-    return lines.map((line) => `  ${line}`).join("\n");
   }
 }

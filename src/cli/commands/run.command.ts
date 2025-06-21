@@ -7,12 +7,12 @@ export class RunCommand extends BaseCommand {
     program
       .command("run")
       .alias("r")
-      .description("Run investigation/analysis on a bug")
+      .description("Run investigation on a bug")
       .argument("<bug-id>", "Bug ID to run analysis on")
       .option(
-        "-f, --format <type>",
-        "Output format (prompt|json|summary)",
-        "prompt"
+        "-m, --mode <type>",
+        "Running mode (interactive|background)",
+        "interactive"
       )
       .option("-o, --output <file>", "Output to file instead of stdout")
       .action(async (bugId: string, options) => {

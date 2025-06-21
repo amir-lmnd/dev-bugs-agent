@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { BaseCommand } from "./base.command";
+import { CLIHelpers } from "../helpers";
 import { pullAndProcessBugData } from "../../lib/services/bug-data.service";
 
 export class PullCommand extends BaseCommand {
@@ -20,27 +21,27 @@ export class PullCommand extends BaseCommand {
 
   private static async execute(options: any): Promise<void> {
     try {
-      console.log("🚀 Starting pull operation...");
-      console.log(`📊 Source: ${options.source}`);
+      CLIHelpers.logInfo("Starting pull operation...");
+      CLIHelpers.logInfo(`Source: ${options.source}`);
       console.log("");
 
       if (options.source === "fibery" || options.source === "all") {
         await this.pullFromFibery();
       }
 
-      console.log("✅ Pull operation completed successfully!");
+      CLIHelpers.logSuccess("Pull operation completed successfully!");
     } catch (error) {
       PullCommand.handleError(error, "Pull");
     }
   }
 
   private static async pullFromFibery(): Promise<void> {
-    console.log("📥 Fetching bug data from Fibery...");
+    CLIHelpers.logInfo("Fetching bug data from Fibery...");
 
     const result = await pullAndProcessBugData();
 
-    console.log(`📋 Retrieved ${result.bugCount} bug reports from Fibery`);
-    console.log(`📄 Generated ${result.cardCount} bug cards`);
-    console.log(`💾 Saved to: ${result.outputPath}`);
+    CLIHelpers.logInfo(`Retrieved ${result.bugCount} bug reports from Fibery`);
+    CLIHelpers.logInfo(`Generated ${result.cardCount} bug cards`);
+    CLIHelpers.logInfo(`Saved to: ${result.outputPath}`);
   }
 }
