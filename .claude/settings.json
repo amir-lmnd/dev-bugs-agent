@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__lmcp__search_lemonade_github_code",
+      "mcp__lmcp__get_lemonade_github_file_blob"
+    ],
+    "deny": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["lmcp"]
+}

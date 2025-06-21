@@ -1,6 +1,4 @@
 ##### Tasks #####
-  Eval system
-  TODO: use lmcp github tool instead of repos in workdir
 
 
 ##### Pre agent steps #####

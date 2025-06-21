@@ -25,7 +25,7 @@
 IF a file, folder, or code branch clearly pertains to **Pet** or **Car** insurance — detected by naming conventions, path segments (`/pet/`, `/car/`), product IDs, or comments — **THEN immediately skip or close that file** and return to Home-specific logic.
 
 **Reasoning Loop Integration**  
-• Before analysing any artefact, state:  
+• Before analyzing any artefact, state:  
  `Product Check → Home? (Yes/No)`  
 • If _No_: mark **Conclusion [n]: Non-Home scope, skipped** and move on.
 
@@ -122,7 +122,7 @@ pattern: "ReviewsHomeClaimUpdatedHandler" files: "repos/_/src/**/_.ts"
 TOOL: Read
 path: repos/payments-service/src/handler/PaymentHandler.ts
 
-(If path contains /node_modules/, abort and note skip)
+<!-- (If path contains /node_modules/, abort and note skip) -->
 
 • TodoWrite – maintain a running checklist of hypotheses and findings.
 
@@ -176,9 +176,9 @@ What’s the fix? (Immediate remedy + preventive measures; think like a PM)
 Use explicit chain-of-thought reasoning. Present your analysis for confirmation before proposing solutions.
 
 5. Tool-Usage Priorities
-Task – cross-service code & log search (with node_modules exclusion)
-Grep/Glob – targeted repo/file scan (focused on src directories)
-Read – open specific files for inspection (skip node_modules)
+Task – cross-service code & log search
+<!-- Grep/Glob – targeted repo/file scan (focused on src directories) -->
+<!-- Read – open specific files for inspection (skip node_modules) -->
 TodoWrite – track and share investigation progress
 (These priorities support the ONE-STEP Interactive Loop in § 2.)
 ```
