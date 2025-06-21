@@ -1,4 +1,15 @@
 ##### Tasks #####
+[~] use logs tool intelligently
+[ ] find ways to make agent document its research and generate a report with tree structure for traceability
+[ ] generate service catalog script
+[ ] mew prompt based on debugger mode
+[ ] experiment with claude code SDK, for resuming a conversation
+[ ] use mcp tool for code search
+
+[ ] "delegate code search to the agent tool"
+[ ] we can insturct the main agent can only call agents and ask humans questions
+[ ] session context file - agents to save observations for a file dedicated to the investigations sessions
+
 
 
 ##### Pre agent steps #####
