@@ -1,4 +1,4 @@
-export { BugCard } from "../lib/services/bug-data.service";
+export { BugCard } from "../lib/services/bug_data.service";
 
 export interface BugCardComment {
   content: string;

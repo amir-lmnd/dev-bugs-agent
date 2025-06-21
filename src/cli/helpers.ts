@@ -1,4 +1,4 @@
-import { DataLoader } from "./data-loader";
+import { DataLoader } from "./tui/data-loader";
 import { BugCard } from "./types";
 
 export class CLIHelpers {

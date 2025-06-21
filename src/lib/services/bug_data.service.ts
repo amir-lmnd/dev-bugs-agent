@@ -1,7 +1,7 @@
+import * as path from "path";
+import * as fs from "fs";
 import { exportTickets } from "../data_providers/fibery/export";
 import { FiberyBugReport } from "../data_providers/fibery/parsers/bug_report.parser";
-import * as fs from "fs";
-import * as path from "path";
 
 export interface BugCard {
   bugPublicId: string;
@@ -66,7 +66,7 @@ function getBugCard(bug: FiberyBugReport): BugCard {
     bugPublicId: bug.publicId,
     bugCreatedAt: bug.createdAt.toISOString(),
     claimPublicId: extractClaimPublicId(bug.exampleUrl),
-    bugTitle: bug.title,
+    bugTitle: formatTitle(bug.title),
     bugDescription: bug.description.join("\n"),
   };
 }
@@ -76,4 +76,18 @@ function extractClaimPublicId(exampleUrl: string | null): string | null {
 
   const claimPublicId = exampleUrl.match(/LC\w+/);
   return claimPublicId ? claimPublicId[0] : null;
+}
+
+export function formatTitle(title: string): string {
+  const stringsToRemoveFromTitle = [
+    "Renters - Internal handling - ",
+    "Home US - Internal handling - ",
+    "Home EU - Internal handling - 🇪🇺 ",
+    "Home EU - Internal handling - 🇳🇱 ",
+    "Home EU - Internal handling - ",
+  ];
+  const titleWithoutPrefix = stringsToRemoveFromTitle.reduce((acc, prefix) => {
+    return acc.replace(prefix, "");
+  }, title);
+  return titleWithoutPrefix;
 }

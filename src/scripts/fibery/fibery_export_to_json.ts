@@ -1,4 +1,4 @@
-import { pullBugDataFromFibery } from "../../lib/services/bug-data.service";
+import { pullBugDataFromFibery } from "../../lib/services/bug_data.service";
 
 async function main() {
   try {

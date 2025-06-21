@@ -2,7 +2,7 @@ import {
   loadRawBugData,
   transformToBugCards,
   saveBugCards,
-} from "../lib/services/bug-data.service";
+} from "../lib/services/bug_data.service";
 
 function main() {
   const bugs = loadRawBugData();

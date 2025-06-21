@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import { BaseCommand } from "./base.command";
 import { CLIHelpers } from "../helpers";
-import { pullAndProcessBugData } from "../../lib/services/bug-data.service";
+import { pullAndProcessBugData } from "../../lib/services/bug_data.service";
 
 export class PullCommand extends BaseCommand {
   static register(program: Command): void {

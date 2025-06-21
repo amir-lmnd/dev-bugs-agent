@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import { BaseCommand } from "./base.command";
 import { CLIHelpers } from "../helpers";
-import { TUIApp } from "../tui-app";
+import { TUIApp } from "../tui/tui-app";
 import { BugCard } from "../types";
 
 export class InfoCommand extends BaseCommand {

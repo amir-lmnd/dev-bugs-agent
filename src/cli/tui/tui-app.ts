@@ -1,5 +1,5 @@
 import * as blessed from "blessed";
-import { TableRow, BugCard } from "./types";
+import { TableRow, BugCard } from "../types";
 import { DataLoader } from "./data-loader";
 
 export class TUIApp {

@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
-import { BugCard } from "../lib/services/bug-data.service";
-import { TableRow } from "./types";
+import { BugCard, formatTitle } from "../../lib/services/bug_data.service";
+import { TableRow } from "../types";
 
 export class DataLoader {
   private static readonly DATA_FILE_PATH = path.join(
@@ -52,19 +52,6 @@ export class DataLoader {
   }
 
   private static formatTitle(title: string, maxLength: number): string {
-    const stringsToRemoveFromTitle = [
-      "Renters - Internal handling - ",
-      "Home US - Internal handling - ",
-      "Home EU - Internal handling - 🇪🇺 ",
-      "Home EU - Internal handling - 🇳🇱 ",
-      "Home EU - Internal handling - ",
-    ];
-    const titleWithoutPrefix = stringsToRemoveFromTitle.reduce(
-      (acc, prefix) => {
-        return acc.replace(prefix, "");
-      },
-      title
-    );
-    return this.truncateText(titleWithoutPrefix, maxLength);
+    return this.formatTitle(formatTitle(title), maxLength);
   }
 }
