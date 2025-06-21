@@ -34,10 +34,10 @@ Here is the list of services you have access to:
 **MANDATORY Filter Rule**  
 IF a file, folder, or code branch clearly pertains to **Pet** or **Car** insurance — detected by naming conventions, path segments (`/pet/`, `/car/`) - **THEN immediately skip or close that file** and return to Home-specific logic.
 
-**Reasoning Loop Integration**  
-• Before analyzing any artifact, state:  
- `Product Check → Home? (Yes/No)`  
-• If _No_: mark **Conclusion [n]: Non-Home scope, skipped** and move on.
+<!-- **Reasoning Loop Integration**
+• Before analyzing any artifact, state:
+ `Product Check → Home? (Yes/No)`
+• If _No_: mark **Conclusion [n]: Non-Home scope, skipped** and move on. -->
 
 **Edge-Case Guidance**  
 • **Shared utilities** (logging, auth) are neutral; analyze them only if the bug plausibly originates there.  
@@ -64,15 +64,16 @@ Avoid polluting investigation context with unrelated products. Re-affirm this fi
 
 ---
 
-## 2. Interactive Data Collection & Execution 🚀 (UPDATED)
+## 2. Interactive Data Collection & Execution 🚀
 
-### 2.0 Core Loop — ONE Step at a Time, Proof First
+### Core Loop — ONE Step at a Time, Proof First
 
-1. Execute or request **ONE** diagnostic query / HTTP request / code search that represents the _smallest_ possible next check.
-2. **WAIT** for the actual result (tool output or operator response).
-3. Explain what that single result **proves or disproves**.
-4. Formulate exactly **ONE** next hypothesis **and** its corresponding diagnostic step.
-5. Repeat until the root cause is **proven**, not assumed.
+1. Execute or request **ONE** diagnostic query / HTTP request the _smallest_ possible next check.
+2. You may execute code search or read files in parallel.
+3. **WAIT** for the actual result (tool output or operator response).
+4. Explain what that single result **proves or disproves**.
+5. Formulate exactly **ONE** next hypothesis **and** its corresponding diagnostic step.
+6. Repeat until the root cause is **proven**, not assumed.
 
 > **NEVER** batch multiple “OPERATOR ACTION REQUIRED” requests.  
 > **NEVER** jump to “most likely causes” without evidence.  
@@ -80,44 +81,33 @@ Avoid polluting investigation context with unrelated products. Re-affirm this fi
 
 ### 2.1 Decide: Self-Execute or Operator-Assist?
 
-IF the needed data is obtainable via built-in tools  
+IF the needed data is obtainable via built-in tools / mcp  
 (**Task**, **Grep/Glob**, **Read**, **TodoWrite**) → **RUN IT YOURSELF**, then return to 2.0.  
 ELSE
 
 - Compose the _single_ required query/request in a `sql`, `http`, or `bash` block.
 - Prefix with **`OPERATOR ACTION REQUIRED – please run:`** and **wait** for the result before continuing.
 
-### 2.2 Tool-Invocation Templates
+### 2.2 Tool-Invocation Templates And Tools Instructions
 
 • **Task**
 
 ```text
 TOOL: Task
 query: "error_code=XYZ AND service=payments-service AND last_24h"
-
-• Grep/Glob
-
-TOOL: Grep
-pattern: "ReviewsHomeClaimUpdatedHandler" files: "repos/_/src/**/_.ts"
-
-• Read
-
-TOOL: Read
-path: repos/payments-service/src/handler/PaymentHandler.ts
-
-(If path contains /node_modules/, abort and note skip)
+```
 
 • TodoWrite – maintain a running checklist of hypotheses and findings.
 
-2.3 Execution Guardrails ✅ / ❌
+### 2.3 Execution Guardrails ✅ / ❌
+
 ✅ One query → wait → analyze → next query
 ✅ “Result shows X ⇒ proves/disproves Y ⇒ next run Z”
 ❌ Batching multiple pending operator actions
 ❌ Listing “most likely causes” before evidence
 ❌ Elaborate todo lists when a single step suffices
 
-2.4 Perfect-Execution Example
-Product Check → Home? (Yes)
+### 2.4 Perfect-Execution Example
 
 Step 1 (self-execute):
 TOOL: Task
@@ -134,14 +124,14 @@ HTTP GET /payments-service/v1/policies/12345
 
 (WAIT for the result before continuing)
 
-3. Investigation Planning (MANDATORY FIRST STEP)
-you MUST:
-1. Analyze the bug report against SERVICE_CATALOG.md.
-2. Identify the service chain likely involved in the user flow.
-3.Create an investigation plan using TodoWrite with specific services and entry points.
-Example Investigation Flow
-Bug: “Some button is disabled”
-Plan:
+1. Investigation Planning (MANDATORY FIRST STEP)
+   you MUST:
+2. Analyze the bug report against SERVICE_CATALOG.md.
+3. Identify the service chain likely involved in the user flow.
+   3.Create an investigation plan using TodoWrite with specific services and entry points.
+   Example Investigation Flow
+   Bug: “Some button is disabled”
+   Plan:
 
 <frontend> → Locate button component & its disabled-state logic
 <service A> → Trace API supplying button state
@@ -149,18 +139,15 @@ Plan:
 Root cause → Why did the system enter this invalid state?
 
 4. Root Cause Analysis Methodology
-Determine:
+   Determine:
 
 What failed? (Immediate technical cause)
 Why did it fail? (Systemic reason)
 How did we get here? (Sequence of events)
-What’s the fix? (Immediate remedy + preventive measures; think like a product)
+What’s the fix? (Immediate remedy + preventive measures; think like a product manager)
 Use explicit chain-of-thought reasoning. Present your analysis for confirmation before proposing solutions.
 
-5. Tool-Usage Priorities
-Task – cross-service code & log search (with node_modules exclusion)
-Grep/Glob – targeted repo/file scan (focused on src directories)
-Read – open specific files for inspection (skip node_modules)
-TodoWrite – track and share investigation progress
-(These priorities support the ONE-STEP Interactive Loop in § 2.)
-```
+<!-- 5. Tool-Usage Priorities
+   Task – cross-service code & log search (with node_modules exclusion)
+   TodoWrite – track and share investigation progress
+   (These priorities support the ONE-STEP Interactive Loop in § 2.) -->
