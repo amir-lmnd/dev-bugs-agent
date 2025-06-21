@@ -1,64 +1,26 @@
 #!/usr/bin/env node
 
-import { TUIApp } from "./tui-app";
-import { DataLoader } from "./data-loader";
-import { spawn } from "child_process";
-import path from "path";
+import { Command } from "commander";
+import { InfoCommand } from "./commands/info.command";
+import { RunCommand } from "./commands/run.command";
+import { PullCommand } from "./commands/pull.command";
 
-async function main(): Promise<void> {
-  // try {
-  const args = process.argv.slice(2);
-  let publicId: string;
+const program = new Command();
 
-  if (args.length > 0) {
-    publicId = args[0];
-  } else {
-    const app = new TUIApp();
-    publicId = await app.selectBugCard();
-  }
+program
+  .name("dev-bugs")
+  .description("CLI tool for managing development bugs")
+  .version("1.0.0");
 
-  const bugCards = await DataLoader.loadBugCards();
-  const selectedBugCard = bugCards.find(
-    (card) => card.bugPublicId === publicId
-  );
+// Register commands
+InfoCommand.register(program);
+RunCommand.register(program);
+PullCommand.register(program);
 
-  if (!selectedBugCard) {
-    console.error(`Bug card with ID '${publicId}' not found`);
-    process.exit(1);
-  }
+// Parse command line arguments
+program.parse(process.argv);
 
-  const bugCardJson = JSON.stringify(selectedBugCard, null, 2);
-  const prompt = `Investigate this bug: ${bugCardJson}`;
-
-  console.log(prompt);
-
-  // console.log(`Launching Claude to investigate bug ${publicId}...`);
-
-  // const claude = spawn("claude", [prompt], {
-  //   stdio: "inherit",
-  //   shell: true,
-  //   cwd: path.join(process.cwd(), "../../../bionics"),
-  // });
-
-  //   claude.on("close", (code) => {
-  //     if (code !== 0) {
-  //       console.error(`Claude process exited with code ${code}`);
-  //       process.exit(code || 1);
-  //     }
-  //   });
-
-  //   claude.on("error", (error) => {
-  //     console.error("Failed to start Claude:", error.message);
-  //     console.error("Make sure 'claude' command is available in your PATH");
-  //     process.exit(1);
-  //   });
-  // } catch (error) {
-  //   console.error(
-  //     "Failed to get bug card:",
-  //     error instanceof Error ? error.message : error
-  //   );
-  //   process.exit(1);
-  // }
+// Show help if no arguments provided
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
 }
-
-main();

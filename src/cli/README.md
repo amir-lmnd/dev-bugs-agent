@@ -1,199 +1,216 @@
-# Dev Bugs Agent CLI
+# Dev Bugs CLI
 
-A CLI tool for investigating bug reports with an interactive terminal UI.
+A command-line interface for managing development bug data from Fibery.
 
-## Overview
+## Installation & Usage
 
-This CLI allows you to:
-
-- Select bug cards from an interactive terminal interface
-- Launch investigations for specific bug IDs by passing them as arguments
-- Access the tool globally from anywhere on your system
-
-## Data Requirements
-
-The CLI operates on bug report data processed through a specific pipeline:
-
-1. **Data Export**: The `fibery_export_to_json.ts` script downloads all bug reports from Fibery and exports them to JSON format
-2. **Data Processing**: The `prepare_bug_cards.ts` script processes the exported data and generates structured bug cards optimized for CLI presentation and prompting
-3. **Data Consumption**: The CLI expects the processed data to be available at `data/bug_cards.json` and will load this file to populate the interactive interface
-
-Ensure the data pipeline has been run and the `data/bug_cards.json` file is present before using the CLI.
-
-## Global Installation
-
-The CLI is set up to be globally accessible from any directory on your machine.
-
-### How It Works
-
-1. **Wrapper Script**: The project uses a wrapper script at `bin/dev-bugs` that:
-
-   - Uses `ts-node` to run TypeScript files directly (no compilation needed)
-   - Automatically resolves the correct project paths
-   - Passes through all command-line arguments
-
-2. **Package.json Configuration**: The `bin` field in `package.json` tells npm where to find the executable:
-
-   ```json
-   "bin": {
-     "dev-bugs": "./bin/dev-bugs"
-   }
-   ```
-
-3. **npm link**: Creates a global symlink so you can run `dev-bugs` from anywhere
-
-### Installation Steps
-
-From the project root directory:
+The CLI is available through the npm script or directly via the binary:
 
 ```bash
-# Make the wrapper script executable (already done)
-chmod +x bin/dev-bugs
+# Using npm script
+npm run cli -- <command> [options]
 
-# Install globally using npm link
-npm link
+# Using binary directly
+./bin/dev-bugs <command> [options]
+
+# Global help
+dev-bugs --help
 ```
 
-### Uninstallation
+## Commands
 
-To remove the global CLI:
+### `info [bug-id]` - Show Bug Information
+
+Display detailed information about bugs. If no bug ID is provided, opens an interactive TUI selector.
 
 ```bash
-# From the project root
-npm unlink
+# Interactive bug selection
+dev-bugs info
+
+# Direct bug lookup
+dev-bugs info ABCD-1234
+
+# JSON output
+dev-bugs info ABCD-1234 --json
+
+# Verbose details
+dev-bugs info ABCD-1234 --verbose
 ```
 
-## Usage
+**Options:**
 
-### Interactive Mode
+- `-j, --json` - Output in JSON format
+- `-v, --verbose` - Show detailed information
+- `-h, --help` - Display help for command
+
+**Aliases:** `i`
+
+### `run <bug-id>` - Run Investigation Analysis
+
+Generate investigation prompts and analysis for a specific bug.
 
 ```bash
-# Run without arguments to open the interactive selector
-dev-bugs
+# Generate investigation prompt
+dev-bugs run ABCD-1234
+
+# Output as JSON
+dev-bugs run ABCD-1234 --format json
+
+# Generate summary
+dev-bugs run ABCD-1234 --format summary
+
+# Save to file
+dev-bugs run ABCD-1234 --output investigation.txt
 ```
 
-### Direct Bug ID
+**Options:**
+
+- `-f, --format <type>` - Output format: `prompt` (default), `json`, or `summary`
+- `-o, --output <file>` - Save output to file instead of stdout
+- `-h, --help` - Display help for command
+
+**Aliases:** `r`
+
+### `pull` - Pull Latest Bug Data
+
+Fetch the latest bug data from remote sources (Fibery). **Note: This command is not yet implemented.**
 
 ```bash
-# Pass a bug ID directly
-dev-bugs BUG-123
+# Pull all data
+dev-bugs pull
+
+# Dry run to see what would be pulled
+dev-bugs pull --dry-run
+
+# Force refresh
+dev-bugs pull --force
+
+# Pull from specific source
+dev-bugs pull --source fibery
 ```
 
-### From Any Directory
+**Options:**
+
+- `-s, --source <source>` - Data source: `fibery` or `all` (default: `all`)
+- `-f, --force` - Force refresh even if data is recent
+- `--dry-run` - Show what would be pulled without actually pulling
+- `-h, --help` - Display help for command
+
+**Aliases:** `p`
+
+## Interactive TUI (Text User Interface)
+
+When using `dev-bugs info` without a bug ID, you'll enter an interactive mode:
+
+### Navigation
+
+- **↑/↓** or **j/k** - Navigate through bugs
+- **Enter** - Select a bug and exit
+- **v** - View bug details in overlay
+- **/** or **Ctrl+F** - Search by bug ID
+- **Ctrl+U** - Clear search
+- **ESC** or **q** - Quit
+
+### Search
+
+- Type any alphanumeric character to start searching
+- Search is case-insensitive and matches bug IDs
+- Clear search with **Ctrl+U**
+
+## Examples
 
 ```bash
-# Works from anywhere on your system
-cd /tmp
-dev-bugs BUG-456
+# Browse all bugs interactively
+dev-bugs info
+
+# Get bug details in JSON format for scripting
+dev-bugs info ABCD-1234 --json | jq '.bugDescription'
+
+# Generate investigation prompt and save to file
+dev-bugs run ABCD-1234 --output investigation-ABCD-1234.txt
+
+# Get a quick summary of a bug
+dev-bugs run ABCD-1234 --format summary
+
+# Check what data would be pulled (when implemented)
+dev-bugs pull --dry-run
 ```
 
-## Architecture
+## Data Location
 
-```
-src/cli/
-├── index.ts          # Main CLI entry point with shebang
-├── tui-app.ts        # Terminal UI for bug selection
-├── data-loader.ts    # Loads bug card data
-├── types.ts          # TypeScript type definitions
-└── README.md         # This file
-
-bin/
-└── dev-bugs          # Wrapper script for global access
-```
+Bug data is loaded from: `data/bug_cards.json`
 
 ## Development
 
-### Live Updates
+The CLI is built with:
 
-Since the global CLI uses `ts-node`, any changes you make to the TypeScript source files are immediately available when you run the global command - no rebuild required!
+- **TypeScript** for type safety
+- **Commander.js** for command parsing and help generation
+- **Blessed** for the interactive TUI
+- **Node.js best practices** for CLI tools
 
-### Testing Locally
+### Architecture
 
-```bash
-# Test the wrapper script directly
-./bin/dev-bugs
-
-# Test with ts-node
-npm start
-
-# Test a specific bug ID
-npm start BUG-123
+```
+src/cli/
+├── index.ts              # Main CLI entry point
+├── commands/             # Command implementations
+│   ├── base.command.ts   # Base class with common utilities
+│   ├── info.command.ts   # Info command
+│   ├── run.command.ts    # Run command
+│   └── pull.command.ts   # Pull command (placeholder)
+├── tui-app.ts           # Interactive TUI implementation
+├── data-loader.ts       # Bug data loading utilities
+└── types.ts             # TypeScript type definitions
 ```
 
-### Dependencies
+### Adding New Commands
 
-- `ts-node`: Runs TypeScript files directly
-- `blessed`: Terminal UI framework
-- `dotenv`: Environment variable management
+1. Create a new command file in `src/cli/commands/`
+2. Extend `BaseCommand` for common utilities
+3. Implement the `register()` static method
+4. Import and register in `src/cli/index.ts`
 
-## Alternative Global Installation Methods
+Example:
 
-If `npm link` doesn't work for your setup, you can use these alternatives:
+```typescript
+import { Command } from "commander";
+import { BaseCommand } from "./base.command";
 
-### Method 1: Add to PATH
+export class NewCommand extends BaseCommand {
+  static register(program: Command): void {
+    program
+      .command("new")
+      .description("Description of new command")
+      .action(async (options) => {
+        await NewCommand.execute(options);
+      });
+  }
 
-```bash
-# Add to ~/.zshrc or ~/.bash_profile
-export PATH="$PATH:/path/to/dev-bugs-agent/bin"
+  private static async execute(options: any): Promise<void> {
+    try {
+      // Command implementation
+    } catch (error) {
+      NewCommand.handleError(error, "New");
+    }
+  }
+}
 ```
 
-### Method 2: Create symlink
+## Error Handling
 
-```bash
-ln -s /path/to/dev-bugs-agent/bin/dev-bugs /usr/local/bin/dev-bugs
-```
+The CLI provides helpful error messages with suggestions:
 
-### Method 3: Shell alias
+- **Bug not found**: Shows available bug IDs and suggests using the TUI
+- **Data loading errors**: Clear error messages with file paths
+- **Command errors**: Consistent error formatting with emojis for readability
 
-```bash
-# Add to ~/.zshrc
-alias dev-bugs="cd /path/to/dev-bugs-agent && npm start"
-```
+## Future Enhancements
 
-## Troubleshooting
-
-### Command not found
-
-- Ensure `npm link` was run from the project root
-- Check that `/usr/local/bin` or similar is in your PATH
-- Try running `which dev-bugs` to see if it's installed
-
-### TypeScript compilation errors
-
-- The CLI bypasses compilation by using `ts-node`
-- Large directories like `repos/` are excluded from TypeScript processing
-- If you encounter memory issues, ensure the `exclude` field in `tsconfig.json` includes large directories
-
-### Missing dependencies
-
-- Run `npm install` in the project root
-- Ensure `ts-node` is available: `npm install -g ts-node`
-
-### Common Issues
-
-**"Bug cards file not found"**
-
-```bash
-# Ensure data file exists
-ls data/bug_cards.json
-
-# Check file permissions
-chmod 644 data/bug_cards.json
-```
-
-**"Invalid JSON format"**
-
-```bash
-# Validate JSON syntax
-cat data/bug_cards.json | jq '.'
-```
-
-**Terminal display issues**
-
-```bash
-# Try different terminal
-# Ensure terminal supports color and Unicode
-# Resize terminal window if table appears cramped
-```
-
-**Happy bug hunting! 🐛✨**
+- [ ] Implement `pull` command for fetching data from Fibery
+- [ ] Add configuration file support
+- [ ] Add logging capabilities
+- [ ] Add tests for CLI commands
+- [ ] Add bug filtering and search capabilities
+- [ ] Add export capabilities (CSV, Excel, etc.)
+- [ ] Add bug assignment and status update features

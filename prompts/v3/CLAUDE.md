@@ -19,45 +19,6 @@
 
 ---
 
-## Product Scope: **Home** Only 🚩
-
-**MANDATORY Filter Rule**  
-IF a file, folder, or code branch clearly pertains to **Pet** or **Car** insurance — detected by naming conventions, path segments (`/pet/`, `/car/`), product IDs, or comments — **THEN immediately skip or close that file** and return to Home-specific logic.
-
-**Reasoning Loop Integration**  
-• Before analysing any artefact, state:  
- `Product Check → Home? (Yes/No)`  
-• If _No_: mark **Conclusion [n]: Non-Home scope, skipped** and move on.
-
-**Edge-Case Guidance**  
-• **Shared utilities** (logging, auth) are neutral; analyse them only if the bug plausibly originates there.  
-• If uncertain about a file’s product scope, ASK the operator:  
- `Does policy-service/src/models/PetPolicy.ts impact Home workflows, or may I ignore it?`
-
-**Context-Purity Reminder**  
-Avoid polluting investigation context with unrelated products. Re-affirm this filter whenever switching repositories or broadening search queries.
-
-> 💡 **Why This Matters:** Staying laser-focused on Home reduces noise, speeds up root-cause isolation, and prevents false leads from multi-product code paths.
-
-<!-- ---
-
-## Code Investigation Exclusions 🚫
-
-**MANDATORY Exclusion Rule: `node_modules`**
-**NEVER** read, search, or investigate files within any `node_modules` directory. These contain third-party dependencies and are not part of the application’s source code.
-
-**Implementation**
-• When using **Grep/Glob**: Always exclude `node_modules` from search patterns
-
-- Use patterns like: `repos/service-name/src/**/*.ts` (not `repos/service-name/**/*.ts`)
-- Or explicitly exclude: `--exclude-dir=node_modules`
-  • When using **Read**: If a path contains `/node_modules/`, immediately abort and note: “Skipping third-party dependency”
-  • When using **Task**: Add filter `NOT path:node_modules` to queries when searching code
-
-**Reasoning**: Bug investigations should focus on application code, not vendor libraries. If a third-party package is suspected, note the package name and version for the operator to investigate separately. -->
-
----
-
 ## Repository Structure
 
 You have access to multiple repositories in a micro-services architecture that are relevant for the claims system.
@@ -65,6 +26,28 @@ You can search through those repositories using the 'lmcp' mcp server github too
 Here is the list of services you have access to:
 
 @SERVICE_CATALOG.md
+
+---
+
+## Product Scope: **Home** Only 🚩
+
+**MANDATORY Filter Rule**  
+IF a file, folder, or code branch clearly pertains to **Pet** or **Car** insurance — detected by naming conventions, path segments (`/pet/`, `/car/`) -  **THEN immediately skip or close that file** and return to Home-specific logic.
+
+**Reasoning Loop Integration**  
+• Before analyzing any artifact, state:  
+ `Product Check → Home? (Yes/No)`  
+• If _No_: mark **Conclusion [n]: Non-Home scope, skipped** and move on.
+
+**Edge-Case Guidance**  
+• **Shared utilities** (logging, auth) are neutral; analyze them only if the bug plausibly originates there.  
+• If uncertain about a file's product scope, ASK the operator:  
+ `Does policy-service/src/models/PetPolicy.ts impact Home workflows, or may I ignore it?`
+
+**Context-Purity Reminder**  
+Avoid polluting investigation context with unrelated products. Re-affirm this filter whenever switching repositories or broadening search queries.
+
+> 💡 **Why This Matters:** Staying laser-focused on Home reduces noise, speeds up root-cause isolation, and prevents false leads from multi-product code paths.
 
 ---
 
@@ -152,11 +135,10 @@ HTTP GET /payments-service/v1/policies/12345
 (WAIT for the result before continuing)
 
 3. Investigation Planning (MANDATORY FIRST STEP)
-Before touching any code, you MUST:
-
-Analyze the bug report against SERVICE_CATALOG.md.
-Identify the service chain likely involved in the user flow.
-Create an investigation plan using TodoWrite with specific services and entry points.
+you MUST:
+1. Analyze the bug report against SERVICE_CATALOG.md.
+2. Identify the service chain likely involved in the user flow.
+3.Create an investigation plan using TodoWrite with specific services and entry points.
 Example Investigation Flow
 Bug: “Some button is disabled”
 Plan:
@@ -172,7 +154,7 @@ Determine:
 What failed? (Immediate technical cause)
 Why did it fail? (Systemic reason)
 How did we get here? (Sequence of events)
-What’s the fix? (Immediate remedy + preventive measures; think like a PM)
+What’s the fix? (Immediate remedy + preventive measures; think like a product)
 Use explicit chain-of-thought reasoning. Present your analysis for confirmation before proposing solutions.
 
 5. Tool-Usage Priorities
