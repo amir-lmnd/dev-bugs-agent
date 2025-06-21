@@ -1,0 +1,44 @@
+##### Tasks #####
+  Eval system
+  TODO: use lmcp github tool instead of repos in workdir
+
+
+##### Pre agent steps #####
+  1. bug card generation
+
+##### Agent Steps #####
+  1. Identify relevant repos, expect output: list of repos
+    why extra step? it will allow us to use a detailed service catalog
+
+  2. Investigate
+    ...
+  3. Export results
+
+
+##### Tools needed #####
+
+- SQL generation
+  input: name of a model, repo, fields wanted
+  output: SQL query runnable on Snowflake
+  why: - it constantly doesn't recognize that claims table have encryptedId fields instead of publicId - in case of snowflake, we need to prefix the table name with the schema name, dont want to have this instruction in the general system prompt
+
+
+
+- Session Memory Bank
+  Why: during a long investigation it repeatedly asked for the same data
+
+- Define Available Tools Clearly
+  Why: I has a session where it tried to figure out how we are logging:
+    ⏺ Task(Find logging configuration and search patterns)
+    ⎿ Search(pattern: "(logger\.info|logger\.error|logger\.warn|logger\.debug)._claim", include: "_.{js,ts}")
+    Found 226 files (ctrl+r to expand)
+    +13 more tool uses
+    ⎿ No (tell Claude what to do differently)
+
+- Logs tool
+
+- MCP for the domain
+
+- Human in the loop feedback
+
+- Rerun with human inputs
